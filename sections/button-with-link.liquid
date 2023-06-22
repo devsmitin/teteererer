@@ -1,0 +1,62 @@
+<section class="Section {% unless section.settings.image %}Section--spacingNormal{% endunless %}">
+  <div class="Container">
+    <div class="Section-flex">
+    	{% for block in section.blocks %}
+      	   <div class="Flex-items">
+             <div class="Button--flex">
+               <span class="button--icon">{%- render 'icon', icon: 'mobile' -%}</span>
+               <span class="button-text Heading u-h4">{%- if block.settings.link != blank -%}<a href="{{ block.settings.link }}">{%- endif -%}{{ block.settings.button_text | escape }}{%- if block.settings.link != blank -%}</a>{%- endif -%}</span>
+             </div>
+      	   </div>
+      	{% endfor %}
+    </div>
+  </div>
+</section>
+
+{% schema %}
+  {
+    "name": "Mobile Name with Text",
+	"class" : "shopify-section--bordered button-section",
+    "settings": [],
+    "blocks": [
+      {
+        "type": "Text-section",
+        "name": "Text Section",
+        "settings": [
+			{
+              "type": "text",
+              "id": "button_text",
+              "label": "Enter text",
+              "default": "Apple iPhone"
+            },
+			{
+              "type": "url",
+              "id": "link",
+              "label": "Link"
+            }
+		]
+      }
+  	],
+	"presets": [
+      {
+		"category": "Button with text",
+        "name": "Mobile Icon with Text",
+        "settings": {},
+		 "blocks": [
+          {
+            "type": "Text-section",
+            "settings": {
+              
+            }
+          }
+        ]
+      }
+    ]
+  }
+{% endschema %}
+
+{% stylesheet %}
+{% endstylesheet %}
+
+{% javascript %}
+{% endjavascript %}

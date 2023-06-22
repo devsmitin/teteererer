@@ -1,0 +1,622 @@
+<!DOCTYPE html>
+<html lang="{{ locale }}" dir="{{ direction }}" class="{{ checkout_html_classes }}">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, height=device-height, minimum-scale=1.0, user-scalable=0">
+    <meta name="referrer" content="origin">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
+    <title>{{ page_title }}</title>
+
+    {{ content_for_header }}
+
+    {{ checkout_stylesheets }}
+    {{ checkout_scripts }}
+  </head>
+  <body>
+    {{ skip_to_content_link }}
+
+    <header class="banner" data-header role="banner">
+      <div class="wrap">
+        {{ content_for_logo }}
+      </div>
+    </header>
+
+    {{ order_summary_toggle }}
+    <div class="content" data-content>
+      <div class="wrap">
+        <div class="main">
+          <header class="main__header" role="banner">
+            {{ content_for_logo }}
+            {{ breadcrumb }}
+            {{ alternative_payment_methods }}
+          </header>
+          <main class="main__content" role="main">
+            {{ content_for_layout }}
+          </main>
+          <footer class="main__footer" role="contentinfo">
+            {{ content_for_footer }}
+          </footer>
+        </div>
+        <aside class="sidebar" role="complementary">
+          <div class="sidebar__header">
+            {{ content_for_logo }}
+          </div>
+          <div class="sidebar__content">
+            {{ content_for_order_summary }}
+               <div class="payment-icons">
+                          {%- capture supported_sizes -%}{%- render 'image-size', sizes: '200,400,600,700,800,900,1000,1200'-%}{%- endcapture -%}
+           {%- assign image_url = settings.payment-1 | img_url: '1x1' | replace: '_1x1.', '_{width}x.' -%}    
+           {%- assign image_url1 = settings.payment-2 | img_url: '1x1' | replace: '_1x1.', '_{width}x.' -%}      
+           {%- assign image_url2 = settings.payment-3 | img_url: '1x1' | replace: '_1x1.', '_{width}x.' -%}      
+           {%- assign image_url3 = settings.payment-4 | img_url: '1x1' | replace: '_1x1.', '_{width}x.' -%}      
+           {%- assign image_url4 = settings.payment-5 | img_url: '1x1' | replace: '_1x1.', '_{width}x.' -%}      
+           {%- assign image_url5 = settings.payment-6 | img_url: '1x1' | replace: '_1x1.', '_{width}x.' -%}      
+
+
+                 {% if request.host == "renewedmobile.fr" or request.host == "renewedmobile.de" or request.host == "renewedmobile.it" or request.host == "renewedmobile.es" %}
+             
+                  {%- else -%}
+                   
+                          {%- if settings['payment-1'] -%}
+                            <img class=" Image--lazyLoad Image--fadeIn" 
+                             src="{{ settings.payment-1 | img_url: "50px" }}"
+                              data-src="{{ image_url }}"
+                              data-widths="[{{ supported_sizes }}]"
+                              data-sizes="auto"
+                              alt="{{  settings.payment-1  | escape }}"              
+                             srcset="{{  settings.payment-1 | img_url: image_url }} 1x",
+                           >
+                         {%- endif -%}
+                          {%- if settings['payment-2'] -%}
+                           <img class=" Image--lazyLoad Image--fadeIn" 
+                             src="{{ settings.payment-2 | img_url: "50px" }}"
+                              data-src="{{ image_url1 }}"
+                              data-widths="[{{ supported_sizes }}]"
+                              data-sizes="auto"
+                              alt="{{  settings.payment-2  | escape }}"              
+                             srcset="{{  settings.payment-2 | img_url: image_url1 }} 1x",
+                           >
+                          {% endif %}
+                          {%- if settings['payment-3'] -%}
+                            <img class=" Image--lazyLoad Image--fadeIn" 
+                             src="{{ settings.payment-3 | img_url: "50px" }}"
+                              data-src="{{ image_url2 }}"
+                              data-widths="[{{ supported_sizes }}]"
+                              data-sizes="auto"
+                              alt="{{  settings.payment-3  | escape }}"              
+                             srcset="{{  settings.payment-3 | img_url: image_url2 }} 1x",
+                           >
+                          {% endif %}
+                          {%- if settings['payment-4'] -%}
+                           <img class=" Image--lazyLoad Image--fadeIn" 
+                             src="{{ settings.payment-4 | img_url: "50px" }}"
+                              data-src="{{ image_url3 }}"
+                              data-widths="[{{ supported_sizes }}]"
+                              data-sizes="auto"
+                              alt="{{  settings.payment-4  | escape }}"              
+                             srcset="{{  settings.payment-4 | img_url: image_url3 }} 1x",
+                           >
+                          {% endif %}
+
+                        {% if request.host == "renewedmobile.dk" %}
+                             
+                        {%- else -%}
+                          {%- if settings['payment-5'] -%}
+                           <img class=" Image--lazyLoad Image--fadeIn" 
+                             src="{{ settings.payment-5 | img_url: "50px" }}"
+                              data-src="{{ image_url4 }}"
+                              data-widths="[{{ supported_sizes }}]"
+                              data-sizes="auto"
+                              alt="{{  settings.payment-5  | escape }}"              
+                             srcset="{{  settings.payment-5 | img_url: image_url4 }} 1x",
+                           >
+                          {% endif %}
+                          {% endif %}
+                   
+                            {%- if settings['payment-6'] -%}
+                           <img class=" Image--lazyLoad Image--fadeIn" 
+                             src="{{ settings.payment-6 | img_url: "50px" }}"
+                              data-src="{{ image_url5 }}"
+                              data-widths="[{{ supported_sizes }}]"
+                              data-sizes="auto"
+                              alt="{{  settings.payment-6  | escape }}"              
+                             srcset="{{  settings.payment-6 | img_url: image_url5 }} 1x",
+                           >
+                          {% endif %}
+
+                  {% endif %} 
+                        
+               </div>
+          </div>
+        </aside>
+      </div>
+    </div>
+
+    {{ tracking_code }}
+
+
+
+{% assign premium = settings['premium-text'] %}
+{% assign tag_text_2 = settings['tag-text-2'] %}
+{% assign tag_text_3 = settings['tag-text-3'] %}
+
+{% assign productIDArray = "" %}
+{% assign productIDArray1 = "" %}
+{% assign productIDArray2 = "" %}
+
+{% for item in checkout.line_items %}
+  {% assign tagg = item.product.tags %}
+
+  {% assign pDs = item.product.id %}
+
+
+  {% for item_tag in tagg %}
+    {% if item_tag == premium %}
+      {% assign productID = item.product.id %}
+      {% assign productIDArray = productIDArray | append: productID | append: "," %}
+    {% endif %}
+
+    {% if item_tag == tag_text_2 %}
+      {% assign productID = item.product.id %}
+      {% assign productIDArray1 = productIDArray1 | append: productID | append: "," %}
+    {% endif %}
+
+    {% if item_tag == tag_text_3 %}
+      {% assign productID = item.product.id %}
+      {% assign productIDArray2 = productIDArray2 | append: productID | append: "," %}
+    {% endif %}
+  {% endfor %}
+
+  {% assign pDsArray = pDsArray | push: pDs %}
+{% endfor %}
+
+{% if settings.premium != blank %}
+  <script>
+    var productIDArray = '{{ productIDArray }}'.split(',').filter(Boolean);
+    var productIDArray1 = '{{ productIDArray1 }}'.split(',').filter(Boolean);
+    var productIDArray2 = '{{ productIDArray2 }}'.split(',').filter(Boolean);
+    var imgSrc = '{{ settings.premium | img_url: "50x50" }}';
+    var imgSrc1 = '{{ settings.tag-image-2 | img_url: "50x50" }}';
+    var imgSrc2 = '{{ settings.tag-image-3 | img_url: "50x50" }}';
+
+    for (var i = 0; i < productIDArray.length; i++) {
+      var productID = productIDArray[i];
+      var productThumbnail = document.querySelector('[data-product-id="' + productID + '"] .product-thumbnail');
+      if (productThumbnail) {
+        var imgElement = document.createElement('img');
+        imgElement.src = imgSrc;
+        imgElement.className = 'premium-img';
+        productThumbnail.parentNode.insertBefore(imgElement, productThumbnail.nextSibling);
+      }
+    }
+    for (var i = 0; i < productIDArray1.length; i++) {
+      var productID = productIDArray1[i];
+      var productThumbnail = document.querySelector('[data-product-id="' + productID + '"] .product-thumbnail');
+      if (productThumbnail) {
+        var imgElement = document.createElement('img');
+        imgElement.src = imgSrc1;
+        imgElement.className = 'premium-img';
+        productThumbnail.parentNode.insertBefore(imgElement, productThumbnail.nextSibling);
+      }
+    }
+    for (var i = 0; i < productIDArray2.length; i++) {
+      var productID = productIDArray2[i];
+      var productThumbnail = document.querySelector('[data-product-id="' + productID + '"] .product-thumbnail');
+      if (productThumbnail) {
+        var imgElement = document.createElement('img');
+        imgElement.src = imgSrc2;
+        imgElement.className = 'premium-img';
+        productThumbnail.parentNode.insertBefore(imgElement, productThumbnail.nextSibling);
+      }
+    }
+
+
+  var premiumImg = $('.product .premium-img');
+  var productTd = premiumImg.closest('.product__image');
+  productTd.css('position', 'relative');
+
+  </script>
+{% endif %}
+
+    
+    <script>
+             $(document).on('page:load', function() {
+               $(".payment-icons").insertAfter(".order-summary__section--total-lines");
+      });
+    </script>
+
+     <script type="text/javascript">
+      if (window.location.href.indexOf("checkouts") != -1) {
+          $(".payment-icons").show();
+      }
+      else{
+          $(".payment-icons").hide();
+      }
+     </script>
+
+     <script>
+    
+          $( document ).ready(function() {
+        
+            console.log("teest");
+            
+            function addShippingMessage() {
+              console.log("in function")
+              var checkout = Shopify.Checkout;
+              console.log(checkout, "checkout");
+              var subtotal = parseFloat(checkout.totalPrice);
+              console.log(subtotal, "subtotal");
+              var price = new Intl.NumberFormat('sv-SE', {style: 'currency', currency: 'SEK'}).format(subtotal);
+              console.log(price,"price");
+              if (subtotal < 2000) {
+                console.log("total if condition");
+                $('.section--shipping-method .radio__label:not(:contains("(B2B)"), :contains("Best Hemleverans"), :contains("FÃ¶retag"), :contains("Företag"))').append("<p id='shipping-msg'><b>{{ settings.nshift_checkout_msg }}</b></p>");
+              }
+              else{
+                console.log("else condition");
+              }
+              
+          }
+          if (Shopify.Checkout.step === 'shipping_method') {
+          var showShippingMsgTimeout = setInterval(function(){
+           if($('.section--shipping-method .radio__label').length > 0){
+              addShippingMessage();
+              clearInterval(showShippingMsgTimeout); // interval ended
+           }
+          }, 1000);
+          }
+        
+        });
+    
+  </script>
+
+    <script>
+
+     $( document ).ready(function() {
+
+        function fortagMsg() {
+          
+        $('.section--shipping-method .radio__label__primary').each(function() {        
+        var word = $(this).attr("data-shipping-method-label-title");
+        console.log(word,"word");
+          
+        if (word.indexOf("FÃ¶retag") !== -1) {  
+          console.log("if condtionfortag");
+          console.log(word, "contains 'FÃ¶retag'");
+    
+          var newText = word.replace('FÃ¶retag', 'Företag');
+          console.log(newText,"newWord");
+    
+          $(this).text(newText);        
+      } 
+          else{
+            console.log("newWordA");
+          }      
+    });
+        }
+          
+         if (Shopify.Checkout.step === 'shipping_method') {
+          var fortagTimeout = setInterval(function(){
+           if($('.section--shipping-method .radio__label__primary').length > 0){
+              fortagMsg();
+              clearInterval(fortagTimeout); // interval ended
+           }
+          }, 500);
+  }   
+
+});
+    
+    </script>
+
+{% comment %}Remove Klarna code{% endcomment %}
+   <script>
+    
+        $( document ).ready(function() {
+          function removeKlarna() {
+              console.log("function working");      
+                if(window.location.host == "renewedmobile.fr" || window.location.host == "renewedmobile.de" || window.location.host == "renewedmobile.it" || window.location.host == "renewedmobile.es"){
+                    console.log("if condition worked");
+                    var classK =  $('.section--payment-method .radio-wrapper[data-select-gateway="76250710170"]').hide();
+                    var classN =  $('.section--payment-method .radio-wrapper[data-select-gateway="76439617690"]').hide();
+                    console.log(classK,"classK");            
+                }
+          }
+        
+        if (Shopify.Checkout.step == 'payment_method') {
+          console.log("payment_method");
+           var klarnaTimeout = setInterval(function(){
+           if($('.section--payment-method .radio-wrapper[data-select-gateway="76250710170"]').length > 0){
+              removeKlarna();
+              clearInterval(klarnaTimeout); // interval ended
+           }
+          }, 500);
+        }
+        });
+    
+  </script>
+
+{% comment %} Klarna prefield for Nordics {% endcomment %} 
+  
+    <script>
+             $( document ).ready(function() {
+           
+              function prefieldKlrna() {
+                if(window.location.host == "renewed.se" || window.location.host == "renewedmobiles.se" || window.location.host == "renewedmobile.dk"){
+                
+
+              var classK = $('.section--payment-method .radio-wrapper[data-select-gateway="76250710170"]').remove();
+              $('.section--payment-method .section__content .content-box').prepend(classK);
+              
+              var nordics = $("#checkout_payment_gateway_76250710170").prop("checked", true);
+              console.log(nordics, "nordics");
+                  
+                }
+              }
+       
+              if (Shopify.Checkout.step == 'payment_method') {
+              console.log("checked");                
+                 var prefieldfunction = setInterval(function(){
+                   if($(".section--payment-method .radio-wrapper .radio__input #checkout_payment_gateway_76250710170").length > 0){
+                      prefieldKlrna();
+                      clearInterval(prefieldfunction); // interval ended
+                   }
+                  }, 500);
+                 }
+      
+            });
+    </script>
+
+  {% comment %} remove nets easy from denmark {% endcomment %} 
+     <script>
+             $( document ).ready(function() {      
+              function netsRemoveforDk() {
+                if(window.location.host == "renewedmobile.dk"){
+                 var classNE =  $('.section--payment-method .radio-wrapper[data-select-gateway="76439617690"]').hide(); 
+                }
+              }
+       
+              if (Shopify.Checkout.step == 'payment_method') {
+              console.log("checked");                
+                 var netsremovefunction = setInterval(function(){
+                   if($('.section--payment-method .radio-wrapper[data-select-gateway="76439617690"]').length > 0){
+                      netsRemoveforDk();
+                      clearInterval(netsremovefunction);
+                   }
+                  }, 500);
+                 }
+      
+            });
+    </script>
+  
+{% comment %} Add this code where you want the checkbox to appear {% endcomment %}
+
+ 
+{%- assign policy_content = "" -%}
+
+<!--   {{ settings.default_policies }}  -->
+ 
+  {% if settings.enable_default_policies %}
+    
+    {% if settings.default_policies == 'refund_policy' %}
+      {% assign policy_content = shop.refund_policy %}
+     
+    
+      {% elsif settings.default_policies == 'privacy_policy' %}
+      {% assign policy_content = shop.privacy_policy %}
+     
+    
+      {% elsif settings.default_policies == 'terms_of_service' %}
+      {% assign policy_content = shop.terms_of_service %}
+      
+    
+      {% elsif settings.default_policies == 'shipping_policy' %}
+      {% assign policy_content = shop.shipping_policy %}
+    
+  
+    {% endif %}
+    
+      {% else %}
+    
+      {% assign policy_content = settings.terms_and_condition_text %}
+        
+    {% endif %}
+    
+<script>
+var termsCheckbox = document.createElement('div');
+termsCheckbox.innerHTML = `
+  <div class="custom_checkbox">
+    <label for="terms-checkbox">
+      {{ settings.terms_and_condition_statement }}
+    </label>
+  </div>
+
+  <div class="show_info" >
+  <div class="popup-detail">
+  <div class="close-popup"><a href="javascript:void(0);" class="close">X</a></div>
+  <h2><b>{{ settings.terms_and_condition_heading }}</b></h2>
+    <p>{{ policy_content}}</p>
+  </div>
+  <div class="overlay-bg"></div>
+</div>   
+`;
+document.querySelector('[data-step="payment_method"]').appendChild(termsCheckbox);
+
+  var billingAddressSection = document.querySelector('.step__footer');
+  billingAddressSection.insertAdjacentElement('beforebegin', termsCheckbox);
+  
+$('#terms-link').on('click',function(e){
+  e.preventDefault();
+    $('.show_info').fadeIn();
+})
+$('.close-popup').click(function(){
+$('.show_info').fadeOut();
+})
+  
+</script>   
+    
+    <style>
+      .payment-icons img{
+        width:14%;
+      }
+      .payment-icons{
+        margin: 5px 0 19px;
+        display: flex;
+        align-items: center;
+        gap: 13px;
+      }
+
+       #shipping-msg {
+        margin-top: 10px;
+        }
+
+        #terms-checkbox {
+            appearance: auto;
+           }
+
+        .custom_checkbox {
+            padding-top: 30px;
+          }
+      
+          a#terms-link {
+             text-decoration: underline;
+             color: blue;
+          }
+
+          .show_info .popup-detail p {
+            max-width: 600px;
+            padding-right: 40px;
+            margin: 0 auto;
+           }
+
+            .show_info {
+          	 display: none;
+          	 position: fixed;
+          	 width: 100%;
+          	 height: 100%;
+          	 top: 0;
+          	 right: 0;
+          	 z-index: 999999;
+          }
+           .show_info .popup-detail {
+          	 height: auto;
+          	 background-color: #fff;
+          	 max-width: 700px;
+               max-height: 80vh;
+          	 box-shadow: 0 0 30px #555;
+          	 padding: 20px;
+          	 width: 40%;
+          	 position: absolute;
+          	 top: 50%;
+          	 right: 50%;
+          	 margin: 0 auto;
+          	 transform: translate(50%, -50%);
+               overflow: auto;
+          }
+           .show_info .popup-detail label {
+          	 text-align: center;
+          	 display: block;
+          }
+           .show_info .popup-detail .close_popup {
+          	 text-align: right;
+          }
+          
+           .overlay-bg {
+          	 display: block;
+          	 background: rgba(0, 0, 0, .3);
+          	 height: 100%;
+          	 width: 100%;
+          	 left: 0;
+          	 top: 0;
+          }
+          
+          .close-popup {
+              position: sticky;
+              top: 0px;
+              left: 655px;
+              width: 30px;
+              height: 30px;
+              background-color: #434343;
+              color: #fff;
+              cursor: pointer;
+              display: inline-block;
+              z-index: 9999;
+          }
+          
+          a.close {
+               color: #fff;
+              display: flex;
+              align-items: center;
+              justify-content: center;
+              transform: translate(50%, -50%);
+              top: 50%;
+              right: 50%;
+              position: absolute;
+          }
+          
+          .popup-detail h2 {
+              font-size: 25px;
+              max-width: 600px;
+              padding-bottom: 10px;
+              margin:0 auto;
+              padding-right: 40px;
+          }
+
+          @media screen and (max-width: 1439px){
+                .close-popup {
+                    top: 18px;
+                    right: 18px;    
+                  }
+              }
+      
+               @media screen and (max-width: 950px){
+                .show_info .popup-detail {
+                   width: 60%;
+                    padding-left: 20px!important;
+                    padding-right: 0px!important;
+                    padding-top: 0!important;
+                    padding-bottom: 20px!important;
+                  }
+
+                  .close-popup {
+                    top: 0px;
+                    right: 18px;    
+                  }
+               }
+      
+       @media screen and (max-width: 420px){
+         .payment-icons{
+             gap: 10px;
+         }
+
+        .popup-detail h2 {
+            font-size: 18px;              
+          }
+
+          .close-popup {
+              top: -1px;
+              right: 15px; 
+              width: 24px;
+              height: 24px;
+          }
+       }
+
+             .product__image{
+            position:relative;
+          }
+
+          .product__image .premium-img{
+            position: absolute;
+            width: 40%;
+            top: 6px;
+            left: 40px;
+            z-index: 1;
+          }
+
+      .product:first-child .product__image .premium-img{
+        top:0;
+      }
+
+    </style>
+  </body>
+</html>

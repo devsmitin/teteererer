@@ -1,0 +1,162 @@
+<div class="vimla_modal">
+  <div class="vimla_modal_inner">
+    <h3 class="first_popuptitle">{{- 'product.vimla_products.subscription_popup_title' | t -}}</h3>
+    <div class="body">
+      <div class="model_flex">
+        {%- if settings.text != blank -%}
+<!--           <div class="model_flex-inner" >
+              <div class="model_info">
+                  <div class="model_heading">
+                       <h3 class="SectionHeader__Heading Heading u-h4">{{ settings.text | escape }}</h3>
+                  </div>
+                  <div class="model_price">
+                      {{ settings.vimla-price }}
+                  </div>
+                  <div class="model_disc">
+                       {{ settings.vimla-info  }}
+                  </div>
+                  <div class="model_buy">
+                     <a offer-id="offer 1" class="model_buy_now" href="#">{{- 'product.vimla_products.buy_now' | t -}}</a>
+                  </div>
+              </div>
+          </div> -->
+        {%- endif -%}
+        {%- if settings.second-text != blank -%}
+<!--           <div class="model_flex-inner">
+              <div class="model_info">
+                  <div class="model_heading">
+                       <h3 class="SectionHeader__Heading Heading u-h4">{{ settings.second-text | escape }}</h3>
+                  </div>
+                  <div class="model_price">
+                      {{ settings.second-vimla-price }}
+                  </div>
+                  <div class="model_disc">
+                       {{ settings.second-vimla-info  }}
+                  </div>
+                  <div class="model_buy">
+                     <a offer-id="offer 2" class="model_buy_now" href="#">{{- 'product.vimla_products.buy_now' | t -}}</a>
+                  </div>
+              </div>
+          </div> -->
+       {%- endif -%}
+       {%- if settings.third-text  != blank -%}
+<!--          <div class="model_flex-inner">
+              <div class="model_info">
+                  <div class="model_heading">
+                       <h3 class="SectionHeader__Heading Heading u-h4">{{ settings.third-text | escape }}</h3>
+                  </div>
+                  <div class="model_price">
+                      {{ settings.third-vimla-price }}
+                  </div>
+                  <div class="model_disc">
+                       {{ settings.third-vimla-info  }}
+                  </div>
+                  <div class="model_buy">
+                     <a offer-id="offer 3" class="model_buy_now" href="#">{{- 'product.vimla_products.buy_now' | t -}}</a>
+                  </div>
+              </div>
+          </div> -->
+      {%- endif -%}
+      {%- if settings.fourth-text  != blank -%}
+<!--           <div class="model_flex-inner">
+              <div class="model_info">
+                  <div class="model_heading">
+                       <h3 class="SectionHeader__Heading Heading u-h4">{{ settings.fourth-text | escape }}</h3>
+                  </div>
+                  <div class="model_price">
+                      {{ settings.fourth-vimla-price }}
+                  </div>
+                  <div class="model_disc">
+                       {{ settings.fourth-vimla-info  }}
+                  </div>
+                  <div class="model_buy">
+                     <a  offer-id="offer 4" class="model_buy_now" href="#">{{- 'product.vimla_products.buy_now' | t -}}</a>
+                  </div>
+              </div>
+          </div> -->
+        {%- endif -%}
+      </div>
+      <div class="modal_footer_note">{{ settings.vimla-footer-note }}</div>
+      <div class="close_btn"> 
+         <a class="btn js-close-modal">{{- 'product.vimla_products.close_button' | t -}}</a>
+       </div>
+    </div>
+    <div class="final_model">
+                    
+      <div class="final_model_heading">
+          <h3>{{ settings.form-heading  }}</h3>
+      </div>
+        <div class="final_model_main">
+                <div class="model_form_tite">
+                    <h5>{{ settings.form-subheading  }}</h5>		
+                </div>
+                <div class="form_info">
+                    <input type="tel" onkeypress='validate(event)' name="properties[_person_number]" id="Number" placeholder="{{- 'product.vimla_products.security_number' | t -}}" required>
+                    <input type="email" id="email" name="properties[_email]" placeholder="{{- 'product.vimla_products.email' | t -}}"   pattern=".+@globex\.com" required>
+                </div>		
+                <script>
+                  function validate(evt) {
+                      var theEvent = evt || window.event;
+                    
+                      // Handle paste
+                      if (theEvent.type === 'paste') {
+                          key = event.clipboardData.getData('text/plain');
+                      } else {
+                      // Handle key press
+                          var key = theEvent.keyCode || theEvent.which;
+                          key = String.fromCharCode(key);
+                      }
+                      var regex = /[0-9]|\./;
+                      if( !regex.test(key) ) {
+                        theEvent.returnValue = false;
+                        if(theEvent.preventDefault) theEvent.preventDefault();
+                      }
+                    }
+                </script>
+                <div class="form_check">
+                    <span class="checkbox-title">
+                         {{ settings.info_heading  }}
+                    </span>	
+                     <input id="temp-code" type="hidden" name="properties[_vimla]">
+                     <input id="action-code" type="hidden" name="properties[_action]">
+                     
+                     <input id="offer_text" type="hidden" name="properties[Vimla-abonnemang]">
+                  <div class="number_flex">
+                    <div class="check_number">
+                        <input type="checkbox" class="number_check" id="check_number_self" name="new_number" value="exist" required>
+                        <label for="check_number_self">{{ settings.new_number  }}</label>
+                          <div class="check_number_self">
+                            <input type="tel" name="properties[_befintligt_nummer]" id="self-Number" placeholder="{{- 'product.vimla_products.existing_number' | t -}}">
+                          </div>
+                        
+                    </div>
+                    <div class="regular_number">
+                        <input type="checkbox" class="number_check" name="properties[_nytt_nummer]" id="cehck_regular_number" value="new" required>
+                        <label for="cehck_regular_number">{{ settings.existing_number  }}</label>
+                    
+                       <span style="display:none;" class="number-details">{{- 'product.vimla_products.new_number_details' | t -}}</span>
+                    </div>
+                      <span class="show-error">{{- 'product.vimla_products.error' | t -}}</span>
+                  </div>
+                    <div class="trms_condition">
+                        <input type="checkbox" id="vimla_trms" name="condition">
+                        <label for="vimla_trms">{{ settings.terms }}</label>
+                        <label class="trms_error">Vänligen acceptera användarvillkoren för att fortsätta</label>
+                    </div>
+                  <div class="validError">
+                    <label class="validationError"></label>
+                  </div>
+                    <div class="form_submit">
+                        <button type="submit" class="submit_done" form="form1" value="Submit">{{- 'product.vimla_products.submit' | t -}}</button>
+                      <button type="submit" id="vimla_sub-submit" style="display:none;">{{- 'product.vimla_products_unsubscribe.submit_button' | t -}}</button>
+                    </div>
+                </div>	
+   
+        </div>
+    </div>
+    <div class="vimla_modal_close">
+      <span>{% render 'icon' with 'close' %}</span>
+    </div>
+  </div>
+</div>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/axios/1.1.2/axios.min.js" integrity="sha512-bHeT+z+n8rh9CKrSrbyfbINxu7gsBmSHlDCb3gUF1BjmjDzKhoKspyB71k0CIRBSjE5IVQiMMVBgCWjF60qsvA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>

@@ -1,0 +1,114 @@
+{%- if section.settings.enable_bar -%}
+  {%- unless section.settings.home_page_only and template != 'index' -%}
+    <section id="section-{{ section.id }}" data-section-id="{{ section.id }}" data-section-type="announcement-bar">
+      <div class="AnnouncementBar">
+        <div class="AnnouncementBar__Wrapper">
+          <div class="AnnouncementBar__Content Heading">
+          <div class="ll">
+                {%- if section.settings.image1 != blank -%}
+                {% if request.host == "renewedmobile.fr" or request.host == "renewedmobile.de" or request.host == "renewedmobile.it" or request.host == "renewedmobile.es" %}
+                    {%- else -%} 
+                <img loading="lazy"  src="{{ section.settings.image1 | img_url: '300x' }}"  alt="{{ section.settings.contents1 | escape }}">
+                {% endif %}       
+                {%- endif -%}
+              <div>{{ section.settings.contents1 | escape }}</div></div>            
+             <div class="mm">
+                {%- if section.settings.image2 != blank -%}
+             <img loading="lazy"  src="{{ section.settings.image2 | img_url: '300x' }}"  alt="{{ section.settings.contents | escape }}">
+                   {%- endif -%}
+               <div>{{ section.settings.content | escape }}</div></div>             
+            <div class="rr">
+               {%- if section.settings.image3 != blank -%}
+             <img loading="lazy"  src="{{ section.settings.image3 | img_url: '300x' }}"  alt="{{ section.settings.contents3 | escape }}">
+                   {%- endif -%}
+              <div>{{ section.settings.contents3 | escape }}</div></div>     
+          </div>
+        </div>
+      </div>
+</section><div class="bl"></div>
+
+    <style>
+      #section-{{ section.id }} {
+        background: {{ section.settings.background }};
+        color: {{ section.settings.text_color }};
+      }
+    </style>
+
+    <script>
+      document.documentElement.style.setProperty('--announcement-bar-height', document.getElementById('shopify-section-announcement').offsetHeight + 'px');
+    </script>
+  {%- endunless -%}
+{%- endif -%}
+
+{% schema %}
+{
+  "name": "Announcement bar",
+  "settings": [
+    {
+      "type": "checkbox",
+      "id": "enable_bar",
+      "label": "Enable bar",
+      "default": true
+    },
+    {
+      "type": "checkbox",
+      "id": "home_page_only",
+      "label": "Home page only",
+      "default": false
+    },
+    {
+      "type": "color",
+      "id": "background",
+      "label": "Background",
+      "default": "#000000"
+    },
+    {
+      "type": "color",
+      "id": "text_color",
+      "label": "Text",
+      "default": "#ffffff"
+    },
+ {
+      "type": "text",
+      "id": "contents1",
+      "label": "Text left",
+      "default": "Announce something here"
+    },
+ {
+      "type": "image_picker",
+      "id": "image1",
+      "label": "Image",
+      "info": "small size recommended"
+    },
+    {
+      "type": "text",
+      "id": "content",
+      "label": "Text",
+      "default": "Announce something here"
+    },
+ {
+      "type": "image_picker",
+      "id": "image2",
+      "label": "Image",
+      "info": "small size recommended"
+    },
+ {
+      "type": "text",
+      "id": "contents3",
+      "label": "Text right",
+      "default": "Announce something here"
+    },
+ {
+      "type": "image_picker",
+      "id": "image3",
+      "label": "Image",
+      "info": "small size recommended"
+    },
+    {
+      "type": "url",
+      "id": "link",
+      "label": "Link"
+    }
+  ]
+}
+{% endschema %}

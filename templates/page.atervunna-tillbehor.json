@@ -1,0 +1,127 @@
+{
+  "sections": {
+    "main": {
+      "type": "main-page",
+      "disabled": true,
+      "settings": {
+        "show_large": false
+      }
+    },
+    "48c5a5ef-ebab-4277-9f90-b6f643bbade5": {
+      "type": "collection-list",
+      "blocks": {
+        "template--15997232971930__48c5a5ef-ebab-4277-9f90-b6f643bbade5-16752478539e4d428a-0": {
+          "type": "collection",
+          "settings": {
+            "collection": "skarmskydd",
+            "image_alignment": "center center",
+            "content_position": "bottomLeft",
+            "subheading": "",
+            "title": "Skärmskydd",
+            "button_text": "Se mer",
+            "button_link": "",
+            "apply_overlay": true
+          }
+        },
+        "5996fd4b-92b0-48ec-a415-baa1ba90bf66": {
+          "type": "collection",
+          "settings": {
+            "collection": "mobilskal",
+            "image_alignment": "center center",
+            "content_position": "bottomLeft",
+            "subheading": "",
+            "title": "Mobilskal",
+            "button_text": "Se mer",
+            "button_link": "",
+            "apply_overlay": true
+          }
+        },
+        "template--15997232971930__48c5a5ef-ebab-4277-9f90-b6f643bbade5-16752478539e4d428a-1": {
+          "type": "collection",
+          "settings": {
+            "collection": "laddare-stromadapter",
+            "image_alignment": "top center",
+            "content_position": "bottomLeft",
+            "subheading": "",
+            "title": "Laddare",
+            "button_text": "Se mer",
+            "button_link": "",
+            "apply_overlay": true
+          }
+        },
+        "template--15997232971930__48c5a5ef-ebab-4277-9f90-b6f643bbade5-16752478539e4d428a-2": {
+          "type": "collection",
+          "settings": {
+            "collection": "horlurar",
+            "image_alignment": "center center",
+            "content_position": "bottomLeft",
+            "subheading": "",
+            "title": "Hörlurar",
+            "button_text": "Se mer",
+            "button_link": "",
+            "apply_overlay": true
+          }
+        },
+        "a7a89dbb-806a-49c4-9bd0-bcc849ff526d": {
+          "type": "collection",
+          "disabled": true,
+          "settings": {
+            "collection": "hogtalare",
+            "image_alignment": "center center",
+            "content_position": "bottomLeft",
+            "subheading": "",
+            "title": "Högtalare",
+            "button_text": "Se mer",
+            "button_link": "",
+            "apply_overlay": true
+          }
+        },
+        "a2058352-0149-441c-ab8b-d3ce4225ff69": {
+          "type": "collection",
+          "settings": {
+            "collection": "router",
+            "image_alignment": "center center",
+            "content_position": "bottomLeft",
+            "subheading": "",
+            "title": "Router",
+            "button_text": "Se mer",
+            "button_link": "shopify:\/\/collections\/router",
+            "apply_overlay": true
+          }
+        }
+      },
+      "block_order": [
+        "template--15997232971930__48c5a5ef-ebab-4277-9f90-b6f643bbade5-16752478539e4d428a-0",
+        "5996fd4b-92b0-48ec-a415-baa1ba90bf66",
+        "template--15997232971930__48c5a5ef-ebab-4277-9f90-b6f643bbade5-16752478539e4d428a-1",
+        "template--15997232971930__48c5a5ef-ebab-4277-9f90-b6f643bbade5-16752478539e4d428a-2",
+        "a7a89dbb-806a-49c4-9bd0-bcc849ff526d",
+        "a2058352-0149-441c-ab8b-d3ce4225ff69"
+      ],
+      "settings": {
+        "image_size": "small",
+        "add_spacing": true,
+        "expand_collection": false,
+        "stack_on_mobile": true,
+        "smaller_Grid": true,
+        "head_color": "#ffffff",
+        "text_color": "#2028cd",
+        "button_color": "#ffffff"
+      }
+    },
+    "b62add04-912a-4834-8d80-7cfa16d5a4d7": {
+      "type": "richtext",
+      "settings": {
+        "color_bg": "#efefef",
+        "title": "Komplettera med tillbehör",
+        "content": "<p>Vårt sortiment av mobiltillbehör inkluderar mobilskal, hörlurar, skärmskydd och mobilladdare. Dessa tillbehör är utformade för att ge extra skydd och funktionalitet till din mobiltelefon. Vi har mobilskal i flera färger och som skyddar mot repor och stötar. Våra hörlurar ger en bättre ljudupplevelse och våra skärmskydd skyddar din skärm mot smuts och repor. Våra mobilladdare gör det enkelt att ladda din telefon var som helst och när som helst. Utforska vårt sortiment av mobiltillbehör och hitta det som du behöver!<\/p><p>Komplettera er förnyade mobiltelefon med nya tillbehör för att öka produktens livslängd. Vi på renewed jobbar med att förlänga livslängden på fullt fungerande mobiltelefoner som håller marknadens bästa kvalité. <\/p><p>Vi anser att det bästa vi kan göra för miljön är att ändra våra konsumtionsvanor. Idag har fler och fler blivit mer bekanta med andrahandsmarknaden av mobiltelefoner. En av anledningarna till detta är att det blivit betydligt dyrare att äga en iPhone eller Samsung idag mot var det var för några år sedan. Trots att teknologin och hållbarheten på nya telefonerna bara blir bättre så väljer en del ändå att köpa nytt så fort det släpps en ny modell. Detta skapar i sin tur en marknad för begagnade iPhones och Samsung telefoner som håller hög standard med samma funktioner och egenskaper som de allra senaste modellerna. Om man kompletterar sitt köp med våra tillbehör i form av skärmskydd och mobilskal så hjälper detta till att skydda telefonen och öka produktens livslängd. <\/p><p>Vårt utbud av återvunna eller begagnade iPhones och Samsung mobiltelefoner är brett där vi har allt från den billigaste varianten ifall man vill köpa barnens första telefon till de absolut senaste modellerna som man kan köpa till ett väldigt förmånligt pris. <\/p><p>Våra tillbehör är utmärkta komplement för att öka livslängden men även piffa upp eller styla om din nya telefon. <\/p><p><strong>Begagnad mobiltelefoner i olika skick men med samma funktionalitet<\/strong><\/p><p>Vi säljer våra  mobiltelefoner i olika skick. Med skick så menar vi endast telefonens kosmetiska utseende och inte funktion. Oavsett vilket skick ni väljer så fungerar telefonen som ny där alla våra telefoner är noga kontrollerade av professionella tekniker, testade och fungerar lika bra som nya telefoner. Därför känner vi oss väldigt trygga med att kunna erbjuda våra kunder 12 månaders garanti och 14 dagars ångerrätt på alla våra iPhones. <\/p><p><strong>Mobiltelefon på avbetalning<\/strong><\/p><p>Vi samarbetar med Klarna för att göra det ännu enklare för våra kunder att handla sin begagnade iPhone hos oss. Här har man möjlighet att dela upp sin betalning efter behov, få sin produkt först och betala senare men även alternativet att betala med kort direkt. Vi strävar efter att erbjuda våra kunder en flexibel lösning med olika betalningsmöjligheter. <\/p><p><\/p>",
+        "image": "shopify:\/\/shop_images\/Begagnade_mobiltelefoner_1000x_27909914-a4ec-4900-835f-dcef4a990650.webp"
+      }
+    }
+  },
+  "order": [
+    "main",
+    "48c5a5ef-ebab-4277-9f90-b6f643bbade5",
+    "b62add04-912a-4834-8d80-7cfa16d5a4d7"
+  ]
+}

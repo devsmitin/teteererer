@@ -1,0 +1,204 @@
+{
+  "sections": {
+    "main": {
+      "type": "main-faq",
+      "blocks": {
+        "791050ba-1968-43e8-a8f5-6341c08bec0d": {
+          "type": "separator",
+          "settings": {
+            "title": "Beställning"
+          }
+        },
+        "59189464-de49-4c96-86fb-02552ae550f2": {
+          "type": "question",
+          "settings": {
+            "title": "Hur kan jag följa min order?",
+            "answer": "<p>När din beställning är skickad kommer du att få ett spårningsnummer som du kan spåra via DHL tracking.<\/p>"
+          }
+        },
+        "0f6edad2-a287-4ae8-8946-3595a4ee4f3a": {
+          "type": "question",
+          "settings": {
+            "title": "Efter en beställning, hur lång tid tar det tills man får sin produkt?",
+            "answer": "<p>Vi jobbar med DHL Express, vår leveranstid är 1-3 arbetsdagar. Din orderbekräftelse inkluderas med ett spårningsnummer för din leverans.<\/p>"
+          }
+        },
+        "7995e95f-b575-4ec5-b392-1e697ec63a43": {
+          "type": "question",
+          "settings": {
+            "title": "Vad gör jag om jag vill avbryta min order?",
+            "answer": "<p>Om du vill avbryta din order, rekommenderar vi att du mailar till oss på <a href=\"mailto:kontakt@renewed.se\" title=\"mailto:kontakt@renewed.se\">kontakt@renewed.se<\/a> så snart som möjligt. Vi återkommer till dig inom 24h.<\/p>"
+          }
+        },
+        "c05ddad3-5d27-475f-9784-ed34b2e22598": {
+          "type": "question",
+          "settings": {
+            "title": "Vilka olika betalningsalternativ använder ni?",
+            "answer": "<p>Vi använder oss av Klarna. Du kan välja att betala på en gång, via faktura eller via delbetalning på 6,12, eller 24 månader.<\/p>"
+          }
+        },
+        "0c92941a-1535-41d7-b1f6-68bf67ccbec7": {
+          "type": "question",
+          "settings": {
+            "title": "Vad ingår i paketet?",
+            "answer": "<p>Våra produkter skickas i egna specialgjorda kartonger som innehåller en laddningskabel och en simkorts öppnare.<\/p>"
+          }
+        },
+        "d38687c1-64d7-40d8-9c20-f3704889a12c": {
+          "type": "question",
+          "settings": {
+            "title": "Vart kommer reneweds telefoner ifrån?",
+            "answer": "<p>Våra telefoner kommer från den nordiska marknaden och har kontrollerats noga av professionella tekniker innan de säljs vidare.<\/p>"
+          }
+        },
+        "5f955301-dac1-4e32-a104-91bf16e1ab2d": {
+          "type": "question",
+          "settings": {
+            "title": "Vilket skick har de telefoner som säljs av er?",
+            "answer": "<p>Alla våra produkter är noga kontrollerade, fabriksåterställda och har vid behov renoverats med hjälp av den senaste teknologin. Vår kvalitetskontroll genomförs med hjälp av en unik mjukvara.<\/p><p>Produktens skick innebär endast vilket skick produktens kosmetiska utseende har på utsidan. Oavsett vilket skick du köper så är alla produkter testade och fungerar lika bra som en ny.<\/p><p><strong>Nyskick<\/strong> = En telefon som nästan inte har några tecken på användning, likt en ny telefon. Skärmen är dock fri från sprickor och har en batterikapacitet på över 90 procent. <\/p><p><strong>Mycket bra skick<\/strong> = En telefon i mycket bra skick och hög standard. Kan eventuellt ha några synbara tecken på användning. Skärmen är dock fri från sprickor och har en batterikapacitet på över 85 procent. <\/p><p><strong>Bra skick<\/strong> = En telefon med måttliga tecken av användning som repor eller skrapmärken. Skärmen är dock fri från sprickor och har en batterikapacitet på över 80 procent. <\/p>"
+          }
+        },
+        "4358921d-be4f-45e5-ac1f-2c92c053887c": {
+          "type": "question",
+          "settings": {
+            "title": "Hur kontrolleras telefonerna innan de läggs ut till försäljning?",
+            "answer": "<p>Alla våra telefoner är noga kontrollerade, fabriksåterställda och har vid behov renoverats med hjälp av den senaste teknologin. Vi gör även en kvalitetskontroll med diagnostest på alla våra telefoner. Innan mobilerna säljs så ser vi också till att de är rengjorda och desinficerade. <\/p>"
+          }
+        },
+        "a60f009f-0124-41da-b926-99d6945dd332": {
+          "type": "separator",
+          "settings": {
+            "title": "Retur"
+          }
+        },
+        "d88dc1b5-41a2-41b8-9e92-6064dba4fc81": {
+          "type": "question",
+          "settings": {
+            "title": "Hur lång tid tar en återbetalning?",
+            "answer": "<p>Om du ångrar ditt köp och returnerar produkten inom 14 dagar så tar det ca 1-4 arbetsdagar för oss att behandla din order efter att vi har mottagit den. Efter detta gör vi en återbetalning tillbaka till dig.<\/p>"
+          }
+        },
+        "4f732f7b-37bf-4581-bdf8-ebe59cc24274": {
+          "type": "question",
+          "settings": {
+            "title": "Vad har ni för returpolicy?",
+            "answer": "<p>Vi har öppet köp med 14 dagars returrätt. Detta förutsätter att produkten är i samma skick som när den skickades från oss. Man returnerar produkten med DHL fraktsedeln som medföljer i varje leverans.<\/p>"
+          }
+        },
+        "30fd40be-f681-4f9a-b2b7-551afd78627e": {
+          "type": "separator",
+          "settings": {
+            "title": "Garanti"
+          }
+        },
+        "29f67cc0-7941-4b7d-a6e8-2e0529345806": {
+          "type": "question",
+          "settings": {
+            "title": "Vad erbjuder ni för garanti?",
+            "answer": "<p>Vi har 12 månaders garanti på alla våra telefoner, surfplattor och smartklockor och 14 dagars öppet köp.<\/p>"
+          }
+        },
+        "b15e1435-70a7-481e-b132-db96b8d6ebf7": {
+          "type": "question",
+          "settings": {
+            "title": "Vad täcker garantin?",
+            "answer": "<p>Vår garanti täcker alla tekniska fel som kamera, mikrofon, display m.m. Fel som uppkommer under garantitiden ska anses vara ursprungliga. Skulle fel visa sig bero på skada orsakad av kund såsom fukt, tapp eller stötskador, så gäller inte garantin.<\/p>"
+          }
+        },
+        "2967921a-40f3-4e8d-98e7-91c4cdf62aeb": {
+          "type": "question",
+          "settings": {
+            "title": "Vad gör jag om jag upptäcker fel?",
+            "answer": "<p>Om du upptäcker fel på din telefon så kontakta vår kundservice så hjälper vi dig att lösa problemet. <\/p><p>Du når oss enklast på <a href=\"mailto:kontakt@renewed.se\" title=\"mailto:kontakt@renewed.se\">kontakt@renewed.se<\/a>.<\/p>"
+          }
+        },
+        "09129178-8b78-485f-8f17-032d1acbc49e": {
+          "type": "separator",
+          "settings": {
+            "title": "Vimla abonnemang"
+          }
+        },
+        "9543605a-1e04-4615-95d9-4b117eea84c5": {
+          "type": "question",
+          "settings": {
+            "title": "Vilket nät använder Vimla?",
+            "answer": "<p>Vimla använder samma nät som Telenor, och täcker därmed 99,9% av Sveriges befolkning! Kolla in din täckning på <a href=\"https:\/\/vimla.se\/tackningskartan\/\" target=\"_blank\" title=\"https:\/\/vimla.se\/tackningskartan\/\">vimla.se\/tackningskartan.<\/a> <\/p>"
+          }
+        },
+        "dcbfcdf1-4339-4b7d-a5fc-6e1ef96a90d8": {
+          "type": "question",
+          "settings": {
+            "title": "Hur mycket surf behöver jag?",
+            "answer": "<p>Det beror på hur mycket du vill surfa, men här är några tumregler:<br\/><strong>3 GB<\/strong> – Perfekt till dig som mest kollar mail eller streamar Spotify. Räcker till mer än 30 minuters lyssnande på Spotify per dag. <br\/><strong>6 GB<\/strong> –  Passar dig som mest scrollar Facebook eller Instagram men inte ser så mycket på video. <br\/><strong>10 GB<\/strong> – Är perfekt för dig som lyssnar mycket på Spotify, och kanske vill kika lite Youtube på bussen in till stan.<br\/><strong>20 GB <\/strong>– Perfekt för vardagssurfaren, på väg in till jobbet eller skolan.<br\/><strong>50 GB<\/strong> – Passar dig som vill göra allt med mobilen. Surfa, streama, lyssna på Spotify. Gärna allt samtidigt.<br\/><strong>100 GB<\/strong> – Är för dig som aldrig vill behöva bry dig om att få slut på surf. Du kanske t.o.m använder mobilen som hotspot (internetdelning) ibland. <\/p>"
+          }
+        },
+        "c7389443-0e39-4cf4-b5ab-fc8a38c56909": {
+          "type": "question",
+          "settings": {
+            "title": "Kan jag byta abonnemangsnivå om jag ångrar mig?",
+            "answer": "<p>Självklart! Du kan ändra ditt abonnemang när du vill direkt på Mitt Vimla eller i deras App.<\/p>"
+          }
+        },
+        "9f4cda62-64e9-4c93-8b44-983cc946e8dc": {
+          "type": "question",
+          "settings": {
+            "title": "Vilka regler finns för att spara surf?",
+            "answer": "<p><br\/>Du får:<br\/>– Spara surf på <strong>alla Vimlas abonnemang<\/strong>.<br\/>– Spara <strong>hur mycket surf du vill.<\/strong><br\/>– Spara <strong>surfen hur länge du vill.<\/strong><\/p><p>Du kan läsa mer om sparad surf <a href=\"https:\/\/faq.vimla.se\/hc\/sv\/articles\/360019829558-S%C3%A5-h%C3%A4r-fungerar-sparad-data\" target=\"_blank\" title=\"https:\/\/faq.vimla.se\/hc\/sv\/articles\/360019829558-S%C3%A5-h%C3%A4r-fungerar-sparad-data\">här<\/a><\/p>"
+          }
+        },
+        "b6bd5779-8f3b-4468-af2d-dc18ac3cd484": {
+          "type": "question",
+          "settings": {
+            "title": "Kan jag flytta med mitt nummer?",
+            "answer": "<p>Självklart kan du välja att flytta med ditt nuvarande nummer till Vimla! För att din nummerflytt ska kunna godkännas så finns det några saker du behöver kontrollera innan du gör din beställning hos Vimla. <\/p><p>Läs allt om hur du går tillväga både innan, under och efter beställningen för att få till en lyckad nummerflytt, i Vimlas <a href=\"https:\/\/vimla.se\/nummerflytt-guide\/\" target=\"_blank\" title=\"https:\/\/vimla.se\/nummerflytt-guide\/\">nummerflyttsguide<\/a>.<\/p>"
+          }
+        },
+        "31110d06-3ab2-4200-bce6-cd7eed6bd366": {
+          "type": "question",
+          "settings": {
+            "title": "Behöver jag säga upp mitt gamla abonnemang?",
+            "answer": "<p>Ditt gamla abonnemang kommer automatiskt att sägas upp den dagen som ditt nummer flyttas över till Vimla. <\/p><p>Ifall du har uppsägningstid på abonnemanget så startar den på flyttdagen och abonnemanget avslutas först när uppsägningstiden är slut, vilket innebär att du kan få betala för två abonnemang samtidigt. Därför rekommenderar vi alltid innan en nummerflytt att ta kontakt med nuvarande operatör och kontrollera allt tillsammans med dem.<\/p>"
+          }
+        },
+        "4cd65460-db89-4c7b-a00c-ea7d535e2571": {
+          "type": "question",
+          "settings": {
+            "title": "Funkar Vimla med alla telefoner?",
+            "answer": "<p>Vissa <strong>2G-telefoner som är tillverkade före 2013<\/strong> har inte stöd för nya operatörer, och funkar därför inte med Vimla. Det beror på att Vimla startades <strong>efter att tillverkaren slutat uppdatera telefonens mjukvara<\/strong>.<br\/>Detta är inget unikt för Vimla, utan telefonerna känner inte igen några nystartade operatörer.<\/p>"
+          }
+        }
+      },
+      "block_order": [
+        "791050ba-1968-43e8-a8f5-6341c08bec0d",
+        "59189464-de49-4c96-86fb-02552ae550f2",
+        "0f6edad2-a287-4ae8-8946-3595a4ee4f3a",
+        "7995e95f-b575-4ec5-b392-1e697ec63a43",
+        "c05ddad3-5d27-475f-9784-ed34b2e22598",
+        "0c92941a-1535-41d7-b1f6-68bf67ccbec7",
+        "d38687c1-64d7-40d8-9c20-f3704889a12c",
+        "5f955301-dac1-4e32-a104-91bf16e1ab2d",
+        "4358921d-be4f-45e5-ac1f-2c92c053887c",
+        "a60f009f-0124-41da-b926-99d6945dd332",
+        "d88dc1b5-41a2-41b8-9e92-6064dba4fc81",
+        "4f732f7b-37bf-4581-bdf8-ebe59cc24274",
+        "30fd40be-f681-4f9a-b2b7-551afd78627e",
+        "29f67cc0-7941-4b7d-a6e8-2e0529345806",
+        "b15e1435-70a7-481e-b132-db96b8d6ebf7",
+        "2967921a-40f3-4e8d-98e7-91c4cdf62aeb",
+        "09129178-8b78-485f-8f17-032d1acbc49e",
+        "9543605a-1e04-4615-95d9-4b117eea84c5",
+        "dcbfcdf1-4339-4b7d-a5fc-6e1ef96a90d8",
+        "c7389443-0e39-4cf4-b5ab-fc8a38c56909",
+        "9f4cda62-64e9-4c93-8b44-983cc946e8dc",
+        "b6bd5779-8f3b-4468-af2d-dc18ac3cd484",
+        "31110d06-3ab2-4200-bce6-cd7eed6bd366",
+        "4cd65460-db89-4c7b-a00c-ea7d535e2571"
+      ],
+      "settings": {
+      }
+    }
+  },
+  "order": [
+    "main"
+  ]
+}

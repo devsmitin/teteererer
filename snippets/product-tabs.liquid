@@ -1,0 +1,81 @@
+{%- capture product_tabs -%}
+  {%- for block in section.blocks -%}
+    {%- case block.type -%}
+      {%- when 'content' -%}
+        {%- if block.settings.page != blank -%}
+          {%- assign title = block.settings.page.title -%}
+          {%- assign content = block.settings.page.content -%}
+        {%- else -%}
+          {%- assign title = block.settings.title -%}
+          {%- assign content = block.settings.content -%}
+        {%- endif -%}
+
+        {%- if title != blank and content != blank -%}
+          <div class="Collapsible Collapsible--large" {{ block.shopify_attributes }}>
+            <button class="Collapsible__Button Heading u-h6" data-action="toggle-collapsible" aria-expanded="false">
+              {{- title -}} <span class="Collapsible__Plus"></span>
+            </button>
+
+            <div class="Collapsible__Inner">
+              <div class="Collapsible__Content">
+                <div class="Rte">
+                  {{- content -}}
+                </div>
+              </div>
+            </div>
+          </div>
+        {%- endif -%}
+
+{%- when 'Specs' -%}
+          <div class="Collapsible Collapsible--large">
+        <button class="Collapsible__Button Heading u-h6" data-action="toggle-collapsible" aria-expanded="false">
+          {{ product.metafields.sf_product_tabs.tab_1_title }} <span class="Collapsible__Plus"></span>
+        </button>
+
+        <div class="Collapsible__Inner">
+          <div class="Collapsible__Content">
+            <div class="Rte">
+              {{ product.metafields.sf_product_tabs.tab_1_content }}
+            </div>
+          </div>
+        </div>
+    </div>
+
+ {%- when 'Info' -%}
+          <div class="Collapsible Collapsible--large">
+        <button class="Collapsible__Button Heading u-h6" data-action="toggle-collapsible" aria-expanded="false">
+          {{ product.metafields.sf_product_tabs.tab_2_title }} <span class="Collapsible__Plus"></span>
+        </button>
+
+        <div class="Collapsible__Inner">
+          <div class="Collapsible__Content">
+            <div class="Rte">
+              {{ product.metafields.sf_product_tabs.tab_2_content }}
+            </div>
+          </div>
+        </div>
+    </div>
+
+      {%- when 'reviews' -%}
+        <div class="Collapsible Collapsible--large" {{ block.shopify_attributes }}>
+          <button class="Collapsible__Button Heading u-h6" data-action="toggle-collapsible" aria-expanded="false">
+            <span>{{ 'product.tabs.reviews' | t }} <span class="text--light">({{ product.metafields.reviews.rating_count.value | default: 0 }})</span></span>
+            <span class="Collapsible__Plus"></span>
+          </button>
+
+          <div class="Collapsible__Inner">
+            <div class="Collapsible__Content">
+              <div id="shopify-product-reviews" data-id="{{product.id}}">{{ product.metafields.spr.reviews }}</div>
+            </div>
+          </div>
+        </div>
+    {%- endcase -%}
+  {%- endfor -%}
+{%- endcapture -%}
+{% unless product.tags contains 'hide_tab' %}
+{%- if product_tabs != blank -%}  
+  <div class="Product__Tabs Container">
+    {{- product_tabs -}}
+  </div>
+  {%- endif -%}
+{% endunless %}

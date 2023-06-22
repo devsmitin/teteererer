@@ -1,0 +1,164 @@
+  {% if template contains 'telenorgreenroom' or template contains 'telenor-tillbehor' %} 
+      <style>
+        .{{ template.suffix }}-{{ section.id }} {
+          background: {{ section.settings.bg }};
+        }
+      </style>
+  {% endif %}
+ <style>
+    .Text-flex .Text-flex-inner .Text-link {
+      color: {{ section.settings.color_link }}; 
+    }
+    </style>
+ 
+ 
+<section class="{{ template.suffix }}-{{ section.id }} Section {% unless section.settings.image %}Section--spacingNormal{% endunless %}">
+  <div class="Container">
+    <div class="Section--heading">
+      {%- if section.settings.title != blank -%}
+      <header class="SectionHeader SectionHeader--center">
+        <h2 class="SectionHeader__Heading Heading u-h1 TelenorEvolution-Bold">{{ section.settings.title | escape }}</h2>
+      </header>
+      {%- endif -%}
+    </div>
+    <div class="Text-flex">
+      {% for block in section.blocks %}
+          
+        <div class="Text-flex-inner">
+          <div class="flex-outer">
+			<article class="ArticleItem ArticleItem-main" {% if block %}{{ block.shopify_attributes }}{% endif %}>
+                {%- if block.settings.image != blank -%}
+                  {%- capture supported_sizes -%}{%- render 'image-size', sizes: '200,400,600,700,800,900,1000,1200', image: block.settings.image -%}{%- endcapture -%}
+                  {%- assign image_url = block.settings.image | img_url: '1x1' | replace: '_1x1.', '_{width}x.' -%}
+
+                  <a class="ArticleItem__ImageWrapper AspectRatio AspectRatio--withFallback" target="_blank" style="background: url({{ block.settings.image | img_url: '1x1', format: 'jpg' }}); padding-bottom: 58%; --aspect-ratio: 1.7" href="{{ block.settings.image_url }}">
+                    <img class="ArticleItem__Image Image--lazyLoad Image--fadeIn"
+                         data-src="{{ image_url }}"
+                         data-widths="[{{ supported_sizes }}]"
+                         data-sizes="auto"
+                         alt="{{ block.settings.image.alt | escape }}">
+
+                    <noscript>
+                      <img class="ArticleItem__Image" src="{{ block.settings.image | img_url: '600x' }}" alt="{{ block.settings.image.alt | escape }}">
+                    </noscript>
+                  </a>
+                {%- endif -%}
+
+                <div class="ArticleItem__Content" style="background-color:{{ block.settings.color_bg}};">
+                  {%- if block.settings.block_heading != blank -%}
+                    <h2 class="ArticleItem__Title TelenorEvolution-Bold Heading u-h2">
+                       {{ block.settings.block_heading | escape }}
+                    </h2>
+				  {% endif %}
+                  
+                  {%- if block.settings.block_heading != blank -%}
+                    <p class="ArticleItem__Excerpt TelenorEvolutionUI-Light">{{ block.settings.content }}</p>
+                  {% endif %}
+                
+                  <div class="Text-link">
+                    <a href="{{ block.settings.link_url }}" target="_blank" class="ArticleItem__Link Link Link--underline TelenorEvolutionUI-Light">{{ block.settings.link_text | escape }}</a>
+                  </div>
+                  
+                </div>
+              </article>
+          </div>
+        </div>
+      {% endfor %}
+    </div>
+  </div>
+</section>
+
+{% schema %}
+  {
+    "name": "New text with image",
+    "class": "shopify-section--bordered page--section",
+    "settings": [
+         {
+        "type": "color",
+        "id": "bg",
+        "label": "Select background color",
+        "default": "#F5F5F5"
+         },
+         {
+            "type": "color",
+            "id": "color_link",
+            "label": "Choose Link color",
+            "default": "#19aaf8"
+         },
+		{
+          "type": "text",
+          "id": "title",
+          "label": "Heading",
+          "default": "Title"
+        }
+	],
+      "blocks": [
+        {
+          "type": "image",
+          "name": "image",
+          "settings": [
+			   {
+                  "type": "color",
+                  "id": "color_bg",
+                  "label": "Choose Background color",
+                  "default": "#fff"
+               },
+              
+			   {
+                  "type": "image_picker",
+                  "id": "image",
+                  "label": "Image"
+               },
+			   {
+                  "type": "url",
+                  "id": "image_url",
+                  "label": "Image URL"
+               },
+			   {
+                  "type": "text",
+                  "id": "block_heading",
+                  "label": "Content heading",
+				  "default": "block heading"
+               },
+			   {
+                  "type": "richtext",
+                  "id": "content",
+                  "label": "Text",
+                  "default": "<p>Add your own custom content to give more information about your store, availability details...</p>"
+               },
+			   {
+                  "type": "text",
+                  "id": "link_text",
+                  "label": "Link text"
+               },
+               {
+                  "type": "url",
+                  "id": "link_url",
+                  "label": "Link URL"
+               }
+		   ]
+		}
+	],
+      "presets": [
+        {
+          "category": "Text",
+          "name": "New Text with Image section",
+          "settings": {},
+          "blocks": [
+            {
+              "type": "image",
+              "settings": {
+
+              }
+            }
+          ]
+        }
+      ]
+  }
+{% endschema %}
+
+{% stylesheet %}
+{% endstylesheet %}
+
+{% javascript %}
+{% endjavascript %}

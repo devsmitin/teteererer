@@ -1,0 +1,156 @@
+ {% if template contains 'telenorgreenroom' or template contains 'telenor-tillbehor' %} 
+      <style>
+        .{{ template.suffix }}-{{ section.id }} {
+          background: {{ section.settings.bg }};
+        }
+        .richtext-logo {
+          border-top: 1px solid var(--border-color) !important; 
+        }
+      </style>
+  {% endif %}
+
+<section class="{{ template.suffix }}-{{ section.id }} Section {% unless section.settings.image %}Section--spacingNormal{% endunless %}">
+  <div class="Container">
+    <div class="Richtext-bg">
+      <div class="Richtext-heading">
+      	 {%- if section.settings.title != blank -%}
+          <header class="SectionHeader SectionHeader--center">
+            <h2 class="SectionHeader__Heading Heading u-h1 TelenorEvolution-Bold">{{ section.settings.title | escape }}</h2>
+          </header>
+          {%- endif -%}
+      </div>
+      <div class="Richtext-content TelenorEvolutionUI-Light">
+      	{{ section.settings.content }}
+      </div>
+    </div>
+      <div class="logo--main">
+       {% if section.blocks.size > 0 %}
+          <ul class="logo--flex">
+          {% for block in section.blocks %}
+            <li class="logo-bar-section" {{ block.shopify_attributes }}>
+              {% if block.settings.link != blank %}
+                <a href="{{ block.settings.link }}">
+              {% endif %}
+              {% if block.settings.image != blank %}
+               {%- if has_alternate_image -%}
+                  {%- capture supported_sizes -%}{%- render 'image-size', sizes: '200,300,400,600,800,900,1000,1200', image: block.settings.image -%}{%- endcapture -%}
+
+                  {%- assign image_url = block.settings.image | img_url: '1x1' | replace: '_1x1.', '_{width}x.' -%}
+
+                  <img class="ProductItem__Image ProductItem__Image--alternate Image--lazyLoad Image--fadeIn" data-src="{{ image_url }}" data-widths="[{{ supported_sizes }}]" data-sizes="auto" alt="{{ block.settings.image.alt | escape }}" data-media-id="{{ block.settings.image.id }}">
+                {%- endif -%}
+
+                {%- capture supported_sizes -%}{%- render 'image-size', sizes: '200,400,600,700,800,900,1000,1200', image: block.settings.image -%}{%- endcapture -%}
+                {%- assign image_url = block.settings.image | img_url: '1x1' | replace: '_1x1.', '_{width}x.' -%}
+
+                <img class="ProductItem__Image Image--lazyLoad Image--fadeIn" data-src="{{ image_url }}" data-widths="[{{ supported_sizes }}]" data-sizes="auto" alt="{{ block.settings.image.alt | escape }}" data-media-id="{{ product.featured_media.id }}">
+                <span class="Image__Loader"></span>
+
+                <noscript>
+                  <img class="ProductItem__Image ProductItem__Image--alternate" src="{{ block.settings.image | img_url: '600x' }}" alt="{{ block.settings.image.alt | escape }}">
+                  <img class="ProductItem__Image" src="{{ block.settings.image| img_url: '600x' }}" alt="{{ block.settings.image.alt | escape }}">
+                </noscript>
+              {% else %}
+                  {{ placeholder | placeholder_svg_tag: 'ProductItem__Image PlaceholderSvg PlaceholderSvg--dark' }}
+              {% endif %}
+              {% if block.settings.link != blank %}
+                </a>
+              {% endif %}
+            </li>
+          {% endfor %}
+        </ul>
+      {% endif %}
+    </div>
+  </div>
+</section>
+<style>
+.logo-bar-section {
+ max-width: {{ section.settings.logo_width }};
+ display: inline-block;
+ padding: 10px;
+}
+</style>
+{% schema %}
+  {
+    "name": "richtext with logo",
+	"class": "shopify-section--bordered richtext-logo",
+    "settings": [
+            {
+              "type": "color",
+              "id": "bg",
+              "label": "Select background color",
+              "default": "#F5F5F5"
+            },     
+			{
+              "type": "text",
+              "id": "title",
+              "label": "Heading",
+              "default": "Title"
+            },
+            {
+              "type": "richtext",
+              "id": "content",
+              "label": "Text",
+              "default": "<p>Add your own custom content to give more information about your store, availability details...</p>"
+            },
+			{
+              "type": "select",
+              "id": "logo_width",
+              "label": "Logo width",
+              "default": "150px",
+              "options": [
+                {
+                  "label": "Extra Small",
+                  "value": "100px"
+                },
+                {
+                  "label": "Small",
+                  "value": "125px"
+                },
+                {
+                  "label": "Medium",
+                  "value": "150px"
+                },
+                {
+                  "label": "Large",
+                  "value": "175px"
+                },
+                {
+                  "label": "Extra Large",              
+                  "value": "200px"
+                }
+              ]
+      }
+	],
+	 "blocks": [
+      {
+        "type": "logo-section",
+        "name": "logo Section",
+        "settings": [
+			{
+              "type": "image_picker",
+              "id": "image",
+              "label": "Image"
+            },
+			{
+              "type": "url",
+              "id": "link",
+              "label": "Image URL"
+            }
+	    ]
+	  }
+	],
+      "presets": [
+    	{
+		  "category": "Logo",
+          "name": "Text with logo"
+		} 
+	]
+  }
+{% endschema %}
+
+{% stylesheet %}
+{% endstylesheet %}
+
+{% javascript %}
+{% endjavascript %}

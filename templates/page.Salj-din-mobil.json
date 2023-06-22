@@ -1,0 +1,251 @@
+{
+  "sections": {
+    "main": {
+      "type": "main-page",
+      "disabled": true,
+      "settings": {
+        "show_large": false
+      }
+    },
+    "16532916926c62d9ea": {
+      "type": "slideshow",
+      "blocks": {
+        "1653291692ac0ee759-1": {
+          "type": "image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/renewed_banner_desktop_3.jpg",
+            "mobile_image": "shopify:\/\/shop_images\/renewed_mobil_banner_1_91695ebf-6dde-445b-b65f-443bb23e2783.jpg",
+            "apply_overlay": false,
+            "content_position": "bottomLeft",
+            "content_position_mobile": "bottom",
+            "mobiletextbg": "",
+            "show_mobile": false,
+            "topheading": "",
+            "top_heading_font": "helvetica_n4",
+            "topheadfsize": 16,
+            "topheadcolor": "",
+            "topsubheadingmobile": "",
+            "topsubheading": "",
+            "top_subheading_font": "helvetica_n4",
+            "topsubheadfsize": 16,
+            "topsubheadcolor": "",
+            "listedpointsmobile": "",
+            "listedpoints": "",
+            "listedpointscolor": "",
+            "subheading": "",
+            "title": "",
+            "bottomheadfsize": 16,
+            "bottomhead_color": "",
+            "subtext": "",
+            "bottomsubheadfsize": 16,
+            "bottomsubhead_color": "",
+            "button_1_text": "",
+            "button_1_link": "",
+            "button_2_text": "",
+            "button_2_link": ""
+          }
+        },
+        "e0a530bd-7b5d-4995-bcd9-d90d6c2cc018": {
+          "type": "image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/renewed_banner_desktop_1.jpg",
+            "mobile_image": "shopify:\/\/shop_images\/renewed_mobil_banner_3.jpg",
+            "apply_overlay": false,
+            "content_position": "bottomLeft",
+            "content_position_mobile": "bottom",
+            "mobiletextbg": "",
+            "show_mobile": false,
+            "topheading": "",
+            "top_heading_font": "helvetica_n4",
+            "topheadfsize": 16,
+            "topheadcolor": "",
+            "topsubheadingmobile": "",
+            "topsubheading": "",
+            "top_subheading_font": "helvetica_n4",
+            "topsubheadfsize": 16,
+            "topsubheadcolor": "",
+            "listedpointsmobile": "",
+            "listedpoints": "",
+            "listedpointscolor": "",
+            "subheading": "",
+            "title": "",
+            "bottomheadfsize": 16,
+            "bottomhead_color": "",
+            "subtext": "",
+            "bottomsubheadfsize": 16,
+            "bottomsubhead_color": "",
+            "button_1_text": "",
+            "button_1_link": "",
+            "button_2_text": "",
+            "button_2_link": ""
+          }
+        }
+      },
+      "block_order": [
+        "1653291692ac0ee759-1",
+        "e0a530bd-7b5d-4995-bcd9-d90d6c2cc018"
+      ],
+      "settings": {
+        "bg": "#f5f5f5",
+        "show_fullscreen": false,
+        "show_arrow": false,
+        "autoplay": false,
+        "cycle_speed": 5,
+        "text_color": "#ffffff",
+        "button_color": "#363636",
+        "button_background": "#ffffff"
+      }
+    },
+    "16532919517943b0e4": {
+      "type": "foretag-image-with-text",
+      "settings": {
+        "show_border": false,
+        "subheading": "",
+        "title": "För en grönare och mer produktiv elektronikanvändning",
+        "image": "shopify:\/\/shop_images\/Foretag_1000_x_500.jpg",
+        "image_position": "right",
+        "content": "<p>Köp kvalitativ elektronik och IT-utrustning av oss på renewed. Alltid med garanti och öppet köp! Tryggt, Enkelt och Prisvärt!<\/p><p>Alla våra produkter är grundligt genomgångna, testade och renoverade av professionella tekniker. Produkterna säkerhetsraderas enligt lagstadgade regler där vi använder vår certifierade samarbetspartner phonecheck och deras marknadsledande programvara som på ett säkert sätt uppfyller kraven enligt GDPR. <\/p><p>Vi på renewed har sammanlagt över 30 års erfaranhet inom IT branschen och vi kan se ett ökat fokus på ansvarsfullt företagande med hållbarhet i fokus. <\/p><p>Med vår lösning av återvunna och förnyade elektronikprodukter så bidrar vi tillsammans med våra kunder till en bättre miljö och framtid. Samtidigt sparar våra kunder pengar genom att konsumera smartare. <\/p>",
+        "link_text": "",
+        "link_url": ""
+      }
+    },
+    "1653296448b0f278f0": {
+      "type": "foretag-image-with-text",
+      "blocks": {
+        "b441c883-ca50-4e51-9e8a-0511489d3697": {
+          "type": "text",
+          "settings": {
+            "title-1": "<b>Ny mobil<\/b>",
+            "sub-content-1": "<p>86,5 kg <\/p><p>CO2e<\/p>",
+            "title-2": "<b>Mobil Renewed<\/b>",
+            "sub-content-2": "<p>6,82 kg <\/p><p>   CO2e<br\/><\/p>",
+            "title-3": "<b>Skillnad<\/b>",
+            "sub-content-3": "<p>-92%<\/p>"
+          }
+        },
+        "336d0a24-0eff-4bc8-918b-57e043027994": {
+          "type": "text",
+          "settings": {
+            "title-1": "",
+            "sub-content-1": "<p>281 kg<\/p><p>Råmaterial <\/p>",
+            "title-2": "",
+            "sub-content-2": "<p>23 kg<\/p><p>Råmaterial <\/p>",
+            "title-3": "",
+            "sub-content-3": "<p>-92%<\/p>"
+          }
+        },
+        "917ae1e5-46fb-4483-bd01-f589fe009475": {
+          "type": "text",
+          "settings": {
+            "title-1": "",
+            "sub-content-1": "<p>82,300 L<\/p><p>Vatten <\/p>",
+            "title-2": "",
+            "sub-content-2": "<p>13,900 L<\/p><p>Vatten<\/p>",
+            "title-3": "",
+            "sub-content-3": "<p>-83%<\/p>"
+          }
+        },
+        "f0badfc7-a2e8-4ce5-aaea-5062785225eb": {
+          "type": "text",
+          "settings": {
+            "title-1": "",
+            "sub-content-1": "<p>199 g<\/p><p>E-avfall <\/p>",
+            "title-2": "",
+            "sub-content-2": "<p>24 g<\/p><p>E-avfall <\/p>",
+            "title-3": "",
+            "sub-content-3": "<p>-88%<\/p>"
+          }
+        }
+      },
+      "block_order": [
+        "b441c883-ca50-4e51-9e8a-0511489d3697",
+        "336d0a24-0eff-4bc8-918b-57e043027994",
+        "917ae1e5-46fb-4483-bd01-f589fe009475",
+        "f0badfc7-a2e8-4ce5-aaea-5062785225eb"
+      ],
+      "settings": {
+        "show_border": true,
+        "subheading": "",
+        "title": "Ansvarsfullt företagande för miljön!",
+        "image": "shopify:\/\/shop_images\/Foretag_1000_x_500_2.jpg",
+        "image_position": "left",
+        "content": "",
+        "link_text": "",
+        "link_url": ""
+      }
+    },
+    "54899ceb-e1cf-4ab2-ba9c-2512de1761bb": {
+      "type": "foretag-image-with-text",
+      "settings": {
+        "show_border": true,
+        "subheading": "",
+        "title": "Tillsammans mot en bättre framtid",
+        "image": "shopify:\/\/shop_images\/Foretag_1000_x_500_3.jpg",
+        "image_position": "right",
+        "content": "<p>Renewed arbetar för en grönare framtid och för att minska Koldioxid (CO2) avtrycken på både kort och lång sikt. <\/p><p>Här ovan kan ni se skillnaden och miljöpåverkan när en ny mobiltelefon tillverkas jämfört med en återvunnen mobil. <\/p><p>Vi på renewed ser det som en självklarhet att ta vara på de resurser som redan finns och inte utsätta vår planet och miljö för mer utsläpp än vad som är nödvändigt. Då över 95% av alla mobiltelefoner som säljs i Sverige kan återanvändas så strävar vi efter att skapa en mer hållbar utveckling och framtid med ansvarsfullt företagande. <\/p>",
+        "link_text": "",
+        "link_url": ""
+      }
+    },
+    "16533904411e33e93a": {
+      "type": "foretag-richtext",
+      "settings": {
+        "color_bg": "#ffffff",
+        "title": "Sälj er gamla IT och elektronikutrustning till oss!",
+        "Heading_position": "center",
+        "content": "<p>Vi har en mångårig erfaranhet av andrahandsmarknaden för begagnad utrustning. Med detta som vår expertis så erbjuder vi unika lösningar och tjänster. <\/p><p>Nyckelord i vår verksamhet är säkerhet, kompetens och kvalité. <\/p><p>Vi arbetar aktivt för att minska klimatpåverkan som nytillverkning av elektronikutrustning innebär. Vi hanterar hela processen, allt ifrån säker upphämtning av era produkter till säkerhetsradering enligt GDPR till återvinning. Vinst för både miljön och företaget.  <\/p>"
+      }
+    },
+    "1653392816770d06c9": {
+      "type": "foretag-contact",
+      "blocks": {
+        "a36b59ac-ee16-4e64-bf1c-21dc8b0206b0": {
+          "type": "List",
+          "settings": {
+            "list-title": "Gör en inventering av er utrustning."
+          }
+        },
+        "649fa263-53c0-4eeb-9d17-fef51d76fbcb": {
+          "type": "List",
+          "settings": {
+            "list-title": "Vi värderar och återkopplar."
+          }
+        },
+        "4d7baf4e-48e7-4526-a900-6f58d7e9b2cf": {
+          "type": "List",
+          "settings": {
+            "list-title": "Efter överenskommelse hämtar vi utrustningen i säkerhetsskåp, säkerhetsraderar enligt GDPR, återrapporterar och ni får ersättning för er utrustning."
+          }
+        },
+        "de282b3b-bbdd-46bc-97d8-8b3690ea28fe": {
+          "type": "text",
+          "settings": {
+            "title": "Mobil (valfritt)",
+            "use_long_text": false,
+            "is_required": false
+          }
+        }
+      },
+      "block_order": [
+        "a36b59ac-ee16-4e64-bf1c-21dc8b0206b0",
+        "649fa263-53c0-4eeb-9d17-fef51d76fbcb",
+        "4d7baf4e-48e7-4526-a900-6f58d7e9b2cf",
+        "de282b3b-bbdd-46bc-97d8-8b3690ea28fe"
+      ],
+      "settings": {
+        "title": "Hur går man tillväga?",
+        "content": "",
+        "right-title": "<p>Är du ett företag eller organisation - Är du intresserad av att köpa och\/eller sälja - kontakta oss via formuläret nedan eller ring 08-517 34 300<\/p>"
+      }
+    }
+  },
+  "order": [
+    "main",
+    "16532916926c62d9ea",
+    "16532919517943b0e4",
+    "1653296448b0f278f0",
+    "54899ceb-e1cf-4ab2-ba9c-2512de1761bb",
+    "16533904411e33e93a",
+    "1653392816770d06c9"
+  ]
+}

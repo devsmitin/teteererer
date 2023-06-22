@@ -1,0 +1,104 @@
+<section class="Section Section--spacingNormal">
+  <div class="Container">
+    <div class="Richtext-bg" style="background-color:{{ section.settings.color_bg }};">
+      <div class="Richtext-heading Foretag-richtext-heading">
+      	 {%- if section.settings.title != blank -%}
+          <header class="SectionHeader SectionHeader--{{ section.settings.Heading_position }}">
+            <h2 class="SectionHeader__Heading Heading u-h1">{{ section.settings.title | escape }}</h2>
+          </header>
+          {%- endif -%}
+      </div>
+      <div class="Richtext-content">
+      	{{ section.settings.content }}
+      </div>
+      <div class="Richtext-img">
+          {% if section.settings.image != blank %}
+          {%- if has_alternate_image -%}
+          {%- capture supported_sizes -%}{%- render 'image-size', sizes: '200,300,400,600,800,900,1000,1200', image: section.settings.image -%}{%- endcapture -%}
+
+          {%- assign image_url = section.settings.image | img_url: '1x1' | replace: '_1x1.', '_{width}x.' -%}
+
+          <img class="ProductItem__Image ProductItem__Image--alternate Image--lazyLoad Image--fadeIn" data-src="{{ image_url }}" data-widths="[{{ supported_sizes }}]" data-sizes="auto" alt="{{ section.settings.image.alt | escape }}" data-media-id="{{ section.settings.image.id }}">
+          {%- endif -%}
+
+          {%- capture supported_sizes -%}{%- render 'image-size', sizes: '200,400,600,700,800,900,1000,1200', image: section.settings.image -%}{%- endcapture -%}
+          {%- assign image_url = section.settings.image | img_url: '1x1' | replace: '_1x1.', '_{width}x.' -%}
+
+          <img class="ProductItem__Image Image--lazyLoad Image--fadeIn" data-src="{{ image_url }}" data-widths="[{{ supported_sizes }}]" data-sizes="auto" alt="{{ section.settings.image.alt | escape }}" data-media-id="{{ product.featured_media.id }}">
+          <span class="Image__Loader"></span>
+
+          <noscript>
+            <img class="ProductItem__Image ProductItem__Image--alternate" src="{{ section.settings.image | img_url: '600x' }}" alt="{{ section.settings.image.alt | escape }}">
+            <img class="ProductItem__Image" src="{{ section.settings.image| img_url: '600x' }}" alt="{{ section.settings.image.alt | escape }}">
+          </noscript>
+          {% else %}
+          {{ placeholder }}
+          {% endif %}
+      </div>
+    </div>
+  </div>
+</section>
+
+{% schema %}
+  {
+    "name": "Foretag richtext section",
+	"class": "shopify-section--bordered richtext--section",
+    "settings": [
+			{
+              "type": "color",
+              "id": "color_bg",
+              "label": "Choose Background color",
+              "default": "#fff"
+            },
+			{
+              "type": "text",
+              "id": "title",
+              "label": "Heading",
+              "default": "Title"
+            },
+			{
+              "type": "select",
+              "id": "Heading_position",
+              "label": "Heading position",
+              "options": [
+                {
+                  "value": "left",
+                  "label": "Left"
+                },
+                {
+                  "value": "right",
+                  "label": "Right"
+                },
+				{
+                  "value": "center",
+                  "label": "Center"
+                }
+              ],
+              "default": "center"
+            },
+            {
+              "type": "richtext",
+              "id": "content",
+              "label": "Text",
+              "default": "<p>Add your own custom content to give more information about your store, availability details...</p>"
+            },
+			{
+              "type": "image_picker",
+              "id": "image",
+              "label": "Image"
+            }
+	],
+      "presets": [
+    	{
+		  "category": "Text",
+          "name": "Foretag richtext section"
+		} 
+	]
+  }
+{% endschema %}
+
+{% stylesheet %}
+{% endstylesheet %}
+
+{% javascript %}
+{% endjavascript %}

@@ -1,0 +1,62 @@
+{
+  "sections": {
+    "main": {
+      "type": "main-list-collections",
+      "blocks": {
+        "4816d6bb-1b33-430a-9ba5-a8330c472cea": {
+          "type": "collection",
+          "settings": {
+            "collection": "telefoner",
+            "image": "shopify:\/\/shop_images\/daniel-romero-KeOUN9KaQAI-unsplash.jpg",
+            "image_alignment": "center center",
+            "content_position": "bottomLeft",
+            "subheading": "",
+            "title": "Begagnade mobiler",
+            "button_text": "Köp nu"
+          }
+        },
+        "dfa27ef0-3964-4042-9f9d-5a8521703f5a": {
+          "type": "collection",
+          "settings": {
+            "collection": "surfplatta",
+            "image": "shopify:\/\/shop_images\/daniel-romero-kp9L5wv9z1A-unsplash.jpg",
+            "image_alignment": "center center",
+            "content_position": "bottomLeft",
+            "subheading": "",
+            "title": "Begagnade surfplattor",
+            "button_text": "Köp nu"
+          }
+        },
+        "d12847b5-650c-4f8d-b76c-b166c9119df5": {
+          "type": "collection",
+          "settings": {
+            "collection": "klockor",
+            "image": "shopify:\/\/shop_images\/daniel-korpai-oOlPR-Fwd7A-unsplash.jpg",
+            "image_alignment": "center center",
+            "content_position": "bottomLeft",
+            "subheading": "",
+            "title": "Begagnade smartklockor",
+            "button_text": "Köp nu"
+          }
+        }
+      },
+      "block_order": [
+        "4816d6bb-1b33-430a-9ba5-a8330c472cea",
+        "dfa27ef0-3964-4042-9f9d-5a8521703f5a",
+        "d12847b5-650c-4f8d-b76c-b166c9119df5"
+      ],
+      "settings": {
+        "collections_to_show": "selected",
+        "image_size": "normal",
+        "add_spacing": true,
+        "expand_collection": false,
+        "apply_overlay": true,
+        "text_color": "#ffffff",
+        "button_color": "#0059c9"
+      }
+    }
+  },
+  "order": [
+    "main"
+  ]
+}

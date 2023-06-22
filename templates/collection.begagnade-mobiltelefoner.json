@@ -1,0 +1,54 @@
+{
+  "sections": {
+    "main": {
+      "type": "main-collection",
+      "settings": {
+        "show_collection_info": true,
+        "show_collection_image": false,
+        "apply_overlay": false,
+        "show_color_swatch": true,
+        "show_vendor": false,
+        "collection_image_size": "normal",
+        "show_sort_by": false,
+        "show_layout_switch": false,
+        "toolbar_position": "top",
+        "show_filters": true,
+        "show_filter_color_swatch": true,
+        "expand_filters": true,
+        "filter_position": "sidebar",
+        "filter_menu": "",
+        "grid_items_per_page": 16,
+        "grid_mobile_items_per_row": "2",
+        "grid_desktop_items_per_row": 4
+      }
+    },
+    "recently-viewed-products": {
+      "type": "recently-viewed-products",
+      "disabled": true,
+      "settings": {
+        "title": "Recently viewed",
+        "show_product_info": true,
+        "show_vendor": false,
+        "show_color_swatch": false
+      }
+    },
+    "1664314381cef131ec": {
+      "type": "foretag-image-with-text",
+      "settings": {
+        "show_border": true,
+        "subheading": "",
+        "title": "Begagnade mobiltelefoner",
+        "image": "shopify:\/\/shop_images\/Begagnade_mobiltelefoner.png",
+        "image_position": "right",
+        "content": "<p>Letar du efter en billig begagnad mobiltelefon? Då har du hittat rätt! Hos renewed kan du göra något bra för miljön samtidigt som du sparar pengar. Begagnad, renoverad, återvunnen, refurbad, ja ett kärt barn har många namn. Hos oss på renewed, så jobbar vi hårt för att våra förnyade telefoner håller högsta kvarlité och känner oss trygga på attt våra begagnade mobiltelefoner håller marknadens bästa standard. Därför erbjuder vi 12 månaders garanti på alla våra mobiler och 14 dagars ångerrätt. Vi samarbetar endast med seriösa auktoriserade partners för att säkerställa att alla delar i våra mobiltelefoner är original. <\/p><p>Renewed är ett svenskt företag som säljer svensksålda mobiler till marknadens bästa priser i motsvarande kvalité. <\/p><p>Köpa nytt eller begagnat?<\/p><p>Senaste åren har populariteten för andrahandsmarknaden av mobiltelefoner vuxit väldigt mycket i Sverige. Anledningen till detta är många. Kvalitén på de nya telefonerna som släpps håller väldigt hög standard och har en livslängd på 5-7 år. Ändå släpps nya modeller varje år av tillverkarna vilket hos många skapar ett måste ha begär. Detta har skapat en marknad för folk som önskar att ha en nästan ny mobil fast inte känner att de önskar lägga tusentals kronor varje år på att få en uppgraderad kamera.<\/p><p>Om du känner att du vill lägga dina pengar på annat kul men ändå vill ha en telefon med senaste teknologin. Passa då på att titta igenom vårt sortiment av begagnade mobiler som är kontrollerade av professionella tekinker och håller hög standard. Köp smart, köp renewed! <\/p>",
+        "link_text": "",
+        "link_url": ""
+      }
+    }
+  },
+  "order": [
+    "main",
+    "recently-viewed-products",
+    "1664314381cef131ec"
+  ]
+}

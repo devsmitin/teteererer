@@ -1,0 +1,39 @@
+{
+  "sections": {
+    "main": {
+      "type": "main-collection",
+      "settings": {
+        "show_collection_info": true,
+        "show_collection_image": false,
+        "apply_overlay": false,
+        "show_color_swatch": true,
+        "show_vendor": false,
+        "collection_image_size": "normal",
+        "show_sort_by": true,
+        "show_layout_switch": false,
+        "toolbar_position": "top",
+        "show_filters": true,
+        "show_filter_color_swatch": true,
+        "expand_filters": true,
+        "filter_position": "sidebar",
+        "filter_menu": "",
+        "grid_items_per_page": 48,
+        "grid_mobile_items_per_row": "2",
+        "grid_desktop_items_per_row": 4
+      }
+    },
+    "1664815375efc734b5": {
+      "type": "richtext",
+      "settings": {
+        "color_bg": "#efefef",
+        "title": "Begagnade smartklockor",
+        "content": "<p>Letar du efter en billig begagnad smartklocka? Då har du hittat rätt!<br\/>Hos renewed kan du göra något bra för miljön samtidigt som du sparar pengar.<\/p><p>Begagnad, renoverad, återvunnen, refurbad, ja det finns många namn som används på second hand marknaden. <\/p><p>Hos oss på renewed, så jobbar vi hårt för att våra förnyade smartklockor ska hålla den högsta kvalitén och vi känner oss trygga med att våra begagnade smartklockor håller marknadens bästa standard.<\/p><p>Därför erbjuder vi 12 månaders garanti på alla våra klockor och 14 dagars ångerrätt. Vi samarbetar endast med seriösa auktoriserade partners för att säkerställa att alla delar i våra klockor är original.<\/p><p>Renewed är ett svenskt företag som säljer svensksålda mobiler, surfplattor och smartklockor till marknadens bästa priser i motsvarande kvalité.<\/p><p>Vi säljer smartklockor från flera olika märken och i olika modeller men våra populäraste klockor är Apple Watch och Samsung Watch.<\/p><p>Vi säljer våra begagnade klockor i olika skick. Med skick så menar vi endast klockans kosmetiska utseende och inte funktion. Oavsett vilket skick ni väljer så fungerar smartklockan som ny där alla våra klockor noga kontrolleras av professionella tekniker, testade och fungerar lika bra som nya klockor. Därför känner vi oss väldigt trygga med att kunna erbjuda våra kunder 12 månaders garanti och 14 dagars ångerrätt på alla våra smartklockor.<\/p><p><strong>Nedan är de skick vi erbjuder våra kunder:<\/strong><\/p><p><strong>Nyskick<\/strong> = En produkt som nästan inte har några tecken alls på användning. Samma funktionalitet som om du köper en fabriksny produkt.  <\/p><p><strong>Mycket bra skick<\/strong> = En produkt i mycket bra skick och hög standard. Skärmen och ramen kan ha enstaka mindre repor men inga tydliga märken. Skärmen och ramen är dock fria från sprickor. Samma funktionalitet som om du köper en fabriksny produkt.  <\/p><p><strong>Bra skick<\/strong> = En fin produkt med några tecken av användning. Skärmen och ramen kan ha mindre repor och märken. Är dock fri från sprickor. Samma funktionalitet som om du köper en fabriksny produkt.  <\/p><p><strong>Köpa nytt eller begagnat?<\/strong><\/p><p>Senaste åren har populariteten för andrahandsmarknaden av hemelektronik vuxit väldigt mycket i Sverige.<\/p><p>Om du känner att du vill lägga dina pengar på annat kul men ändå vill ha en smartklocka med den senaste teknologin. Passa då på att titta igenom vårt sortiment av begagnade klockor som är kontrollerade av professionella tekniker och håller en hög standard.<\/p><p>Köp smart, köp renewed!<\/p><p><\/p>",
+        "image": "shopify:\/\/shop_images\/Begagnade_mobiltelefoner_cc8b4a80-28bd-4ad9-b6bd-dd42f8bc170f.jpg"
+      }
+    }
+  },
+  "order": [
+    "main",
+    "1664815375efc734b5"
+  ]
+}

@@ -1,0 +1,60 @@
+<div class="CampaignBanner">
+  <a class="clickCampaignBanner" href="{{ section.settings.text-link }}">
+    <div class="CampaignBanner__Banner">
+      <div class="CampaignBanner__Text">
+        {{ section.settings['banner-text'] }}
+      </div>
+    </div>
+  </a>
+</div>
+
+<style>
+   .CampaignBanner__Banner {
+     background:{{ section.settings.background }} !important;
+    }
+  .CampaignBanner__Text{
+    color: {{ section.settings.text_color }} !important;
+    text-align:center;
+    padding: 5px;
+  }
+</style>
+
+{% schema %}
+{
+  "name": "Thin Banner",
+  "settings": [
+     {
+      "type": "text",
+      "id": "banner-text",
+      "label": "Banner Text",
+      "default": "¡Los mejores precios en diferentes iPhones!"
+    },
+     {
+      "type": "url",
+      "id": "text-link",
+      "label": "Banner Link"
+    },
+       {
+      "type": "color",
+      "id": "background",
+      "label": "Banner Bacground",
+      "default": "#1c1b1b"
+    },
+       {
+      "type": "color",
+      "id": "text_color",
+      "label": "Banner Text",
+      "default": "#1c1b1b"
+    }
+  ],
+    "presets": [
+    {
+      "category": "Collection",
+      "name": "Thin Banner",
+      "settings": {}
+     
+    }
+  ]
+
+}
+{% endschema %}

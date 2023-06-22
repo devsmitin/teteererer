@@ -1,0 +1,110 @@
+{% capture full_section %}
+  <section class="Section Section--spacingNormal" id="section-{{ section.id }}">
+    <div class="Container">
+      {%- if section.settings.subheading != blank or section.settings.title != blank -%}
+        <header class="SectionHeader SectionHeader--center custom_review">
+          {%- if section.settings.subheading != blank -%}
+            <h3 class="SectionHeader__SubHeading Heading u-h6">{{ section.settings.subheading | escape }}</h3>
+          {%- endif -%}
+  
+          {%- if section.settings.title != blank -%}
+            <h2 class="SectionHeader__Heading Heading u-h1">{{ section.settings.title | escape }}</h2>
+          {%- endif -%}
+        </header>
+      {%- endif -%}
+  
+      <div class="Rte" style="text-align: center">
+        {{ section.settings.html }}
+      </div>
+    </div>
+  </section>
+{%- endcapture -%}
+
+{%- if localization.country == 'Danmark' and section.settings.Denmark -%}
+  {{ full_section }}
+{% elsif localization.country == 'Sverige' and section.settings.Sverige %}
+  {{ full_section }}
+{% elsif localization.country == 'Italia' and section.settings.Italy %}
+  {{ full_section }}
+{% elsif localization.country == 'Deutschland' and section.settings.Germay %}
+  {{ full_section }}
+{% elsif localization.country == 'France' and section.settings.France %}
+  {{ full_section }}
+{% elsif localization.country == 'España' and section.settings.spain %}
+  {{ full_section }}
+{% endif %}
+
+
+{% schema %}
+{
+  "name": "Custom HTML",
+  "class": "shopify-section--bordered",
+  "settings": [
+     {
+        "type": "header",
+        "content": "Check country in which you want show this section"
+      },
+    {
+      "type": "checkbox",
+      "id": "Sverige",
+      "label": "Sverige",
+      "default": false
+    },
+     {
+      "type": "checkbox",
+      "id": "Denmark",
+      "label": "Denmark",
+      "default": false
+    },
+     {
+      "type": "checkbox",
+      "id": "Italy",
+      "label": "Italy",
+      "default": false
+    },
+     {
+      "type": "checkbox",
+      "id": "Germay",
+      "label": "Germay",
+      "default": false
+    },
+     {
+      "type": "checkbox",
+      "id": "France",
+      "label": "France",
+      "default": false
+    },
+     {
+      "type": "checkbox",
+      "id": "spain",
+      "label": "spain",
+      "default": false
+    },
+    {
+      "type": "text",
+      "id": "subheading",
+      "label": "Sub-heading",
+      "default": "Sub-heading"
+    },
+    {
+      "type": "text",
+      "id": "title",
+      "label": "Heading",
+      "default": "Your HTML"
+    },
+    {
+      "type": "html",
+      "id": "html",
+      "label": "HTML content",
+      "default": "<p>Write your own custom HTML content.</p>"
+    }
+  ],
+  "presets": [
+    {
+      "category": "Advanced",
+      "name": "Custom HTML",
+      "settings": {}
+    }
+  ]
+}
+{% endschema %}

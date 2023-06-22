@@ -1,0 +1,211 @@
+<section class="Section Section--spacingNormal">
+  <div class="Container">
+    <div class="contact-part"> 
+      <div class="contact-box">
+         <div class="Richtext-heading Foretag-richtext-heading">
+           {%- if section.settings.title != blank -%}
+            <header class="SectionHeader SectionHeader--{{ section.settings.Heading_position }}">
+              <h2 class="SectionHeader__Heading Heading u-h1">{{ section.settings.title | escape }}</h2>
+            </header>
+            {%- endif -%}
+         </div>
+          {%- if section.settings.content != blank -%}
+          <div class="Richtext-content">
+            {{ section.settings.content }}
+          </div>
+        {% endif %}
+           <ul class="Foretag-contact-info">
+              {%- for block in section.blocks -%}
+                  {%- if block.type == 'List' -%}
+                         <li>{{ block.settings.list-title | escape }}</li>
+                  {%- endif -%}
+              {%- endfor -%}
+         </ul>
+      </div>
+      <div class="contact-box">
+      	{%- if section.settings.right-title != blank -%}
+          <div class="Richtext-content Contect-content">
+            {{ section.settings.right-title }}
+          </div>
+        {% endif %}
+           <div class="Contact-form">
+             {%- form 'contact', class: 'Form Form--spacingTight' -%}
+                {%- if form.posted_successfully? -%}
+                  <p class="Alert Alert--success">{{ 'contact.form.successfully_sent' | t }}</p>
+                {%- endif -%}
+
+                {%- if form.errors -%}
+                  <div class="Form__Alert Alert Alert--error">
+                    <ul class="Alert__ErrorList">
+                      {%- for field in form.errors -%}
+                        {%- if field == 'form' -%}
+                          <li class="Alert__ErrorItem">{{ form.errors.messages[field] }}</li>
+                        {%- else -%}
+                          <li class="Alert__ErrorItem"><strong>{{ form.errors.translated_fields[field] }}</strong> {{ form.errors.messages[field] }}</li>
+                        {%- endif -%}
+                      {%- endfor -%}
+                    </ul>
+                  </div>
+                {%- endif -%}
+
+                <div class="Form__Group">
+                  <div class="Form__Item">
+                    <input type="text" class="Form__Input" name="contact[name]" aria-label="{{ 'contact.form.name' | t }}" placeholder="{{ 'contact.form.name' | t }}" required {% if customer %}value="{{ customer.name }}"{% endif %}>
+                    <label class="Form__FloatingLabel">{{ 'contact.form.name' | t }}</label>
+                  </div>
+
+                  <div class="Form__Item">
+                    <input type="email" class="Form__Input" name="contact[email]" aria-label="{{ 'contact.form.email' | t }}" placeholder="{{ 'contact.form.email' | t }}" required {% if customer %}value="{{ customer.email }}"{% endif %}>
+                    <label class="Form__FloatingLabel">{{ 'contact.form.email' | t }}</label>
+                  </div>
+                </div>
+
+                {%- for block in section.blocks -%}
+                  {%- assign field_title = block.settings.title -%}
+
+                  {%- if field_title == blank -%}
+                    {%- capture field_title -%}Custom field {% increment custom_field %}{%- endcapture -%}
+                  {%- endif -%}
+
+                  {%- if block.type == 'text' -%}
+                    <div class="Form__Item">
+                      {%- if block.settings.use_long_text -%}
+                        <textarea name="contact[{{ field_title | escape }}]" cols="30" rows="10" class="Form__Textarea" aria-label="{{ block.settings.title | escape }}" placeholder="{{ block.settings.title | escape }}" {% if block.settings.is_required %}required{% endif %}></textarea>
+                        <label class="Form__FloatingLabel">{{ block.settings.title | escape }}</label>
+                      {%- else -%}
+                        <input type="text" class="Form__Input" name="contact[{{ field_title | escape }}]" aria-label="{{ block.settings.title | escape }}" placeholder="{{ block.settings.title | escape }}" {% if block.settings.is_required %}required{% endif %}>
+                        <label class="Form__FloatingLabel">{{ block.settings.title | escape }}</label>
+                      {%- endif -%}
+                    </div>
+                  {%- elsif block.type == 'dropdown' -%}
+                    {%- assign values = block.settings.values | split: ',' -%}
+
+                    {%- if values == empty -%}
+                      {%- continue -%}
+                    {%- endif -%}
+
+                    <div class="Form__Item">
+                      <div class="Form__Select Select Select--primary">
+                        {%- render 'icon' with 'select-arrow' -%}
+
+                        <select name="contact[{{ field_title | escape }}]" title="{{ block.settings.title | escape }}" required>
+                          <option value="" disabled selected>{{ block.settings.title | escape }}</option>
+
+                          {%- for value in values -%}
+                            {%- assign trim_value = value | strip -%}
+
+                            <option value="{{ trim_value | escape }}">{{ trim_value | escape }}</option>
+                          {%- endfor -%}
+                        </select>
+                      </div>
+                    </div>
+                  {%- endif -%}
+                {%- endfor -%}
+
+                <div class="Form__Item">
+                  <textarea name="contact[body]" cols="30" rows="10" class="Form__Textarea" aria-label="{{ 'contact.form.message' | t }}" placeholder="{{ 'contact.form.message' | t }}" required></textarea>
+                  <label class="Form__FloatingLabel">{{ 'contact.form.message' | t }}</label>
+                </div>
+
+                <button type="submit" class="Form__Submit Button Button--primary Button--full">{{ 'contact.form.submit' | t }}</button>
+              {%- endform -%}
+          </div>
+      </div>
+    </div>
+  </div>
+</section>
+{% schema %}
+  {
+    "name": "Foretag contact us",
+    "class": "shopify-section--bordered Foretag-contact-main",
+    "settings": [
+		    {
+              "type": "text",
+              "id": "title",
+              "label": "Heading",
+              "default": "Title"
+            },
+			{
+              "type": "richtext",
+              "id": "content",
+              "label": "Text",
+              "default": "<p>Add your own custom content to give more information about your store, availability details...</p>"
+            },
+			{
+              "type": "richtext",
+              "id": "right-title",
+              "label": "Form heading",
+              "default": "<p>Add your own custom content to give more information about your store, availability details...</p>"
+            }
+	],
+	  "blocks": [
+    {
+      "type": "text",
+      "name": "Text field",
+      "settings": [
+        {
+          "type": "text",
+          "id": "title",
+          "label": "Name",
+          "default": "Custom field"
+        },
+        {
+          "type": "checkbox",
+          "id": "use_long_text",
+          "label": "Use long text",
+          "default": false
+        },
+        {
+          "type": "checkbox",
+          "id": "is_required",
+          "label": "Field is required",
+          "default": false
+        }
+      ]
+    },
+    {
+      "type": "dropdown",
+      "name": "Dropdown",
+      "settings": [
+        {
+          "type": "text",
+          "id": "title",
+          "label": "Name",
+          "default": "Custom field"
+        },
+        {
+          "type": "text",
+          "id": "values",
+          "label": "Values",
+          "info": "Separate each value by a comma.",
+          "default": "value 1, value 2, value 3"
+        }
+      ]
+    },
+	{
+     "type": "List",
+      "name": "Text list",
+      "settings": [
+          {
+            "type": "text",
+            "id": "list-title",
+            "label": "Enter text",
+            "default": "Text"
+          }
+		]
+   }	
+  ],
+	"presets": [
+    	{
+		  "category": "Text",
+          "name": "Foretag contact us"
+		} 
+	]
+  }
+{% endschema %}
+
+{% stylesheet %}
+{% endstylesheet %}
+
+{% javascript %}
+{% endjavascript %}

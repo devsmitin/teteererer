@@ -1,0 +1,57 @@
+{
+  "sections": {
+    "main": {
+      "type": "main-article",
+      "settings": {
+        "show_article_image": true,
+        "show_date": false,
+        "show_category": true,
+        "show_author": false,
+        "show_share_buttons": false,
+        "show_prev_next": false
+      }
+    },
+    "6e14ac93-4c33-426b-ac49-013b865b5060": {
+      "type": "newsletter",
+      "settings": {
+        "section_size": "small",
+        "image": "shopify:\/\/shop_images\/renewed_banner_desktop_6_12f633fa-c11f-4a6d-80dd-07f56ee081a4.png",
+        "text_color": "#ffffff",
+        "button_color": "#000000",
+        "subheading": "Missa inga kampanjer",
+        "title": "Anmäl dig till vårt nyhetsbrev",
+        "content": ""
+      }
+    },
+    "shop-now": {
+      "type": "shop-now",
+      "disabled": true,
+      "blocks": {
+        "quote": {
+          "type": "quote",
+          "disabled": true,
+          "settings": {
+            "content": "<p>You can use this element to add a quote, content...<\/p>",
+            "author": ""
+          }
+        }
+      },
+      "block_order": [
+        "quote"
+      ],
+      "settings": {
+        "title": "Köp nu",
+        "collection": "nytt-i-butiken",
+        "grid_items_count": 6,
+        "show_product_info": true,
+        "show_vendor": false,
+        "show_color_swatch": true
+      }
+    }
+  },
+  "order": [
+    "main",
+    "6e14ac93-4c33-426b-ac49-013b865b5060",
+    "shop-now"
+  ]
+}

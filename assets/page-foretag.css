@@ -1,0 +1,52 @@
+/* Header */
+.foretag-heade {padding-top: 80px;margin-bottom: 70px;}
+.foretag-heade .foretag-headeing {font-size: 32px;}
+.foretag-image-main {padding: 40px 0;}
+.Foretag-richtext-heading {padding-bottom: 25px;}
+
+
+.Foretag-contact-main .contact-part {display: flex;flex-wrap: wrap;justify-content: space-between;align-items: flex-start;width: auto;margin: 0 -15px;}
+.Foretag-contact-main .contact-part .contact-box {float: left;width: 50%;padding: 15px;}
+.Foretag-contact-main .contact-part .contact-box .Foretag-contact-info li {padding-bottom: 15px;font-size: 16px;}
+.Foretag-contact-main .contact-part .contact-box .Contect-content {font-size: 16px;padding-bottom: 30px;}
+
+.foretag-image-main .contect-mian {display: flex;flex-wrap: wrap;align-items: flex-start;justify-content: space-between; padding-bottom:15px;}
+
+.foretag-image-main .contect-mian .contect-box {width: 33.33%;float: left;}
+
+.foretag-image-main .contect-mian .contect-box .contect-info p {margin-bottom: 0;}
+.foretag-image-main .FeatureText--imageLeft .AspectRatio {margin-left: auto !important;}
+@media (max-width:1599.99px) {
+.foretag-image-main .Foretag-main .FeatureText__ImageWrapper {
+    padding: 0 20px;
+}
+}
+@media (max-width:991px) {
+.foretag-image-main .FeatureText--withImage {display: flex;flex-wrap: wrap; align-items: center;}
+
+.foretag-image-main .FeatureText--withImage .FeatureText__ContentWrapper, .foretag-image-main  .FeatureText--withImage .FeatureText__ImageWrapper {width: 50%;display: block;}
+
+.foretag-image-main .FeatureText--withImage .SectionHeader__Description {max-width: 100%;}
+.Foretag-contact-main .contact-part .contact-box {width: 100%;}
+.foretag-heade {margin-bottom: 5px; padding-top: 20px;}
+.foretag-image-main {padding: 0px 0;}
+}
+@media (max-width:767px) {
+.foretag-heade .foretag-headeing {font-size: 25px;padding: 0 24px;}
+.Richtext-bg .Richtext-content {text-overflow: ellipsis;overflow: hidden;}
+.foretag-image-main .FeatureText--withImage .FeatureText__ContentWrapper, .foretag-image-main .FeatureText--withImage .FeatureText__ImageWrapper {
+    width: 100% !important;
+}
+
+}
+@media (max-width:424px) {
+.foretag-heade {margin: 0px 0 !important;}
+    .foretag-image-main .Foretag-main .FeatureText__ImageWrapper {
+    padding: 0px !important;
+}
+  .FeatureText__ContentWrapper{
+  padding-left: 0px;
+    padding-right: 0px;
+
+  }
+}

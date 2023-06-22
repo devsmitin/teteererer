@@ -1,0 +1,124 @@
+     {% if product.metafields.custom.frequently_bought.type %}     
+
+{% if product.selected_or_first_available_variant.available %}
+
+         <div class="left_product_section product_section_desktop slideshow-container other_section frequently-bought-together">
+                  
+            <button class="Collapsible__Button Heading u-h6" data-action="toggle-collapsible" aria-expanded="false">
+              
+            <span class="a_title" >{{ 'product.frequently_bought_and_other_have_added_text.Frequently_bought_section_title' | t }}</span>
+                                
+            </button>
+    
+             <form class="frequently" method="post" action="/cart/add">
+            {% assign bundle_products =  product.metafields.custom.frequently_bought.value %}
+            {%- if bundle_products != blank -%}
+            {% comment %}   <header class="SectionHeader SectionHeader--center">
+                <h3 class="SectionHeader__Heading Heading u-h4">{{ section.settings.accessories_title | escape }}</h3>
+              </header> {% endcomment %}
+            {% endif %}
+
+                    <div class="re_product">
+                            <div class="ex-product">
+
+
+    {% comment %} premium logo :start{% endcomment %}
+                                  <!-- logo with tags:start -->
+                                 {% for tag in product.tags %}
+                              {% assign tag-text-1 = settings.premium-text %}
+                              {% assign tag-text-2 = settings.tag-text-2 %}
+                              {% assign tag-text-3 = settings.tag-text-3 %}
+                              {% if tag == tag-text-1 %}
+                                 {% if settings.premium != blank %}
+                                    <img
+                                      class="PM"
+                                      src="{{ settings.premium | img_url:'600x600' }}"
+                                      alt="{{ media.alt | escape }}"
+                                    >
+                                  {% endif %}
+                              {% elsif tag == tag-text-2 %}
+                                  {% if settings.tag-image-2 != blank %}
+                                     <img
+                                          class="PM"
+                                          src="{{ settings.tag-image-2 | img_url:'600x600' }}"
+                                          alt="{{ media.alt | escape }}"
+                                        >
+                                  {% endif %}
+                              {% elsif tag == tag-text-3 %}
+                                {% if settings.tag-image-3 != blank %}
+                                   <img
+                                        class="PM"
+                                        src="{{ settings.tag-image-3 | img_url:'600x600' }}"
+                                        alt="{{ media.alt | escape }}"
+                                      >
+                                {% endif %}
+                              {% endif %}
+                            {% endfor %}
+                                <!-- logo with tags:end -->
+       {% comment %} premium logo :end{% endcomment %}
+                            {% assign which = 0 %}
+                            {% render 'product_custom', which: which, product: product, use_horizontal: true,show_color_swatch:false, show_labels: false, show_product_info: false, show_vendor: false, show_price_on_hover: false %}
+
+                              <div class="main-pro-info">
+                              <p class="custom-main">{{ product.title }}</p>
+
+                                <div class="var_title"></div>
+
+                              
+                              <span class="ProductItem__Price Price Price--highlight test Text--subdued TelenorEvolutionUI-Medium"><span class="money custom_upsel_products_price"> </span></span>
+                              <span class="ProductMeta__Price Price Price--compareAt Text--subdued u-h4" data-money-convertible="">Nypris<span class="money c_price"> </span></span>  
+                             
+                                
+                             <span class="ProductItem__Available">{{ 'product.frequently_bought_and_other_have_added_text.frequently_bought_not_available' | t }}</span>
+                              </div>
+        
+                            </div>
+
+                          {% for bundle_product in bundle_products %}
+                            {%- if bundle_product != blank -%}    
+                             
+                               <div class="Section Section--spacingNormal sx for-this-spacing">
+                               <span class="plus-icon">+</span> 
+                              {% assign which = 1 %}
+                                {% render 'product_custom', which: which, product: bundle_product, use_horizontal: true,show_color_swatch:true, show_labels: false, show_product_info: true, show_vendor: false, show_price_on_hover: false %}
+                               </div>
+                            {% endif %} 
+
+                           {%- endfor -%}                      
+                 </div>
+              <div class="button_other">
+                <span class="add-on">{{ 'product.frequently_bought_and_other_have_added_text.add_at_least_one_item_to_cart' | t }}</span>
+           
+                 <button type="button" attr1="{{ 'product.frequently_bought_and_other_have_added_text.frequently_bought_button_text_1' | t }}"  attr2="{{ 'product.frequently_bought_and_other_have_added_text.frequently_bought_button_text_2' | t }}" attr3=" {%- if product.selected_or_first_available_variant.available -%}
+                              {% if product.template_suffix == 'pre-order' %}{{ 'product.form.pre_order' | t }}{% else %}{{ 'product.form.add_to_cart' | t }}{% endif %}
+      
+                              {%- if block.settings.show_price_in_button -%}
+                                <span class="Button__SeparatorDot"></span>
+                                {{ product.selected_or_first_available_variant.price | money }}
+                              {%- endif -%}
+                            {%- else -%}
+                              {{- 'product.form.sold_out' | t -}}
+                            {%- endif -%}"
+                              class="add_to_cart Button  {% if product.selected_or_first_available_variant.available and use_primary_button %}Button--primary{% else %}Button--secondary{% endif %} Button--full" >
+                          {%- if product.selected_or_first_available_variant.available -%}
+                              <span>{% if product.template_suffix == 'pre-order' %}{{ 'product.form.pre_order' | t }}{% else %}{{ 'product.form.add_to_cart' | t }}{% endif %}</span>
+      
+                              {%- if block.settings.show_price_in_button -%}
+                                <span class="Button__SeparatorDot"></span>
+                                <span>{{ product.selected_or_first_available_variant.price | money }}</span>
+                              {%- endif -%}
+                            {%- else -%}
+                              {{- 'product.form.sold_out' | t -}}
+                            {%- endif -%}
+
+                 </button>
+
+                
+              </div>
+           </form>
+          
+          </div>
+
+ {% endif %}
+           
+ {% endif %}

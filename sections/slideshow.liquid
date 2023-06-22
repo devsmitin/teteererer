@@ -1,0 +1,649 @@
+{%- capture flickity_options -%}
+{
+"prevNextButtons": false,
+"setGallerySize": {% if section.settings.show_fullscreen %}false{% else %}true{% endif %},
+"adaptiveHeight": {% if section.settings.show_fullscreen %}false{% else %}true{% endif %},
+"wrapAround": true,
+"dragThreshold": 15,
+"pauseAutoPlayOnHover": false,
+"autoPlay": {% if section.settings.autoplay %}{{ section.settings.cycle_speed | times: 1000 }}{% else %}false{% endif %},
+"pageDots": {% if section.blocks.size > 1 %}true{% else %}false{% endif %}
+}
+{%- endcapture -%}
+{% if template contains 'telenorgreenroom' or template contains 'telenor-tillbehor' %} 
+      <style>
+        .{{ template.suffix }}-{{ section.id }} {
+          background: {{ section.settings.bg }};
+        }
+      </style>
+  {% endif %}
+<section id="section-{{ section.id }}" data-section-id="{{ section.id }}" data-section-type="slideshow" class="{{ template.suffix }}-{{ section.id }}">
+  <div class="Slideshow {% if section.settings.show_fullscreen %}Slideshow--fullscreen{% else %} Slideshow--smallscreen{% endif %}"> 
+    <div class="{{ template.suffix }} Slideshow__Carousel {% if section.settings.show_arrow %}Slideshow__Carousel--withScrollButton{% endif %} Carousel Carousel--fadeIn {% if section.settings.show_fullscreen %}Carousel--fixed{% endif %} Carousel--insideDots"
+         data-flickity-config='{{ flickity_options }}'>
+      {%- for block in section.blocks -%}
+      {%- capture slide_content -%}
+      {%- comment -%}
+      Implementation note: this is an art driven image selection so it would have been better to be able to use the "picture" tag instead. However,
+      as the mobile and desktop image could have different aspect ratio, the image allocation space would not have work properly without explicitly
+      distinguishing the two images, hence the two containers.
+      {%- endcomment -%}
+
+
+      {% if template == 'index' %}
+
+     {%- assign mobile_image = block.settings.mobile_image | default: block.settings.image -%}
+
+      {%- if mobile_image -%}
+      <div class="Slideshow__ImageContainer {% if block.settings.apply_overlay %}Image--contrast{% endif %} {% unless section.settings.show_fullscreen %}AspectRatio{% endunless %} hidden-tablet-and-up"
+           style="{% unless section.settings.show_fullscreen %}--aspect-ratio: {{ mobile_image.aspect_ratio }};{% endunless %} background-image: url({{ mobile_image | img_url: '1x1', format: 'jpg' }})">
+        <img class="Slideshow__Image Image--lazyLoad"
+            src="{{ mobile_image | img_url: 'master' }}"
+             alt="{{ mobile_image.alt | escape }}">
+
+        <noscript>
+          <img class="Slideshow__Image" src="{{ mobile_image | img_url: 'master' }}" alt="{{ mobile_image.alt | escape }}">
+        </noscript>
+      </div>
+      {%- endif -%}
+
+      {%- if block.settings.image -%}
+      <div class="Slideshow__ImageContainer {% if block.settings.apply_overlay %}Image--contrast{% endif %} {% unless section.settings.show_fullscreen %}AspectRatio AspectRatio--withFallback{% endunless %} hidden-phone"
+           style="{% unless section.settings.show_fullscreen %}padding-bottom: {{ 100.0 | divided_by: block.settings.image.aspect_ratio }}%; --aspect-ratio: {{ block.settings.image.aspect_ratio }};{% endunless %} background-image: url({{ block.settings.image | img_url: '1x1', format: 'jpg' }})">
+        {% assign image_url = block.settings.image | img_url: '1x1' | replace: '_1x1.', '_{width}x.' %}
+
+        <img class="Slideshow__Image hide-no-js"
+             src="{{ block.settings.image | img_url: 'master' }}"
+             alt="{{ block.settings.image.alt | escape }}">
+
+        <noscript>
+          <img class="Slideshow__Image" src="{{ block.settings.image | img_url: 'master' }}" alt="{{ block.settings.image.alt | escape }}">
+        </noscript>
+      </div>
+      {%- else -%}
+      <div class="Slideshow__ImageContainer {% if block.settings.apply_overlay %}Image--contrast{% endif %} {% if section.settings.show_fullscreen %}PlaceholderBackground{% endif %} PlaceholderSvg--dark">
+        {%- capture placeholder -%}{% cycle 'lifestyle-1', 'lifestyle-2' %}{%- endcapture -%}
+        {{ placeholder | placeholder_svg_tag: 'Slideshow__Image PlaceholderBackground__Svg' }}
+      </div>
+      {%- endif -%}
+        
+       {% else %}
+
+      {%- assign mobile_image = block.settings.mobile_image | default: block.settings.image -%}
+
+      {%- if mobile_image -%}
+      <div class="Slideshow__ImageContainer {% if block.settings.apply_overlay %}Image--contrast{% endif %} {% unless section.settings.show_fullscreen %}AspectRatio{% endunless %} hidden-tablet-and-up"
+           style="{% unless section.settings.show_fullscreen %}--aspect-ratio: {{ mobile_image.aspect_ratio }};{% endunless %} background-image: url({{ mobile_image | img_url: '1x1', format: 'jpg' }})">
+        <img class="Slideshow__Image Image--lazyLoad"
+             src="{{ mobile_image | img_url: '1x1' }}"
+             data-src="{{ mobile_image | img_url: 'x800' }}"
+             alt="{{ mobile_image.alt | escape }}">
+
+        <noscript>
+          <img class="Slideshow__Image" src="{{ mobile_image | img_url: 'x800' }}" alt="{{ mobile_image.alt | escape }}">
+        </noscript>
+      </div>
+      {%- endif -%}
+
+      {%- if block.settings.image -%}
+      <div class="Slideshow__ImageContainer {% if block.settings.apply_overlay %}Image--contrast{% endif %} {% unless section.settings.show_fullscreen %}AspectRatio AspectRatio--withFallback{% endunless %} hidden-phone"
+           style="{% unless section.settings.show_fullscreen %}padding-bottom: {{ 100.0 | divided_by: block.settings.image.aspect_ratio }}%; --aspect-ratio: {{ block.settings.image.aspect_ratio }};{% endunless %} background-image: url({{ block.settings.image | img_url: '1x1', format: 'jpg' }})">
+        {% assign image_url = block.settings.image | img_url: '1x1' | replace: '_1x1.', '_{width}x.' %}
+
+        <img class="Slideshow__Image Image--lazyLoad hide-no-js"
+             data-src="{{ image_url }}"
+             data-optimumx="1.2"
+             data-widths="[400, 600, 800, 1000, 1200, 1400, 1600, 1800, 2000, 2200]"
+             data-sizes="auto"
+             alt="{{ block.settings.image.alt | escape }}">
+
+        <noscript>
+          <img class="Slideshow__Image" src="{{ block.settings.image | img_url: '1000x' }}" alt="{{ block.settings.image.alt | escape }}">
+        </noscript>
+      </div>
+      {%- else -%}
+      <div class="Slideshow__ImageContainer {% if block.settings.apply_overlay %}Image--contrast{% endif %} {% if section.settings.show_fullscreen %}PlaceholderBackground{% endif %} PlaceholderSvg--dark">
+        {%- capture placeholder -%}{% cycle 'lifestyle-1', 'lifestyle-2' %}{%- endcapture -%}
+        {{ placeholder | placeholder_svg_tag: 'Slideshow__Image PlaceholderBackground__Svg' }}
+      </div>
+      {%- endif -%}
+        
+      {% endif %}
+     
+
+      {%- capture slideshow_content -%}
+        <div class="block_content_{{ block.id }}">
+      {% if block.settings.topheading != blank %}
+      <h1 class="{{ template.suffix }} top_head">{{ block.settings.topheading }}</h1>
+      {% endif %}
+
+      {% if block.settings.topsubheading != blank %}
+      <h3 class="{{ template.suffix }} top_subhead desktop">{{ block.settings.topsubheading }}</h3>
+      <h3 class="{{ template.suffix }} top_subhead mobile">{{ block.settings.topsubheadingmobile }}</h3>
+      {% endif %}
+
+      {% if block.settings.listedpoints != blank %}
+      <h3 class="{{ template.suffix }} top_listed desktop">{{ block.settings.listedpoints }}</h3>	
+      <h3 class="{{ template.suffix }} top_listed mobile">{{ block.settings.listedpointsmobile }}</h3>	
+      {% endif %}
+
+      {%- if block.settings.subheading != blank -%}
+      <h3 class="SectionHeader__SubHeading TelenorEvolution-Medium Heading u-h6">{{ block.settings.subheading | escape }}</h3>
+      {%- endif -%}
+
+      {%- if block.settings.title != blank -%}
+      <h2 class="SectionHeader__Heading TelenorEvolution-Bold SectionHeader__Heading--emphasize u-h1 bottom_head">{{ block.settings.title }}</h2>
+      {%- endif -%}
+
+      {%- if block.settings.subtext != blank -%}
+      <h3 class="SectionHeader__SubHeading TelenorEvolutionUI-Medium u-h6 bottom_subhead">{{ block.settings.subtext }}</h3>
+      {%- endif -%}
+
+      {%- if block.settings.button_1_text != blank and block.settings.button_2_text != blank -%}
+      {%- assign has_two_buttons = true -%}
+      {%- else -%}
+      {%- assign has_two_buttons = false -%}
+      {%- endif -%}
+
+      {%- if block.settings.button_1_text != blank or block.settings.button_2_text != blank -%}
+      <div class="SectionHeader__ButtonWrapper">
+        <div class="ButtonGroup ButtonGroup--spacingSmall {% if has_two_buttons %}ButtonGroup--sameSize{% endif %}">
+          {%- if block.settings.button_1_text != blank -%}
+          <a href="{{ block.settings.button_1_link }}" class="ButtonGroup__Item Button TelenorEvolutionUI-Medium">{{ block.settings.button_1_text | escape }}</a>
+          {%- endif -%}
+
+          {%- if block.settings.button_2_text != blank -%}
+          <a href="{{ block.settings.button_2_link }}" class="ButtonGroup__Item Button TelenorEvolutionUI-Medium">{{ block.settings.button_2_text | escape }}</a>
+          {%- endif -%}
+        </div>
+      </div>
+      {%- endif -%}
+        </div>
+      {%- endcapture -%}
+
+      {%- if slideshow_content != blank -%}
+      <div class="Slideshow__Content Slideshow__Content--{{ block.settings.content_position }} desktop">
+        <header class="SectionHeader">
+          {{ slideshow_content }}
+        </header>
+      </div>
+      <div class="Slideshow__Content mobile Slideshow__Content--{{ block.settings.content_position_mobile }}  ">
+        <header class="SectionHeader">
+          {{ slideshow_content }}
+        </header>
+      </div>
+      {%- endif -%}
+      {%- endcapture -%}
+
+      {%- comment -%}This code allows to cover a common use case where merchant would like to have a clickable image{%- endcomment -%}
+
+      {%- if block.settings.button_1_text == blank and block.settings.button_1_link != blank -%}
+      <a href="{{ block.settings.button_1_link }}" id="Slide{{ block.id }}" class="Slideshow__Slide Carousel__Cell {% if section.settings.show_fullscreen %}Slideshow--fullscreen{% else %} Slideshow--smallscreen{% endif %} {% if forloop.first %}is-selected{% endif %}" {% if forloop.first %}style="visibility: visible"{% endif %} data-slide-index="{{ forloop.index0 }}" {{ block.shopify_attributes }}>
+        {{- slide_content -}}
+      </a>
+      {%- else -%}
+      <div id="Slide{{ block.id }}" class="Slideshow__Slide Carousel__Cell {% if section.settings.show_fullscreen %}Slideshow--fullscreen{% else %} Slideshow--smallscreen{% endif %} {% if forloop.first %}is-selected{% endif %}" {% if forloop.first %}style="visibility: visible"{% endif %} data-slide-index="{{ forloop.index0 }}" {{ block.shopify_attributes }}>
+        {{- slide_content -}}
+      </div>
+      {%- endif -%}
+      {%- endfor -%}
+    </div>
+
+    {%- if section.settings.show_arrow -%}
+    <button data-href="#section-{{ section.id }}-end" class="Slideshow__ScrollButton RoundButton RoundButton--medium" aria-label="{{ 'general.accessibility.scroll_to_content' | t }}" data-animate-bottom>
+      {%- render 'icon' with 'arrow-bottom' -%}
+    </button>
+    {%- endif -%}
+  </div>
+
+  <span id="section-{{ section.id }}-end" class="Anchor"></span>
+</section>
+
+<style>
+  #section-{{ section.id }} .Heading,
+  #section-{{ section.id }} .flickity-page-dots {
+    color: {{ section.settings.text_color }};
+  }
+
+  #section-{{ section.id }} .Button {
+    color: {{ section.settings.button_color }};
+    border-color: {{ section.settings.button_background }};
+  }
+
+  #section-{{ section.id }} .Button::before {
+    background-color: {{ section.settings.button_background }};
+  }
+  {% for block in section.blocks %}
+  {{ block.settings.top_heading_font | font_face: font_display: 'fallback' }}
+  {{ block.settings.top_subheading_font | font_face: font_display: 'fallback' }}
+
+  
+  .Slideshow__Content .SectionHeader .block_content_{{block.id}} .top_head{
+    margin-bottom:20px;
+    font-size:{{ block.settings.topheadfsize }}px;
+    color: {{ block.settings.topheadcolor }};
+    font-family: {{ block.settings.top_heading_font.family}}, {{ block.settings.top_heading_font.fallback_families }};
+  }
+  .Slideshow__Content .SectionHeader .block_content_{{block.id}} .vimla.top_head{
+    font-family: "Hellix-ExtraBoldItalic";  
+  }
+  
+  .Slideshow__Content .SectionHeader .block_content_{{block.id}} .top_subhead{
+    margin:0;
+    font-size:{{ block.settings.topsubheadfsize }}px;
+    color: {{ block.settings.topsubheadcolor }};
+    font-family: {{ block.settings.top_subheading_font.family}}, {{ block.settings.top_subheading_font.fallback_families }}
+  }
+   .Slideshow__Content .SectionHeader .block_content_{{block.id}} .vimla.top_subhead{
+    font-family: "Helix-Bold";
+  }
+  .Slideshow__Content .SectionHeader .block_content_{{block.id}} .top_listed{
+    margin-bottom:25px;
+    font-size:{{ block.settings.topsubheadfsize }}px;
+    color: {{ block.settings.listedpointscolor }};
+    font-family: {{ block.settings.top_subheading_font.family}}, {{ block.settings.top_subheading_font.fallback_families }}
+  }
+  .Slideshow__Content .SectionHeader .block_content_{{block.id}} .vimla.top_subhead{
+    font-family: "Hellix-Regular";
+  }
+
+  .block_content_{{block.id}} .bottom_head{
+    font-size:{{ block.settings.bottomheadfsize }}px !important;
+    color: {{ block.settings.bottomhead_color }} !important;
+  }
+  .block_content_{{block.id}} .bottom_subhead{
+    font-size:{{ block.settings.bottomsubheadfsize }}px !important;
+    color: {{ block.settings.bottomsubhead_color }} !important;
+  }
+  .mobile{
+    display:none ;
+  }
+  @media (max-width:991px){
+    .vimla_text_heart{
+      width:30px;
+      margin:0 10px;
+    }
+    .template-index .block_content_{{block.id}} .bottom_head{      
+      font-size:calc({{ block.settings.bottomheadfsize }}px - 6px) !important;
+      color: {{ block.settings.bottomhead_color }} !important;
+    }
+    .block_content_{{block.id}} .bottom_head{      
+      font-size:calc({{ block.settings.bottomheadfsize }}px - 16px) !important;
+      color: {{ block.settings.bottomhead_color }} !important;
+    }
+    .block_content_{{block.id}} .bottom_subhead{
+      font-size:{{ block.settings.bottomsubheadfsize }}px !important;
+      color: {{ block.settings.bottomsubhead_color }} !important;
+    }
+    {% if block.settings.show_mobile %}
+    .Slideshow__Content .SectionHeader .top_head{
+      margin-bottom:10px;
+      font-size: calc({{ block.settings.topheadfsize }}px - 27px);
+      display:flex;
+      align-items:center;
+    }
+    .Slideshow__Content .SectionHeader .vimla.top_head{
+      font-size: calc({{ block.settings.topheadfsize }}px - 24px);
+    }
+
+    .Slideshow__Content .SectionHeader .top_subhead{
+      font-size:calc({{ block.settings.topsubheadfsize }}px - 15px);
+    }
+
+    .Slideshow__Content .SectionHeader .top_listed{
+      font-size:calc({{ block.settings.topsubheadfsize }}px - 15px);
+      margin-bottom:0 !important;
+    }
+    .mobile{
+      display:block !important;
+    }
+    .desktop{
+      display:none !important;
+    }
+    .Slideshow__Content.mobile{
+      display:block !important;
+      padding:10px 15px;
+      width:90%;
+      background-color: {{ block.settings.mobiletextbg }};
+    }
+    {% else %}
+    .Slideshow__Content .SectionHeader .top_head,.Slideshow__Content .SectionHeader .top_subhead,.Slideshow__Content .SectionHeader .top_listed{
+      display:none !important;
+    }
+    {% endif %}
+
+  }
+  @media (max-width: 600px) {
+    .block_content_{{block.id}} .bottom_head{
+      font-size: 30px !important;
+      color: {{ block.settings.bottomhead_color }} !important;
+    }
+  }
+  {% endfor %}
+  .Slideshow__Content .SectionHeader .top_listed ul{
+    padding-left:30px;
+  }
+  .Slideshow__Content .SectionHeader .top_listed ul li{
+    line-height:1.2;
+  }
+  {%- if settings.show_button_transition -%}
+  @media (-moz-touch-enabled: 0), (hover: hover) {
+    #section-{{ section.id }} .Button:hover {
+      color: {{ section.settings.button_background }};
+    }
+  }
+  {%- endif -%}
+
+</style>
+
+{% schema %}
+{
+"name": "Slideshow",
+"class": "shopify-section--slideshow",
+"max_blocks": 5,
+"settings": [
+{
+  "type": "color",
+  "id": "bg",
+  "label": "Select background color",
+  "default": "#F5F5F5"
+},
+{
+"type": "checkbox",
+"id": "show_fullscreen",
+"label": "Show full-screen images",
+"info": "If enabled, images will be resized to fit the entire screen.",
+"default": false
+},
+{
+"type": "checkbox",
+"id": "show_arrow",
+"label": "Show bottom arrow",
+"default": false
+},
+{
+"type": "checkbox",
+"id": "autoplay",
+"label": "Auto rotate between slides",
+"default": true
+},
+{
+"type": "range",
+"id": "cycle_speed",
+"min": 3,
+"max": 8,
+"step": 1,
+"unit": "sec",
+"label": "Change slides every",
+"default": 5
+},
+{
+"type": "color",
+"id": "text_color",
+"label": "Text",
+"default": "#ffffff"
+},
+{
+"type": "color",
+"id": "button_color",
+"label": "Button text",
+"default": "#363636"
+},
+{
+"type": "color",
+"id": "button_background",
+"label": "Button background",
+"default": "#ffffff"
+}
+],
+"blocks": [
+{
+"type": "image",
+"name": "Slide",
+"settings": [
+{
+"type": "image_picker",
+"id": "image",
+"label": "Image",
+"info": "1800 x 800px .jpg recommended"
+},
+{
+"type": "image_picker",
+"id": "mobile_image",
+"label": "Mobile image",
+"info": "750 x 1100px .jpg recommended. If none is set, desktop image will be cropped."
+},
+{
+"type": "checkbox",
+"id": "apply_overlay",
+"label": "Apply overlay on image",
+"info": "This can improve text visibility.",
+"default": true
+},
+{
+"type": "select",
+"id": "content_position",
+"label": "Content position",
+"options": [
+{
+"value": "middleLeft",
+"label": "Middle left"
+},
+{
+"value": "middleCenter",
+"label": "Middle center"
+},
+{
+"value": "middleRight",
+"label": "Middle right"
+},
+{
+"value": "bottomLeft",
+"label": "Bottom left"
+},
+{
+"value": "bottomCenter",
+"label": "Bottom center"
+},
+{
+"value": "bottomRight",
+"label": "Bottom right"
+}
+],
+"default": "bottomLeft"
+},
+{
+"type": "select",
+"id": "content_position_mobile",
+"label": "Content position Mobile",
+"options": [
+{
+"value": "top",
+"label": "Top"
+},
+{
+"value": "middle",
+"label": "Middle"
+},
+{
+"value": "bottom",
+"label": "Bottom"
+}
+],
+"default": "bottom"
+},
+{
+"type": "color",
+"id": "mobiletextbg",
+"label": "Mobile Text Background Color"
+},
+{
+"type":"checkbox",
+"id":"show_mobile",
+"label":"Show in Mobile Devices",
+"default":false
+},
+{
+"type": "text",
+"id": "topheading",
+"label": "Top Heading"
+},
+{
+"type": "font_picker",
+"id": "top_heading_font",
+"label": "Heading font",
+"default": "helvetica_n4"
+},
+{
+"type": "range",
+"id": "topheadfsize",
+"label": "Top Heading Font Size",
+"min":0,
+"max":100,
+"unit":"px",
+"default":16
+},
+{
+"type": "color",
+"id": "topheadcolor",
+"label": "Top Heading Color"
+},
+{
+"type": "text",
+"id": "topsubheadingmobile",
+"label": "Top Sub Heading Mobile"
+},
+{
+"type": "text",
+"id": "topsubheading",
+"label": "Top Sub Heading"
+},
+{
+"type": "font_picker",
+"id": "top_subheading_font",
+"label": "Sub Heading font",
+"default": "helvetica_n4"
+},
+{
+"type": "range",
+"id": "topsubheadfsize",
+"label": "Top Sub Heading & Listed Points Font Size",
+"min":0,
+"max":100,
+"unit":"px",
+"default":16
+},
+{
+"type": "color",
+"id": "topsubheadcolor",
+"label": "Top Sub Heading Color"
+},
+{
+"type": "text",
+"id": "listedpointsmobile",
+"label": "Listed Points Mobile"
+},
+{
+"type": "text",
+"id": "listedpoints",
+"label": "Listed Points"
+},
+{
+"type": "color",
+"id": "listedpointscolor",
+"label": "Listed Points Color"
+},
+{
+"type": "text",
+"id": "subheading",
+"label": "Sub-heading",
+"default": "Slide title"
+},
+{
+"type": "text",
+"id": "title",
+"label": "Heading",
+"default": "Tell your story"
+},
+{
+"type": "range",
+"id": "bottomheadfsize",
+"label": "Top Sub Heading & Listed Points Font Size",
+"min":0,
+"max":100,
+"unit":"px",
+"default":16
+},
+{
+"type": "color",
+"id": "bottomhead_color",
+"label": "Heading Color"
+},
+{
+"type": "text",
+"id": "subtext",
+"label": "Text",
+"default": "Slide text"
+},
+{
+"type": "range",
+"id": "bottomsubheadfsize",
+"label": "Top Sub Heading & Listed Points Font Size",
+"min":0,
+"max":100,
+"unit":"px",
+"default":16
+},
+{
+"type": "color",
+"id": "bottomsubhead_color",
+"label": "Sub Heading Color"
+},
+{
+"type": "header",
+"content": "Button 1"
+},
+{
+"type": "text",
+"id": "button_1_text",
+"label": "Text"
+},
+{
+"type": "url",
+"id": "button_1_link",
+"label": "Link"
+},
+{
+"type": "header",
+"content": "Button 2"
+},
+{
+"type": "text",
+"id": "button_2_text",
+"label": "Text"
+},
+{
+"type": "url",
+"id": "button_2_link",
+"label": "Link"
+}
+]
+}
+],
+"presets": [
+{
+"category": "Image",
+"name": "Slideshow",
+"settings": {},
+"blocks": [
+{
+"type": "image"
+},
+{
+"type": "image"
+}
+]
+}
+]
+}
+{% endschema %}

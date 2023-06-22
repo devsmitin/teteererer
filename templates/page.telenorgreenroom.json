@@ -1,0 +1,266 @@
+{
+  "sections": {
+    "1650286611a09e222a": {
+      "type": "slideshow",
+      "blocks": {
+        "1650286611ad814b78-0": {
+          "type": "image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/telenor_renewed_facetime-girl_1115x560_002.jpg",
+            "mobile_image": "shopify:\/\/shop_images\/telenor_renewed_facetime-girl_774x882_8450eda0-7a24-4e41-a17a-89dff9a0dba6.jpg",
+            "apply_overlay": false,
+            "content_position": "bottomLeft",
+            "content_position_mobile": "bottom",
+            "mobiletextbg": "",
+            "show_mobile": false,
+            "topheading": "",
+            "top_heading_font": "bodoni_poster_n9",
+            "topheadfsize": 61,
+            "topheadcolor": "#ffffff",
+            "topsubheadingmobile": "",
+            "topsubheading": "",
+            "top_subheading_font": "sans-serif",
+            "topsubheadfsize": 26,
+            "topsubheadcolor": "#ffffff",
+            "listedpointsmobile": "",
+            "listedpoints": "",
+            "listedpointscolor": "#ffffff",
+            "subheading": "",
+            "title": "Telenor Återvinsten",
+            "bottomheadfsize": 46,
+            "bottomhead_color": "#ffffff",
+            "subtext": "Återvunna mobiler i samarbete med Renewed",
+            "bottomsubheadfsize": 18,
+            "bottomsubhead_color": "#ffffff",
+            "button_1_text": "Köp iPhone",
+            "button_1_link": "shopify:\/\/collections\/iphone",
+            "button_2_text": "Köp Samsung",
+            "button_2_link": "shopify:\/\/collections\/samsung"
+          }
+        }
+      },
+      "block_order": [
+        "1650286611ad814b78-0"
+      ],
+      "settings": {
+        "bg": "#f5f5f5",
+        "show_fullscreen": true,
+        "show_arrow": true,
+        "autoplay": false,
+        "cycle_speed": 5,
+        "text_color": "#ffffff",
+        "button_color": "#ffffff",
+        "button_background": "#2028cd"
+      }
+    },
+    "16506096553f2aaaf0": {
+      "type": "icon-with-text",
+      "blocks": {
+        "16506096556bb7e56d-0": {
+          "type": "Text-section",
+          "settings": {
+            "button_text": "Säker betalning",
+            "link": "",
+            "content": "<p>Delbetala med Klarna<\/p>"
+          }
+        },
+        "159497aa-1125-4492-8115-e90ba06c0848": {
+          "type": "Text-section",
+          "settings": {
+            "button_text": "Snabb leverans",
+            "link": "",
+            "content": "<p>1-3 arbetsdagar<\/p>"
+          }
+        },
+        "557c5f77-2229-4c3e-a952-4f2358a67a1a": {
+          "type": "Text-section",
+          "settings": {
+            "button_text": "Garanti",
+            "link": "",
+            "content": "<p>Handla tryggt med <\/p><p>12 månaders garanti<\/p>"
+          }
+        },
+        "f1e767bb-bf79-4b67-a964-9d327f3718c9": {
+          "type": "Text-section",
+          "settings": {
+            "button_text": "Öppet köp",
+            "link": "",
+            "content": "<p>14 dagars öppet köp<\/p>"
+          }
+        }
+      },
+      "block_order": [
+        "16506096556bb7e56d-0",
+        "159497aa-1125-4492-8115-e90ba06c0848",
+        "557c5f77-2229-4c3e-a952-4f2358a67a1a",
+        "f1e767bb-bf79-4b67-a964-9d327f3718c9"
+      ],
+      "settings": {
+        "bg": "#f5f5f5"
+      }
+    },
+    "165028704429f40a7a": {
+      "type": "featured-collections",
+      "blocks": {
+        "16502870445167c3df-0": {
+          "type": "collection",
+          "disabled": true,
+          "settings": {
+            "collection": "populart",
+            "title": "",
+            "grid_items_count": 4,
+            "button_text": "Se alla"
+          }
+        },
+        "1e416cf1-27bf-411e-807b-7bd153165498": {
+          "type": "collection",
+          "settings": {
+            "collection": "telenor",
+            "title": "",
+            "grid_items_count": 34,
+            "button_text": "Se alla"
+          }
+        }
+      },
+      "block_order": [
+        "16502870445167c3df-0",
+        "1e416cf1-27bf-411e-807b-7bd153165498"
+      ],
+      "settings": {
+        "bg": "#f5f5f5",
+        "title": "",
+        "layout_mode": "carousel",
+        "show_product_info": true,
+        "show_vendor": false,
+        "show_color_swatch": true,
+        "show_popup": false,
+        "show_button": false,
+        "popup_text": "<p>Beskrivning \/ Specifikation <strong>+<\/strong><\/p>",
+        "grid_mobile_items_per_row": "2",
+        "grid_desktop_items_per_row": 4
+      }
+    },
+    "16536486686469c4be": {
+      "type": "text-with-image",
+      "disabled": true,
+      "settings": {
+        "bg": "#f5f5f5",
+        "subheading": "",
+        "title": "Återvinsten",
+        "image": "shopify:\/\/shop_images\/Telenor-atervunnet-716x442.jpg",
+        "image_position": "right",
+        "text_alignment": "left",
+        "text_mobile_alignment": "left",
+        "content": "<p>Telenor återvinsten är ett samarbete mellan Renewed AB och Telenor för att bidra till ett mer hållbart samhälle. Genom att återvinna och återanvända fullt fungerande mobiltelefoner så hjälper man till att reducera klimatpåverkan på vår planet. Med detta samarbete förlänger vi mobiltelefonernas livslängd och ger dem ett nytt hem. <\/p><p>Denna sida drivs av Renewed som säkerställer att alla mobiltelefoner är raderade och fullt funktionskontrollerade enligt lagstadgade krav. <br\/><\/p>",
+        "link_text": "",
+        "link_url": ""
+      }
+    },
+    "1650607137c6e3f470": {
+      "type": "page-image-with-text",
+      "blocks": {
+        "37f4560c-c7ad-4800-a364-84d04b3e78b5": {
+          "type": "image",
+          "settings": {
+            "color_bg": "#ffffff",
+            "image": "shopify:\/\/shop_images\/Telenor-atervunnet-716x442_47d6b310-6a05-49ac-b9a7-02037a71c0e8.jpg",
+            "image_url": "shopify:\/\/collections\/telenor",
+            "block_heading": "Återvinsten",
+            "content": "<p>Med Telenor återvinsten vill vi bidra till ett mer hållbart samhälle genom att återvinna och återanvända mobiltelefoner så de får nytt liv.<\/p>",
+            "link_text": "Köp här",
+            "link_url": "shopify:\/\/collections\/telenor"
+          }
+        },
+        "1650607137839b4bba-0": {
+          "type": "image",
+          "settings": {
+            "color_bg": "#ffffff",
+            "image": "shopify:\/\/shop_images\/Miljo-klimat-716x442.jpg",
+            "image_url": "https:\/\/www.telenor.se\/om-telenor\/hallbarhet\/",
+            "block_heading": "Hållbarhet och miljö",
+            "content": "<p>Vi värdesätter miljön. På vår hemsida kan du läsa mer om vårt arbete med klimat-och miljöfrågor och hur vi jobbar med hållbarhet.<\/p>",
+            "link_text": "Läs mer!",
+            "link_url": "https:\/\/www.telenor.se\/om-telenor\/hallbarhet\/"
+          }
+        },
+        "6ceb41ed-bee4-4ac1-8e9f-8a8f6df3e8ea": {
+          "type": "image",
+          "settings": {
+            "color_bg": "#ffffff",
+            "image": "shopify:\/\/shop_images\/Skaffa-abonnemang-716x442.jpg",
+            "image_url": "https:\/\/www.telenor.se\/handla\/mobilabonnemang\/",
+            "block_heading": "Köp abonnemang",
+            "content": "<p>Behöver du ett abonnemang till din ny-gamla mobil eller lägga till Extra användare till ditt abonnemang? Inga problem, välkommen till Telenor.<\/p>",
+            "link_text": "Läs mer!",
+            "link_url": "https:\/\/www.telenor.se\/handla\/mobilabonnemang\/"
+          }
+        }
+      },
+      "block_order": [
+        "37f4560c-c7ad-4800-a364-84d04b3e78b5",
+        "1650607137839b4bba-0",
+        "6ceb41ed-bee4-4ac1-8e9f-8a8f6df3e8ea"
+      ],
+      "settings": {
+        "bg": "#f5f5f5",
+        "color_link": "#2028cd",
+        "title": ""
+      }
+    },
+    "1650610652c9886ea2": {
+      "type": "richtext-with-logo",
+      "blocks": {
+        "4f9049da-8a63-4e3a-b203-165ccd02c012": {
+          "type": "logo-section",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Picture1.png",
+            "link": ""
+          }
+        },
+        "24d37641-8a97-4e57-a12f-55fba87d3e83": {
+          "type": "logo-section",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Picture3_ec3fdea1-a7f7-4270-8b9c-93b93b076cd7.png",
+            "link": ""
+          }
+        }
+      },
+      "block_order": [
+        "4f9049da-8a63-4e3a-b203-165ccd02c012",
+        "24d37641-8a97-4e57-a12f-55fba87d3e83"
+      ],
+      "settings": {
+        "bg": "#f5f5f5",
+        "title": "Kontakta oss",
+        "content": "<p>08-517 34 300<br\/><a href=\"mailto:kontakt@renewed.se\" target=\"_blank\" title=\"mailto:kontakt@renewed.se\">kontakt@renewed.se<\/a><br\/>Denna sida drivs av Telenors affärspartner Renewed AB<br\/><\/p>",
+        "logo_width": "125px"
+      }
+    },
+    "main": {
+      "type": "main-page",
+      "disabled": true,
+      "settings": {
+        "show_large": false
+      }
+    },
+    "1650286627467da870": {
+      "type": "custom-html",
+      "disabled": true,
+      "settings": {
+        "subheading": "",
+        "title": "Kontakta oss",
+        "html": "<p>08-51734300<br>\ngreenroom@renewed.se<br>\nDenna sida drivs av Telenors affärspartner Renewed AB<\/p>\n<img src=\"https:\/\/cdn.shopify.com\/s\/files\/1\/0472\/8736\/9882\/files\/Picture1_200x.png?v=1645790680\"><img src=\"https:\/\/cdn.shopify.com\/s\/files\/1\/0472\/8736\/9882\/files\/Picture3_ec3fdea1-a7f7-4270-8b9c-93b93b076cd7_200x.png?v=1645792091\">"
+      }
+    }
+  },
+  "order": [
+    "1650286611a09e222a",
+    "16506096553f2aaaf0",
+    "165028704429f40a7a",
+    "16536486686469c4be",
+    "1650607137c6e3f470",
+    "1650610652c9886ea2",
+    "main",
+    "1650286627467da870"
+  ]
+}

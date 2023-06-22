@@ -1,0 +1,388 @@
+{%- if section.settings.enable_bar -%}
+{% capture 'section_settings' %}
+{
+"countdownTime":{{section.settings.countdown | json }},
+"excludeWeekends":{{ section.settings.exclude_weekends | json }},
+"countdownDays": {{section.settings.countdown-range | json}}
+
+}
+{% endcapture %}
+
+{%- unless section.settings.home_page_only and template != 'index' -%}
+<announcement-bar data-settings='{{ section_settings }}'>
+  <section id="section-{{ section.id }}"
+           data-section-id="{{ section.id }}" data-section-type="announcement-bar">
+    <div class="AnnouncementBar">
+      <div class="AnnouncementBar__Wrapper">
+        <p class="AnnouncementBar__Content Heading">
+          {%- if section.settings.link -%}
+          <a href="{{ section.settings.link }}">{{ section.settings.content | escape }}</a>
+          {%- else -%}
+          {{ section.settings.content | escape }}
+          {%- endif -%}
+          {%-    if section.settings.custom_bar -%}
+        <div id="custom_head">
+          <div class="announcment_item">
+            {% for block in section.blocks %}
+
+
+            <div class="Announcment__Container {% if forloop.index0 == 1 or forloop.index0 == 2 %}{% endif %}{% if forloop.index0 == 0 %}active{% endif %}"><span class="helper"></span>
+              {% if block.settings.image %}<img alt="{{block.settings.text}}" class="Announcment__Image" src="{{block.settings.image | img_url }}">{% endif %}
+
+              <div class="AnnouncmentText__Container ml--M">
+                {%- if block.settings.text_link != blank -%}
+                <a href="{{ block.settings.text_link }}">
+                  {% endif %}
+                  <ann class="AnnouncmentText u-h7">{{block.settings.text}}</ann>
+                  {%- if block.settings.text_link != blank -%}
+                </a>
+                {% endif %}
+              </div>
+            </div>
+
+            {% endfor %}
+
+
+
+
+
+            {%-    if section.settings.next_delivery-%}
+
+            <div class="Announcment__Container"><span class="helper"></span>
+              {% if section.settings.next_delivery_i %}  <img alt="{{block.settings.text}}"  class="Announcment__Image" src="{{section.settings.next_delivery_i | img_url }}">
+              {% endif %}
+			  {% comment %}
+              <div class="AnnouncmentText__Container ml--S ship-info u-h7">
+
+                <ann class="AnnouncmentText u-h7">  {{section.settings.next_delivery_t}}:<span id="counter-block" class="u-b3"></span></ann>
+
+
+              </div>
+            	{% endcomment %}
+            </div>
+
+          </div>
+
+
+
+
+        </div>
+        {% endif %}
+      </div>
+
+
+
+
+
+      {% else %}    {%- endif -%}
+
+    </div>
+  </section>
+</announcement-bar>
+
+<style>
+  .AnnouncementBar__Wrapper {
+    padding: 0px 32px;
+  }
+
+  .Announcment__Image {
+    height: 16px;
+  }
+
+  .Icon--buy--icon-m {
+    width: 24px;
+    height: 24px;
+  }
+  .Announcment__Container.active {
+    border-top: 2px solid #19aaf8;
+  }
+  .Announcment__Container {
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    padding : 5px 15px;
+  }
+  .Announcment__Container:first-child {
+    padding-left: 0;
+  }
+
+  .AnnouncmentText {
+    margin-left: 8px !important;
+    white-space: nowrap;
+  }
+
+  .Announcment__Image {
+    margin: auto 0;
+    float: left;
+    height: 24px;
+  }
+
+  .AnnouncmentText__Container {
+    display: inline-flex;
+    height: 100%;
+  }
+
+  .AnnouncmentText {
+    margin: auto 0;
+    font-size: 13px;
+  }
+
+  ann {
+    vertical-align: middle;
+  }
+
+  .announcment_item {
+    display: flex;
+    justify-content: flex-start;
+  }
+  #counter-block{min-width: 55px; margin-left: 8px; color: #F65D1B;    display: inline-block;}
+  @media screen and (max-width: 640px) {
+    .Announcment__Image {
+
+      max-height:16px;
+    }#counter-block{margin-left: 4px; }
+    .not_mobile {
+      display: none;
+    }
+
+    .AnnouncmentText {
+      margin-left: 4px !important;
+      font-size: 11px;
+    }
+
+    .AnnouncementBar__Wrapper {
+      padding: 1px 16px !important;
+    }
+
+
+
+    .item--left .ProductItem__Title {
+      letter-spacing: 0;
+      word-break: none;
+      font-size: 18px;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      width: 130px;
+    }
+
+    .color_changer {
+      padding: 0px 4px;
+      width: 46%;
+    }
+
+    .color_changer.Grid__Cell.\31 \/2--phone.\31 \/2--tablet-and-up.\31 \/3--desk{
+      width: 50%;
+    }
+
+
+  }
+
+
+
+</style>
+
+{%-    if section.settings.next_delivery-%}
+{% comment %}
+<script>
+  class Announcement extends HTMLElement {
+    constructor() {
+      super();
+      this.element = this;
+      this.options = JSON.parse(this.getAttribute("data-settings"));
+
+      const countInterval = setInterval(this.countDown.bind(this), 1000);
+    }
+    countDown() {
+      const dateNow = new Date();
+      const countDate = new Date(
+        "March 3, 2030," + this.options["countdownTime"]
+      );
+      const nOfDays = this.options["countdownDays"];
+      const difference = countDate - dateNow;
+      var textDays = 0;
+      const seconds = 1000;
+      const minutes = seconds * 60;
+      const hours = minutes * 60;
+      const days = hours * 24;
+      const todaysDay = dateNow.getDay();
+
+      const textHours = Math.floor((difference % days) / hours);
+      const textMinutes = Math.floor((difference % hours) / minutes);
+      const textSeconds = Math.floor((difference % minutes) / seconds);
+
+      if (todaysDay == 1) {
+        textDays = nOfDays;
+      } else if (todaysDay == 0) {
+        textDays = 0;
+      } else {
+        textDays = nOfDays - todaysDay;
+        if (textDays < 0) {
+          const mDays = todaysDay % nOfDays;
+          textDays = nOfDays - mDays;
+        }
+      }
+
+      if (this.options["excludeWeekends"] && todaysDay == 5) {
+        textDays = textDays + 2;
+      } else if (this.options["excludeWeekends"] && todaysDay == 6) {
+        textDays = textDays + 1;
+      }
+
+      const displayHours = textHours;
+
+      const formatHours = displayHours < 10 ? `0${displayHours}` : displayHours;
+      const formatMinutes = textMinutes < 10 ? `0${textMinutes}` : textMinutes;
+      const formatSeconds = textSeconds < 10 ? `0${textSeconds}` : textSeconds;
+
+      this.element.querySelector("#counter-block").innerText = `${
+      textDays > 1 ? `${displayHours}d ` : ""
+    }${formatHours}:${formatMinutes}:${formatSeconds}`;
+    }
+  }
+
+  customElements.define("announcement-bar", Announcement);
+</script>
+{% endcomment %}
+{%- endif -%}
+
+
+<style>
+  #section-{{ section.id }} {
+    background: {{ section.settings.background }};
+    color: {{ section.settings.text_color }};
+  }
+</style>
+
+<script>
+  //       document.documentElement.style.setProperty('--announcement-bar-height', document.getElementById('shopify-section-announcement').offsetHeight + 'px');
+</script>
+{%- endunless -%}
+{%- endif -%}
+
+{% comment %}
+{
+"type": "text",
+"id": "countdown",
+"label": "Countdown hour and minutes eg(12:45)",
+"info": "Use this settings only with combination wtih countdown block "
+},
+{
+"type": "range",
+"id": "countdown-range",
+"label": "How often do you ship?",
+"info": "Every 1-7 days",
+"default": 1,
+"min": 1,
+"max": 7
+},
+{
+"type": "checkbox",
+"id": "exclude_weekends",
+"label": "Exclude weekends",
+"default": true,
+"info": "Use this checkox if you want to exclude weekends from counter."
+},
+{
+"type": "checkbox",
+"id": "home_page_only",
+"label": "Home page only",
+"default": false
+},
+{
+"type": "header",
+"content": "Settings for next delivery"
+},
+{
+"type": "checkbox",
+"id": "next_delivery",
+"label": "Show next delivery as last item",
+"default": true
+},
+{
+"type": "image_picker",
+"id": "next_delivery_i",
+"label": "Image for next delivery"
+},
+{
+"type": "text",
+"id": "next_delivery_t",
+"label": "Text for next delivery"
+},
+================================================================================================
+{% endcomment %}
+
+
+{% schema %}
+{
+"name": "Vimla Announcement bar",
+"settings": [
+{
+"type": "checkbox",
+"id": "enable_bar",
+"label": "Enable bar",
+"default": true
+},
+
+{
+"type": "color",
+"id": "background",
+"label": "Background",
+"default": "#000000"
+},
+{
+"type": "header",
+"content": "Additional settings"
+},
+
+{
+"type": "checkbox",
+"id": "custom_bar",
+"label": "Show custom bar",
+"default": true
+},
+{
+"type": "color",
+"id": "text_color",
+"label": "Text",
+"default": "#ffffff"
+},
+{
+"type": "text",
+"id": "content",
+"label": "Text",
+"default": "Announce something here"
+},
+{
+"type": "url",
+"id": "link",
+"label": "Link"
+}
+],
+"blocks": [
+{
+"type": "text",
+"name": "Item",
+"settings": [
+
+{
+"type": "text",
+"id": "text",
+"label": "Text"
+},
+{
+"type": "url",
+"id": "text_link",
+"label": "Link"
+},
+{
+"type": "image_picker",
+"id": "image",
+"label": "Add Image"
+}
+]
+}
+
+]
+}
+{% endschema %}

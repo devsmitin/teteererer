@@ -1,0 +1,416 @@
+{
+  "sections": {
+    "06968fd0-fcff-4041-a66c-cf4bcb49348b": {
+      "type": "capmpaing-banner",
+      "settings": {
+        "banner-text": "Specialerbjudande på iPhone XS Max Premium",
+        "text-link": "shopify:\/\/collections\/kampanj-iphone-xs-max-premium",
+        "background": "#f65d1b",
+        "text_color": "#ffffff"
+      }
+    },
+    "slideshow": {
+      "type": "slideshow",
+      "blocks": {
+        "ea65a240-8d72-40da-bf09-d0bf7c29c1d8": {
+          "type": "image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Desktop_banner_startsida_4.jpg",
+            "mobile_image": "shopify:\/\/shop_images\/Mobile_banner_renewed.jpg",
+            "apply_overlay": false,
+            "content_position": "bottomLeft",
+            "content_position_mobile": "bottom",
+            "mobiletextbg": "",
+            "show_mobile": false,
+            "topheading": "",
+            "top_heading_font": "helvetica_n4",
+            "topheadfsize": 16,
+            "topheadcolor": "",
+            "topsubheadingmobile": "",
+            "topsubheading": "",
+            "top_subheading_font": "montserrat_n4",
+            "topsubheadfsize": 20,
+            "topsubheadcolor": "",
+            "listedpointsmobile": "",
+            "listedpoints": "",
+            "listedpointscolor": "#ffffff",
+            "subheading": "",
+            "title": "Begagnade mobiler<br> i toppskick",
+            "bottomheadfsize": 28,
+            "bottomhead_color": "#ffffff",
+            "subtext": "✅ 12 månaders garanti <br>✅ Alltid fria returer <br> ✅ Spara upp till 50%",
+            "bottomsubheadfsize": 16,
+            "bottomsubhead_color": "#ffffff",
+            "button_1_text": "Köp iPhone",
+            "button_1_link": "shopify:\/\/collections\/iphone",
+            "button_2_text": "Köp Samsung",
+            "button_2_link": "shopify:\/\/collections\/samsung"
+          }
+        },
+        "slide-0": {
+          "type": "image",
+          "disabled": true,
+          "settings": {
+            "image": "shopify:\/\/shop_images\/renewed_med_Vimla_abonnemang.png",
+            "mobile_image": "shopify:\/\/shop_images\/renewed_vimla_mobil.png",
+            "apply_overlay": false,
+            "content_position": "bottomLeft",
+            "content_position_mobile": "bottom",
+            "mobiletextbg": "",
+            "show_mobile": false,
+            "topheading": "",
+            "top_heading_font": "montserrat_i8",
+            "topheadfsize": 40,
+            "topheadcolor": "#ffffff",
+            "topsubheadingmobile": "",
+            "topsubheading": "",
+            "top_subheading_font": "mono",
+            "topsubheadfsize": 40,
+            "topsubheadcolor": "#ffffff",
+            "listedpointsmobile": "",
+            "listedpoints": "",
+            "listedpointscolor": "#323232",
+            "subheading": "",
+            "title": "Köp telefon <br> med Vimlas abonnemang",
+            "bottomheadfsize": 32,
+            "bottomhead_color": "#ffffff",
+            "subtext": "Få hörlurar och 75% rabatt på abonnemanget + 30GB <br> extra surf!",
+            "bottomsubheadfsize": 20,
+            "bottomsubhead_color": "#ffffff",
+            "button_1_text": "Köp iPhone",
+            "button_1_link": "shopify:\/\/collections\/iphone",
+            "button_2_text": "Köp Samsung",
+            "button_2_link": "shopify:\/\/collections\/samsung"
+          }
+        }
+      },
+      "block_order": [
+        "ea65a240-8d72-40da-bf09-d0bf7c29c1d8",
+        "slide-0"
+      ],
+      "settings": {
+        "bg": "#f5f5f5",
+        "show_fullscreen": false,
+        "show_arrow": true,
+        "autoplay": true,
+        "cycle_speed": 6,
+        "text_color": "#ffffff",
+        "button_color": "#ffffff",
+        "button_background": "#2028cd"
+      }
+    },
+    "c90893ac-103e-464a-94cb-ae03f7615777": {
+      "type": "Image-Icon-text",
+      "disabled": true,
+      "blocks": {
+        "template--15869192536218__c90893ac-103e-464a-94cb-ae03f7615777-1666156676353cf4f0-0": {
+          "type": "Text-section",
+          "settings": {
+            "button_text": "Säker betalning",
+            "link": "",
+            "icon-image": "shopify:\/\/shop_images\/security-payment.png",
+            "icon-link": "",
+            "content": "<p>Delbetala med Klarna<\/p>"
+          }
+        },
+        "b71989eb-edb7-4b69-a11d-9e2367e42e36": {
+          "type": "Text-section",
+          "settings": {
+            "button_text": "Snabb leverans",
+            "link": "",
+            "icon-image": "shopify:\/\/shop_images\/fast-delivery_1.png",
+            "icon-link": "",
+            "content": "<p>1-3 dagars leverans<\/p>"
+          }
+        },
+        "c119d582-3d64-4ee5-89a6-85208bf17ad6": {
+          "type": "Text-section",
+          "settings": {
+            "button_text": "Garanti",
+            "link": "",
+            "icon-image": "shopify:\/\/shop_images\/guarantee-certificate.png",
+            "icon-link": "",
+            "content": "<p>12 månaders garanti<\/p>"
+          }
+        },
+        "83fdeaf0-4cdf-4ee4-a13e-44504f521326": {
+          "type": "Text-section",
+          "settings": {
+            "button_text": "Öppet köp",
+            "link": "",
+            "icon-image": "shopify:\/\/shop_images\/unboxing.png",
+            "icon-link": "",
+            "content": "<p>14 dagars öppet köp<\/p>"
+          }
+        }
+      },
+      "block_order": [
+        "template--15869192536218__c90893ac-103e-464a-94cb-ae03f7615777-1666156676353cf4f0-0",
+        "b71989eb-edb7-4b69-a11d-9e2367e42e36",
+        "c119d582-3d64-4ee5-89a6-85208bf17ad6",
+        "83fdeaf0-4cdf-4ee4-a13e-44504f521326"
+      ],
+      "settings": {
+      }
+    },
+    "featured-collections": {
+      "type": "featured-collections",
+      "blocks": {
+        "featured-collection-0": {
+          "type": "collection",
+          "settings": {
+            "collection": "billiga-mobiltelefoner",
+            "title": "Plånboksvänliga mobiler!",
+            "grid_items_count": 50,
+            "button_text": "Se fler billiga mobiler"
+          }
+        }
+      },
+      "block_order": [
+        "featured-collection-0"
+      ],
+      "settings": {
+        "bg": "#f5f5f5",
+        "title": "",
+        "layout_mode": "carousel",
+        "show_product_info": true,
+        "show_vendor": false,
+        "show_color_swatch": true,
+        "show_popup": false,
+        "show_button": true,
+        "popup_text": "<p>Beskrivning \/ Specifikation <strong>+<\/strong><\/p>",
+        "grid_mobile_items_per_row": "2",
+        "grid_desktop_items_per_row": 4
+      }
+    },
+    "1647594488d673cf0e": {
+      "type": "custom-html",
+      "settings": {
+        "Sverige": true,
+        "Denmark": true,
+        "Italy": false,
+        "Germay": false,
+        "France": false,
+        "spain": false,
+        "subheading": "",
+        "title": "Kundernas köpupplevelse:",
+        "html": "<iframe src=\"https:\/\/widget.reco.se\/v2\/widget\/4031121?mode=HORIZONTAL_QUOTE\" scrolling=\"no\" style=\"border:0;display:block\" data-reactroot=\"\" width=\"100%\" height=\"225\"><\/iframe>"
+      }
+    },
+    "4e477fd5-c0b6-41f9-bb0f-29bc3964f326": {
+      "type": "text-with-image",
+      "settings": {
+        "Sverige": true,
+        "Denmark": false,
+        "Italy": false,
+        "Germay": false,
+        "France": false,
+        "spain": false,
+        "bg": "#f5f5f5",
+        "subheading": "",
+        "title": "Skaffa Vimla med din telefon!",
+        "image": "shopify:\/\/shop_images\/Vimla_Renewed.png",
+        "image_position": "left",
+        "text_alignment": "left",
+        "text_mobile_alignment": "left",
+        "container": "with",
+        "text-content": true,
+        "content": "<p>Välj den surfnivå som passar just dig! Alla abonnemang från 3 GB till 100 GB med 75% rabatt i tre månader + 30 GB bara med Renewed. Med Vimlas abonnemang har du alltid, 24\/7, året om:  <\/p><ul><li>Fria samtal och mess<\/li><li>Ingen bindningstid<\/li><li>Spara forever ´n ever!<\/li><li>Sveriges nöjdaste mobilkunder<\/li><\/ul><p>Passa på att bli en del av den fantastiska Vimla familjen!<\/p>",
+        "link_text": "Läs mer om Vimla",
+        "link_url": "shopify:\/\/pages\/partner-vimla"
+      }
+    },
+    "fcb517a2-e9e1-4dfb-89da-0d519dbb12a2": {
+      "type": "text-with-image",
+      "settings": {
+        "Sverige": true,
+        "Denmark": true,
+        "Italy": true,
+        "Germay": true,
+        "France": true,
+        "spain": true,
+        "bg": "#f5f5f5",
+        "subheading": "",
+        "title": "re!Newed Premium",
+        "image": "shopify:\/\/shop_images\/premium_bild_startsida.png",
+        "image_position": "right",
+        "text_alignment": "left",
+        "text_mobile_alignment": "left",
+        "container": "with",
+        "text-content": true,
+        "content": "<p>Ny har vi uppdaterat vårt PREMIUM sortiment med fler produktkategorier. Nu kan du även handla surfplattor och smartklockor av premiumkvalitét. <\/p><p>Våra premium mobiltelefoner är helt renoverade och med alla yttre delar utbytta med originaldelar. Mobilerna ser ut och fungerar som en helt ny telefon. Alla premium telefoner har ett helt nytt batteri och du kan därför njuta av alla funktioner och fördelar med dessa telefoner precis som vid köp av en fabriksny mobiltelefon.<\/p><p>🔶 100% batterikapacitet<br\/>🔶 Enheter renoverade till nyskick<br\/>🔶 Endast originaldelar<br\/>🔶 Inga tecken på användning<\/p><p><\/p>",
+        "link_text": "Handla Premium mobiler",
+        "link_url": "shopify:\/\/pages\/premium"
+      }
+    },
+    "1647595625c9939ad9": {
+      "type": "text-with-image",
+      "settings": {
+        "Sverige": true,
+        "Denmark": true,
+        "Italy": true,
+        "Germay": true,
+        "France": true,
+        "spain": true,
+        "bg": "#f5f5f5",
+        "subheading": "",
+        "title": "Begagnade & renoverade mobiler",
+        "image": "shopify:\/\/shop_images\/startsida_reco.png",
+        "image_position": "left",
+        "text_alignment": "left",
+        "text_mobile_alignment": "left",
+        "container": "with",
+        "text-content": true,
+        "content": "<p>re!Newed är ett svenskt företag som specialiserar sig på att tillhandahålla återvunna IT- och elektronikprodukter. Genom att erbjuda produkter av hög standard med likvärdig funktionalitet som fabriksnya produkter vill vi ge våra kunder ett kostnadseffektivt och miljövänligt alternativ.<\/p><p>För att säkerställa hög kvalitet genomgår alla våra produkter noggranna funktionskontroller av professionella tekniker. Vi är stolta över att kunna erbjuda 12 månaders garanti på alla våra produkter.<\/p><p>Genom att handla från oss kan du spara upp till 50% jämfört med att köpa en fabriksny produkt, samtidigt som du bidrar till att skapa en mer hållbar framtid. <\/p><p>Vi tror att vårt arbete kan hjälpa till att minska den negativa miljöpåverkan som elektronikavfall kan orsaka och vi är övertygade om att små förändringar kan göra stor skillnad.<\/p>",
+        "link_text": "Köp nu",
+        "link_url": "shopify:\/\/collections\/alla-produkter"
+      }
+    },
+    "f658bc52-1f82-4554-ae73-95099cff7bdc": {
+      "type": "text-with-image",
+      "settings": {
+        "Sverige": true,
+        "Denmark": true,
+        "Italy": false,
+        "Germay": false,
+        "France": false,
+        "spain": false,
+        "bg": "#f5f5f5",
+        "subheading": "",
+        "title": "Telenor väljer re!Newed som långsiktig samarbetspartner",
+        "image": "shopify:\/\/shop_images\/telenor_renewed_facetime-girl_1115x560_002_f0295e18-a866-47b8-ae4a-d708ef30b900.jpg",
+        "image_position": "right",
+        "text_alignment": "left",
+        "text_mobile_alignment": "left",
+        "container": "with",
+        "text-content": true,
+        "content": "<p>Under 2022 inledde re!Newed och Telenor sitt samarbete. Samarbetet går ut på att förlänga livslängden hos begagnade mobiltelefoner och genom Telenors program <em>Change<\/em> lämnar kunderna in sina <a href=\"https:\/\/www.telenor.se\/handla\/mobiler\/begagnat\/\">begagnade mobiler<\/a> i samband med att de köper nya mobiltelefoner.<\/p><p>En stor del av dessa mobiltelefoner köper Renewed från <a href=\"https:\/\/telenor.se\/\">Telenor<\/a> för att ge dem ett andra liv. Vissa mobiler köper Telenor sedan tillbaka för att själva sälja, medan andra lever vidare i det gemensamma projektet <em>Återvinsten<\/em> som ligger i drift hos re!Newed.<\/p><p><a href=\"\/pages\/partner-telenor\" title=\"partner-telenor\">Läs mer om Telenor<\/a><\/p>",
+        "link_text": "",
+        "link_url": ""
+      }
+    },
+    "1129a888-8ff7-498a-ac26-78891edb3ff7": {
+      "type": "article-posts",
+      "blocks": {
+        "0cc9b137-4e14-40f7-b6d6-0fd42a581cc8": {
+          "type": "article",
+          "settings": {
+            "Sverige": true,
+            "Denmark": true,
+            "Italy": false,
+            "Germay": false,
+            "France": false,
+            "spain": false,
+            "article_1": "news\/delbetala-med-klarna",
+            "article_url": "shopify:\/\/blogs\/news\/delbetala-med-klarna"
+          }
+        },
+        "328a3399-87ce-479f-b5a4-3e2d203aa4a1": {
+          "type": "article",
+          "settings": {
+            "Sverige": true,
+            "Denmark": true,
+            "Italy": true,
+            "Germay": true,
+            "France": true,
+            "spain": true,
+            "article_1": "news\/12-manaders-kostnadsfri-garanti",
+            "article_url": "shopify:\/\/blogs\/news\/12-manaders-kostnadsfri-garanti"
+          }
+        },
+        "70dd689f-6a5f-4a6e-9cc3-dbe1bada2a01": {
+          "type": "article",
+          "settings": {
+            "Sverige": true,
+            "Denmark": true,
+            "Italy": true,
+            "Germay": true,
+            "France": true,
+            "spain": true,
+            "article_1": "news\/telefonernas-skick",
+            "article_url": "shopify:\/\/blogs\/news\/telefonernas-skick"
+          }
+        },
+        "264a54b7-e39b-4d1b-86f3-1e0eb3be1666": {
+          "type": "article",
+          "settings": {
+            "Sverige": true,
+            "Denmark": false,
+            "Italy": false,
+            "Germay": false,
+            "France": false,
+            "spain": false,
+            "article_1": "news\/vimla-arets-operator-operator-for-femte-aret-i-rad",
+            "article_url": "shopify:\/\/blogs\/news\/varfor-renewed-100-tryggt-kop"
+          }
+        },
+        "fcefbccd-b788-4fdc-a79c-14e3fae277db": {
+          "type": "article",
+          "settings": {
+            "Sverige": true,
+            "Denmark": true,
+            "Italy": true,
+            "Germay": true,
+            "France": true,
+            "spain": true,
+            "article_1": "news\/stolt-vanforetag-till-wateraid",
+            "article_url": "shopify:\/\/blogs\/news\/stolt-vanforetag-till-wateraid"
+          }
+        },
+        "255fcc9a-2cdf-4c1f-bce1-79052717d08c": {
+          "type": "article",
+          "settings": {
+            "Sverige": true,
+            "Denmark": true,
+            "Italy": false,
+            "Germay": false,
+            "France": false,
+            "spain": false,
+            "article_1": "news\/telenor-valjer-renewed-som-langsiktig-samarbetspartner",
+            "article_url": ""
+          }
+        }
+      },
+      "block_order": [
+        "0cc9b137-4e14-40f7-b6d6-0fd42a581cc8",
+        "328a3399-87ce-479f-b5a4-3e2d203aa4a1",
+        "70dd689f-6a5f-4a6e-9cc3-dbe1bada2a01",
+        "264a54b7-e39b-4d1b-86f3-1e0eb3be1666",
+        "fcefbccd-b788-4fdc-a79c-14e3fae277db",
+        "255fcc9a-2cdf-4c1f-bce1-79052717d08c"
+      ],
+      "settings": {
+        "subheading": "",
+        "title": "Handla tryggt med re!Newed",
+        "show_category": false,
+        "button_link": "",
+        "button_text": ""
+      }
+    },
+    "16475959609bfec0ca": {
+      "type": "newsletter",
+      "settings": {
+        "section_size": "small",
+        "image": "shopify:\/\/shop_images\/bild_nyhetsbrev_startsida_ny_bla.png",
+        "text_color": "#ffffff",
+        "button_color": "#000000",
+        "subheading": "",
+        "title": "PRENUMERERA PÅ VÅRT NYHETSBREV",
+        "content": "<p>Missa inga kampanjer och erbjudanden, anmäl dig till vårt nyhetsbrev.<\/p><p>Efter registrering får du en välkomstrabatt på 100 kr som gäller vid köp av mobiltelefoner på vår hemsida.<\/p>"
+      }
+    }
+  },
+  "order": [
+    "06968fd0-fcff-4041-a66c-cf4bcb49348b",
+    "slideshow",
+    "c90893ac-103e-464a-94cb-ae03f7615777",
+    "featured-collections",
+    "1647594488d673cf0e",
+    "4e477fd5-c0b6-41f9-bb0f-29bc3964f326",
+    "fcb517a2-e9e1-4dfb-89da-0d519dbb12a2",
+    "1647595625c9939ad9",
+    "f658bc52-1f82-4554-ae73-95099cff7bdc",
+    "1129a888-8ff7-498a-ac26-78891edb3ff7",
+    "16475959609bfec0ca"
+  ]
+}

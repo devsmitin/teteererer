@@ -1,0 +1,39 @@
+<div class="vimla_modal_second"> 
+  <div class="modal_second_inner">
+     <div class="number_title">
+        <h3>{{ settings.main_heading }} </h3>
+       <h4 class="h4">{{ settings.main_sub_heading }}</h4>
+      </div>
+    <div class="text_flex">
+     <div class="number_box"> 
+       <div class="number_box-info">
+         <label for="phone_number">{{ settings.first_box_heading }}</label>
+         <input type="tel" id="phone_number" placeholder="{{- 'product.vimla_products_unsubscribe.number' | t -}}" min="1" max="12" name="phone_number" pattern="[0-9]{3}-[0-9]{2}-[0-9]{3}">
+         <div class="number_box_error">{{- 'product.vimla_products_unsubscribe.number_error' | t -}}</div>
+       </div> 
+        <div class="number_btn"> 
+          <span class="showInvalideMobile" style="display:none;"></span>
+            <a  class="btn_first" href="javascript:void(0);">{{- 'product.vimla_products_unsubscribe.first_submit_btn' | t -}}</a>
+         </div>
+    
+    </div>
+    <div class="otp_box"> 
+       <div class="otp_box-info">
+         <label for="otp_number">{{ settings.second_box_heading }}</label>
+         <input type="text" id="otp_number" placeholder="{{- 'product.vimla_products_unsubscribe.second_number_placeholder' | t -}}" name="properties[verification_code]">
+         <div class="otp-error">{{- 'product.vimla_products_unsubscribe.second_number_error' | t -}}</div>
+       </div> 
+        <div class="number_btn"> 
+            <span class="showInvalideDiscount" style="display:none;"></span>
+            <a class="btn_second" href="javascript:void(0);">{{- 'product.vimla_products_unsubscribe.second_submit_btn' | t -}}</a>
+          <button type="submit" id="vimla_freeproduct-submit" style="display:none;">{{- 'product.vimla_products_unsubscribe.submit_button' | t -}}</button>
+          <div class="second_footer_note">{{ settings.fotter_note }}</div>
+         </div>
+    </div>
+
+     <div class="modal_close">
+      <span>{% render 'icon' with 'close' %}</span>
+    </div>
+    </div>
+  </div>
+</div>

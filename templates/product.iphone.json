@@ -1,0 +1,103 @@
+{
+  "sections": {
+    "main": {
+      "type": "main-product",
+      "blocks": {
+        "product_meta": {
+          "type": "product_meta",
+          "settings": {
+            "show_vendor": true,
+            "show_sku": false,
+            "show_product_rating": false,
+            "show_taxes_included": false
+          }
+        },
+        "variant_selector": {
+          "type": "variant_selector",
+          "settings": {
+            "selector_mode": "block",
+            "show_color_swatch": true,
+            "show_color_carousel": false,
+            "size_chart": ""
+          }
+        },
+        "buy_buttons": {
+          "type": "buy_buttons",
+          "settings": {
+            "show_price_in_button": false,
+            "show_payment_button": false
+          }
+        },
+        "description": {
+          "type": "description",
+          "settings": {
+          }
+        },
+        "29e71e2c-4886-4ed8-89de-447ab93007c8": {
+          "type": "content",
+          "settings": {
+            "title": "",
+            "content": "",
+            "page": "{{ product.metafields.my_fields.info.value }}"
+          }
+        },
+        "354270ca-e35b-40fd-a2c5-6128ea14a7d3": {
+          "type": "content",
+          "settings": {
+            "title": "",
+            "content": "",
+            "page": "produkternas-skick"
+          }
+        },
+        "e20caade-4306-4c52-896a-45fbaae102f7": {
+          "type": "content",
+          "settings": {
+            "title": "",
+            "content": "",
+            "page": "garanti-med-renewed"
+          }
+        }
+      },
+      "block_order": [
+        "product_meta",
+        "variant_selector",
+        "buy_buttons",
+        "description",
+        "29e71e2c-4886-4ed8-89de-447ab93007c8",
+        "354270ca-e35b-40fd-a2c5-6128ea14a7d3",
+        "e20caade-4306-4c52-896a-45fbaae102f7"
+      ],
+      "settings": {
+        "image_size": "small",
+        "stack_images": false,
+        "show_thumbnails": false,
+        "enable_image_zoom": true,
+        "enable_video_looping": false
+      }
+    },
+    "product-recommendations": {
+      "type": "product-recommendations",
+      "settings": {
+        "heading": "Du kanske också gillar",
+        "show_product_info": true,
+        "show_vendor": false,
+        "show_color_swatch": true
+      }
+    },
+    "recently-viewed-products": {
+      "type": "recently-viewed-products",
+      "disabled": true,
+      "settings": {
+        "title": "Recently viewed",
+        "show_product_info": true,
+        "show_vendor": false,
+        "show_color_swatch": false
+      }
+    }
+  },
+  "order": [
+    "main",
+    "product-recommendations",
+    "recently-viewed-products"
+  ]
+}

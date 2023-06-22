@@ -1,0 +1,1631 @@
+<span class="evoli-pop-up-content">
+      <section class="popup">
+      <div class="popup__content">
+        <div class="close">
+          <span></span>
+          <span></span>
+        </div>
+        {% if section.settings.evoli_popup_heading %}
+          <div class="popup-heading" style="background: {{ section.settings.evoli-popup-heading-bg }}">
+          <h2 class="u-h2">{{ section.settings.evoli_popup_heading }}</h2></div>
+        {% endif %}
+        <div class="popup-content">
+          {% if section.settings.evoli_popup_content %}
+            <span class="popup-body-content">{{ section.settings.evoli_popup_content }}</span>
+          {% endif %}
+          {% if section.settings.evoli_popup_footer_content %}
+            <span class="popup-footer-content">{{ section.settings.evoli_popup_footer_content }}</span>
+          {% endif %}
+        </div>
+      </div>     
+    </section> 
+</span>
+<span class="vimla-pop-up-content">
+  <section class="popup">
+    <div class="popup__content"> 
+      <div class="close">
+        <span></span>
+        <span></span>
+      </div>
+      {% if section.settings.vimla_popup_heading %}
+        <div class="popup-heading" style="background: {{ section.settings.vimla-popup-heading-bg }};">
+          <h2 class="u-h2">{{ section.settings.vimla_popup_heading }}</h2>
+        </div>
+      {% endif %}
+      <div class="popup-content">
+        {% if section.settings.vimla_popup_content %}
+          <span class="popup-body-content">{{ section.settings.vimla_popup_content }}</span>
+        {% endif %}
+        {% if section.settings.vimla_popup_footer_content %}
+          <span class="popup-footer-content" >{{ section.settings.vimla_popup_footer_content }}</span>
+        {% endif %}
+      </div>
+    </div>
+  </section>
+</span>
+
+<span class="Premium_Produtcs_color">
+
+               {% for variant in product.variants %}
+
+                    {% if variant.sku contains 'PM' %}
+                    
+                      {% style %}
+                        
+                      .PageContainer{
+                          background-color: {{ section.settings.bg_color }} !important; 
+                        } 
+
+                       .ProductForm__Variants span, .ProductForm__Variants li label, .ProductForm__Variants p, h1, h4, h5, h6, .Vimla-chech_with_evoli label, .Collapsible__Button, .Product__InfoWrapper .Product__Info form .Product__Tabs, .ProductMeta h2 {
+                          color: {{ section.settings.text_color }} !important; 
+                          }
+
+                        .ProductMeta__Description.Container{
+                          color: {{ section.settings.text_color }} !important;
+                        }
+                        .ProductMeta__Description, .ProductMeta__Text, .Product__InfoWrapper-text .Product__Info.custom_product .Product__Tabs{
+                          color: {{ section.settings.text_color }} !important;
+                        }
+                        
+                        .ProductItem__Price {
+                            color: {{ section.settings.text_color }} !important; 
+                        }
+                        
+                        .Price--highlight{
+                          color: {{ section.settings.price_text_color }} !important;
+                        }
+
+                        .ProductItem__Info a{
+                            color: {{ section.settings.text_color }} !important; 
+                        }
+
+                        .Vimla-chech_with_evoli a{
+                          color: {{ section.settings.text_color }} !important;
+                        }
+
+                         p.custom-main, .var_title{
+                          color: {{ section.settings.text_color }} !important;
+                        }
+                        
+                       .Price--compareAt {
+                          color: {{ section.settings.text_color }} !important; 
+                        }
+
+                        .Product__Wrapper.custom  .Button--primary:before {
+                          background-color: {{ section.settings.button_background_color }} !important;
+                        }
+
+                        .Product__Wrapper.custom .Button--primary {
+                          background-color: {{ section.settings.button_background_color }} !important;
+                          border-color: {{ section.settings.button_background_color }} !important;
+                        }
+
+                        .Product__Wrapper.custom .followMeBar.fixedbuybutton .Button[disabled]{
+                           background-color: {{ section.settings.button_background_color }} !important;
+                          border-color: {{ section.settings.button_background_color }} !important;
+                        }
+                       
+                        .Product__Wrapper.custom .Button.Button--primary:hover:before{
+                          background-color: {{ section.settings.button_background_color_on_hover }} !important;                       
+                        }
+
+                        .Product__Wrapper.custom .Button--primary {        
+                         color: {{ section.settings.button_text_color }} !important;
+                        }
+
+                        .Product__Wrapper.custom .Button--primary:hover {        
+                         color: {{ section.settings.button_text_color_on_hover }} !important;
+                        }
+
+                         .ProductMeta, .vimla_sub{
+                          border-bottom: 1px solid {{ section.settings.border_color }} !important;
+                        }
+
+                        .Vimla-chech_with_evoli{
+                          border-top: 1px solid {{ section.settings.border_color }} !important;
+                        }
+
+                        .Collapsible{
+                          border-top: 1px solid {{ section.settings.border_color }} !important;
+                          border-bottom: 1px solid {{ section.settings.border_color }} !important;
+                        }
+
+                        .Vimla-chech_with_evoli label:before{
+                           border: 2px solid {{ section.settings.checkbox_color }} !important;
+                           border-color: {{ section.settings.checkbox_color }} !important;
+                        }
+
+                        .evoli_checkbox_prefilled_main input[type=radio]:checked~label:before{
+                          background-color: {{ section.settings.checkbox_color }} !important; 
+                        }
+
+                        .Vimla-chech_with_evoli input[type=checkbox]:checked~label:before, input#vimla_subscription:checked + label:before, input#unsubscrib_checkbox:checked + label:before{
+                          background-color: {{ section.settings.checkbox_background_color }} !important; 
+                        }
+
+                        
+                         @media (max-width:768px) {
+                          .Product__ActionItem {
+                                  display: none;
+                              }
+                          }
+                  
+                      {% endstyle %}
+                      
+                    {% endif %}
+                    
+                {% endfor %}
+  
+</span>
+
+{%- assign meta_block = section.blocks | where: 'type', 'product_meta' | first -%}
+{%- assign share_buttons_block = section.blocks | where: 'type', 'share_buttons' | first -%}
+{%- assign inventory_block = section.blocks | where: 'type', 'inventory' | first -%}
+{%- assign buy_buttons_block = section.blocks | where: 'type', 'buy_buttons' | first -%}
+
+{%- capture section_settings -%}
+{
+  "enableHistoryState": true,
+  "templateSuffix": {{ product.template_suffix | json }},
+  "showInventoryQuantity": {% if inventory_block != blank %}true{% else %}false{% endif %},
+  "showSku": {{ meta_block.settings.show_sku | json }},
+  "stackProductImages": {{ section.settings.stack_images | json }},
+  "showThumbnails": {{ section.settings.show_thumbnails | json }},
+  "enableVideoLooping": {{ section.settings.enable_video_looping | json }},
+  "inventoryQuantityThreshold": {{ inventory_block.settings.inventory_quantity_threshold | default: 0 }},
+  "showPriceInButton": {{ buy_buttons_block.settings.show_price_in_button | json }},
+  "enableImageZoom": {{ section.settings.enable_image_zoom | json }},
+  "showPaymentButton": {{ buy_buttons_block.settings.show_payment_button | json }},
+  "useAjaxCart": {% if settings.cart_type == 'drawer' %}true{% else %}false{% endif %}
+}
+{%- endcapture -%}
+
+<script defer>
+  // To power the recently viewed products section, we save the ID of the product inside the local storage
+  (() => {
+    let items = JSON.parse(localStorage.getItem('recentlyViewedProducts') || '[]');
+
+    // We check if the current product already exists, and if it does not, we add it at the start
+    if (!items.includes({{ product.id }})) {
+      items.unshift({{ product.id }});
+    }
+
+    // Then, we save the current product into the local storage, by keeping only the 8 most recent
+    try {
+      localStorage.setItem('recentlyViewedProducts', JSON.stringify(items.slice(0, 8)));
+    } catch (error) {
+      // Do nothing, this may happen in Safari in incognito mode
+    }
+  })();
+</script>
+
+<section class="Product Product--{{ section.settings.image_size }}" data-section-id="{{ section.id }}" data-section-type="product" data-section-settings='{{ section_settings }}'>
+  <div class="Product__Wrapper custom">
+    {%- capture action_list_items -%}
+      {%- if section.settings.enable_image_zoom -%}
+        <div class="Product__ActionItem hidden-lap-and-up">
+          <button class="RoundButton RoundButton--small RoundButton--flat" aria-label="{{ 'product.slideshow.zoom' | t | escape }}" data-action="open-product-zoom">{% render 'icon' with 'plus' %}</button>
+        </div>
+      {%- endif -%}
+
+      {%- if share_buttons_block != blank -%}
+        <div class="Product__ActionItem hidden-lap-and-up">
+          <button class="RoundButton RoundButton--small RoundButton--flat" data-action="toggle-social-share" data-animate-bottom aria-expanded="false">
+            <span class="RoundButton__PrimaryState">{% render 'icon' with 'share' %}</span>
+            <span class="RoundButton__SecondaryState">{% render 'icon' with 'close' %}</span>
+          </button>
+
+          {%- assign share_url = shop.url | append: product.url -%}
+          {%- assign twitter_text = product.title -%}
+          {%- assign pinterest_description = product.description | strip_html | truncatewords: 15 | url_param_escape -%}
+          {%- assign pinterest_image = product.featured_media | img_url: '1024x' | prepend: 'https:' -%}
+
+          <div class="Product__ShareList" aria-hidden="true">
+            <a class="Product__ShareItem" href="https://www.facebook.com/sharer.php?u={{ share_url }}" target="_blank" rel="noopener">{%- render 'icon' with 'facebook' -%} Facebook</a>
+            <a class="Product__ShareItem" href="https://pinterest.com/pin/create/button/?url={{ share_url }}{% if pinterest_image != blank %}&media={{ pinterest_image }}{% endif %}&description={{ pinterest_description }}" target="_blank" rel="noopener">{%- render 'icon' with 'pinterest' -%} Pinterest</a>
+            <a class="Product__ShareItem" href="https://twitter.com/share?{% if twitter_text != blank %}text={{twitter_text}}&{% endif %}url={{ share_url }}" target="_blank" rel="noopener">{%- render 'icon' with 'twitter' -%} Twitter</a>
+          </div>
+        </div>
+      {%- endif -%}
+    {%- endcapture -%}
+
+    {%- comment -%}
+    --------------------------------------------------------------------------------------------------------------------
+    PRODUCT GALLERY
+    --------------------------------------------------------------------------------------------------------------------
+    {%- endcomment -%}
+
+    {%- assign initial_media_id = product.featured_media.id -%}
+    {%- assign initial_media_index = 0 -%}
+    {%- assign media_count = 0 -%}
+
+    {%- capture slideshow_media -%}
+      {%- for media in product.media -%}
+        {%- if product.selected_variant and media.id == product.selected_variant.featured_media.id -%}
+          {%- assign initial_media_index = media_count -%}
+          {%- assign initial_media_id = media.id -%}
+        {%- endif -%}
+
+        {%- capture supported_sizes -%}{%- render 'image-size', sizes: '200,400,600,700,800,900,1000,1200,1400,1600', image: media -%}{%- endcapture -%}
+
+        {%- case media.media_type -%}
+          {%- when 'image' -%}
+            <div id="Media{{ media.id }}" tabindex="0" class="Product__SlideItem Product__SlideItem--image Carousel__Cell {% if initial_media_id == media.id %}is-selected{% endif %}" data-media-type="image" data-media-id="{{ media.id }}" data-media-position="{{ media.position }}" data-image-media-position="{% increment image_position %}">
+              
+                    {% comment %} ***********premium logo: start**********{% endcomment %}
+                          <!-- logo with tags:start -->
+                           {% for tag in product.tags %}
+                              {% assign tag-text-1 = settings.premium-text %}
+                              {% assign tag-text-2 = settings.tag-text-2 %}
+                              {% assign tag-text-3 = settings.tag-text-3 %}
+                              {% if tag == tag-text-1 %}
+                                 {% if settings.premium != blank %}
+                                    <img
+                                      class="PM"
+                                      src="{{ settings.premium | img_url:'600x600' }}"
+                                      alt="{{ media.alt | escape }}"
+                                    >
+                                  {% endif %}
+                              {% elsif tag == tag-text-2 %}
+                                  {% if settings.tag-image-2 != blank %}
+                                     <img
+                                          class="PM"
+                                          src="{{ settings.tag-image-2 | img_url:'600x600' }}"
+                                          alt="{{ media.alt | escape }}"
+                                        >
+                                  {% endif %}
+                              {% elsif tag == tag-text-3 %}
+                                {% if settings.tag-image-3 != blank %}
+                                   <img
+                                        class="PM"
+                                        src="{{ settings.tag-image-3 | img_url:'600x600' }}"
+                                        alt="{{ media.alt | escape }}"
+                                      >
+                                {% endif %}
+                              {% endif %}
+                            {% endfor %}
+                            <!-- logo with tags:end -->
+                {% comment %} ***********premium logo: end**********{% endcomment %}
+              <div class="AspectRatio AspectRatio--withFallback" style="padding-bottom: {{ 100.0 | divided_by: media.aspect_ratio }}%; --aspect-ratio: {{ media.aspect_ratio }};">
+                {% assign image_url = media | img_url: '1x1' | replace: '_1x1.', '_{width}x.' %}
+
+                <img class="Image--lazyLoad Image--fadeIn" data-src="{{ image_url }}" data-widths="[{{ supported_sizes }}]" data-sizes="auto" data-expand="-100" alt="{{ media.alt | escape }}" data-max-width="{{ media.width }}" data-max-height="{{ media.height }}" data-original-src="{{ media | img_url: 'master' }}">
+                <span class="Image__Loader"></span>
+
+                <noscript>
+                  <img src="{{ media | img_url: '800x' }}" alt="{{ media.alt | escape }}">
+                </noscript>
+              </div>
+            </div>
+
+          {%- when 'external_video' -%}
+            <div id="Media{{ media.id }}" tabindex="-1" class="Product__SlideItem Product__SlideItem--video Carousel__Cell {% if initial_media_id == media.id %}is-selected{% endif %}" data-media-type="external_video" data-media-id="{{ media.id }}" data-media-position="{{ media.position }}" data-video-host="{{ media.host | escape }}" data-video-id="{{ media.external_id | escape }}">
+              <div class="Image--lazyLoad Image--fadeIn" data-expand="-100">
+                <div class="VideoWrapper">
+                  {{- media | external_video_tag: image_size: '1024x' -}}
+                </div>
+              </div>
+            </div>
+
+          {%- when 'video' -%}
+            <div id="Media{{ media.id }}" tabindex="-1" class="Product__SlideItem Product__SlideItem--video Carousel__Cell {% if initial_media_id == media.id %}is-selected{% endif %}" data-media-type="video" data-media-id="{{ media.id }}" data-media-position="{{ media.position }}">
+              <div class="Image--lazyLoad Image--fadeIn" data-expand="-100">
+                <div class="VideoWrapper VideoWrapper--native" style="padding-bottom: {{ 100.0 | divided_by: media.aspect_ratio }}%">
+                  {{- media | video_tag: image_size: '1024x', controls: true -}}
+                </div>
+              </div>
+            </div>
+
+          {%- when 'model' -%}
+            <div id="Media{{ media.id }}" tabindex="-1" class="Product__SlideItem Product__SlideItem--model Carousel__Cell {% if initial_media_id == media.id %}is-selected{% endif %}" data-media-type="model" data-media-id="{{ media.id }}" data-media-position="{{ media.position }}">
+              <div class="Image--lazyLoad Image--fadeIn" data-expand="-100">
+                <div class="ModelWrapper">
+                  {{- media | model_viewer_tag: image_size: '1024x', reveal: 'interaction', toggleable: true -}}
+                </div>
+              </div>
+            </div>
+        {%- endcase -%}
+
+        {%- assign media_count = media_count | plus: 1 -%}
+      {%- endfor -%}
+    {%- endcapture -%}
+
+    {%- if product.media.size > 0 -%}
+      <div class="Product__Gallery {% if section.settings.stack_images %}Product__Gallery--stack{% endif %} {% if section.settings.show_thumbnails and media_count > 1 %}Product__Gallery--withThumbnails{% else %}Product__Gallery--withDots{% endif %}">
+        <span id="ProductGallery" class="Anchor"></span>
+
+        {%- if action_list_items != blank -%}
+          <div class="Product__ActionList hidden-lap-and-up {% if product.media[initial_media_index].media_type != 'image' %}is-hidden{% endif %}">
+            {{ action_list_items }}
+          </div>
+        {%- endif -%}
+
+        {%- capture slideshow_nav -%}
+          {%- if media_count > 1 -%}
+            {%- if section.settings.show_thumbnails -%}
+              <div class="Product__SlideshowNav Product__SlideshowNav--thumbnails">
+                <div class="Product__SlideshowNavScroller">
+                  {%- for media in product.media -%}
+                    {%- capture nav_item_badge -%}
+                      {%- case media.media_type -%}
+                        {%- when 'model' -%}
+                          <span class="Product__SlideshowNavBadge">{% render 'icon', icon: 'media-model-badge' %}</span>
+
+                        {%- when 'video' or 'external_video' -%}
+                          <span class="Product__SlideshowNavBadge">{% render 'icon', icon: 'media-video-badge' %}</span>
+                      {%- endcase -%}
+                    {%- endcapture -%}
+
+                    {%- if section.settings.stack_images -%}
+                      <a href="#Media{{ media.id }}" data-offset="-25" data-focus-on-click data-media-id="{{ media.id }}" class="Product__SlideshowNavImage AspectRatio {% if forloop.first %}is-selected{% endif %}" style="--aspect-ratio: {{ media.preview_image.aspect_ratio }}">
+                        <img src="{{ media | img_url: '160x' }}" alt="{{ media.alt | escape }}">
+                        {{- nav_item_badge -}}
+                      </a>
+                    {%- else -%}
+                      <a href="{{ media | img_url: '1024x' }}" data-media-id="{{ media.id }}" class="Product__SlideshowNavImage AspectRatio {% if media.id == initial_media_id %}is-selected{% endif %}" style="--aspect-ratio: {{ media.preview_image.aspect_ratio }}">
+                        <img src="{{ media | img_url: '160x' }}" alt="{{ media.alt | escape }}">
+                        {{- nav_item_badge -}}
+                      </a>
+                    {%- endif -%}
+                  {%- endfor -%}
+                </div>
+              </div>
+            {%- endif -%}
+
+            {%- if section.settings.stack_images -%}
+              <div class="Product__SlideshowNav Product__SlideshowNav--dots">
+                <div class="Product__SlideshowNavScroller">
+                  {%- for media in product.media -%}
+                    <a href="#Media{{ media.id }}" data-offset="-25" data-focus-on-click class="Product__SlideshowNavDot {% if forloop.first %}is-selected{% endif %}"></a>
+                  {%- endfor -%}
+                </div>
+              </div>
+            {%- endif -%}
+          {%- endif -%}
+        {%- endcapture -%}
+
+        {%- if section.settings.stack_images -%}
+          {{- slideshow_nav -}}
+        {%- endif -%}
+
+        {%- capture flickity_options -%}
+        {
+          "prevNextButtons": false,
+          "pageDots": false,
+          "adaptiveHeight": true,
+          "watchCSS": true,
+          "dragThreshold": 8,
+          "initialIndex": {{ initial_media_index }},
+          "arrowShape": {"x0": 20, "x1": 60, "y1": 40, "x2": 60, "y2": 35, "x3": 25}
+        }
+        {%- endcapture -%}
+
+        <div class="Product__Slideshow {% if section.settings.enable_image_zoom %}Product__Slideshow--zoomable{% endif %} Carousel" data-flickity-config='{{ flickity_options }}'>
+          {{ slideshow_media }}
+        </div>
+
+        {%- comment -%}Add the "view in your space" button, which allows to show the product in customer's environment (if the device supports it){%- endcomment -%}
+        {%- assign first_3d_model = product.media | where: 'media_type', 'model' | first -%}
+
+        {%- if first_3d_model -%}
+          <button class="Product__ViewInSpace Button Button--full" data-shopify-xr data-shopify-model3d-id="{{ first_3d_model.id }}" data-shopify-model3d-default-id="{{ first_3d_model.id }}" data-shopify-title="{{ product.title | escape }}" data-shopify-xr-hidden>
+            {%- render 'icon', icon: 'media-view-in-space' -%} {{- 'product.general.view_in_space' | t -}}
+          </button>
+        {%- endif -%}
+
+        {%- if media_count > 1 -%}
+          {%- comment -%}
+            IMPLEMENTATION NOTE: The reason we create ourselves our own UI instead of relying of the built-in feature of Flickity is that,
+            since the media API, Shopify requires to add arrows next to the dot. Unfortunately this layout is not
+            achievable easily using Flickity options only, so we have to run our own
+          {%- endcomment -%}
+
+          <div class="Product__SlideshowMobileNav {% if section.settings.stack_images or section.settings.show_thumbnails %}hidden-lap-and-up{% endif %}">
+            <button class="Product__SlideshowNavArrow Product__SlideshowNavArrow--previous" type="button" data-direction="previous" aria-label="{{ 'general.accessibility.previous' | t }}">
+              {% render 'icon' with 'media-arrow-left' %}
+            </button>
+
+            <div class="flickity-page-dots">
+              {%- for i in (1..media_count) -%}
+                <button type="button" aria-label="{{ 'product.slideshow.go_to_image' | t: i: i | escape }}" class="dot {% if forloop.index0 == initial_media_index %}is-selected{% endif %}" data-index="{{ forloop.index0 }}"></button>
+              {%- endfor -%}
+            </div>
+
+            <button class="Product__SlideshowNavArrow Product__SlideshowNavArrow--next" type="button" data-direction="next" aria-label="{{ 'general.accessibility.next' | t }}">
+              {% render 'icon' with 'media-arrow-right' %}
+            </button>
+          </div>
+        {%- endif -%}
+
+        {%- unless section.settings.stack_images -%}
+          {{- slideshow_nav -}}
+        {%- endunless -%}
+      </div>
+    {%- endif -%}
+
+   <!--  Code for hide frequently-bought-together in vimla products : start -->
+  {% assign Hide_elements = false %}
+  {% for variant in product.variants %}
+    {% if variant.sku contains 'VM' %}
+      {% if product.selected_or_first_available_variant.sku contains 'VM'  %}
+        {% assign Hide_elements = true %}
+      {% endif %}    
+    {% endif %}
+  {% endfor %}
+  
+  <!--  Liquid condition end  -->
+        
+   {% if Hide_elements == true %}
+      
+   {% else %}
+     {% render 'frequently-bought-together' %}
+   {% endif %}
+<!--  Code for hide frequently-bought-together in vimla products : end -->    
+
+    {%- comment -%}
+    <div class="left_product_section product_section_desktop slideshow-container">
+      {% assign bundle_products =  product.metafields.meta.test_pro.value %}
+      {%- if bundle_products != blank -%}
+        <header class="SectionHeader SectionHeader--center">
+          <h3 class="SectionHeader__Heading Heading u-h4">{{ section.settings.accessories_title | escape }}</h3>
+        </header>
+      {% endif %}
+        
+        {% for bundle_product in bundle_products %}
+          {%- if bundle_product != blank -%}
+             <div class="Section Section--spacingNormal sx for-this-spacing">
+              {% render 'product-items-custom', product: bundle_product, use_horizontal: true, show_labels: false, show_product_info: true, show_vendor: false, show_price_on_hover: false %}
+            </div>
+          {% endif %} 
+         {%- endfor -%}
+
+    </div>
+{%- endcomment -%}
+
+    {% if product.metafields.meta.test_pro.value != blank  %}  
+            
+    <div class="left_product_section product_section_desktop slideshow-container other_one">
+
+    <div class="Collapsible Collapsible--large" style="overflow: visible;">
+
+           <button class="Collapsible__Button Heading u-h6" data-action="toggle-collapsible" aria-expanded="true">
+               
+          <span class="a_title" >{{ 'product.frequently_bought_and_other_have_added_text.Others_have_added_section_title' | t }}</span>
+                    
+             <span class="Collapsible__Plus"></span>                  
+            </button>
+
+      <div class="Collapsible__Inner" style="overflow: visible; height: auto;">
+    
+      {% assign bundle_products =  product.metafields.meta.test_pro.value %}
+      {%- if bundle_products != blank -%}
+         {%- comment -%}
+         <header class="SectionHeader SectionHeader--center">
+          <h3 class="SectionHeader__Heading Heading u-h4">{{ section.settings.accessories_title | escape }}</h3>
+        </header> 
+         {%- endcomment -%}     
+      {% endif %}
+        
+        {% for bundle_product in bundle_products %}
+          {%- if bundle_product != blank -%}
+             <div class="Section Section--spacingNormal sx for-this-spacing">
+              {% render 'product-items-custom', product: bundle_product, use_horizontal: true, show_labels: false, show_color_swatch:true, show_product_info: true, show_vendor: false, show_price_on_hover: false %}
+            </div>
+          {% endif %} 
+         {%- endfor -%}
+
+    </div>
+
+  </div>
+
+    </div>
+      
+{% endif %}
+  
+    {%- capture product_aside -%}
+      {%- comment -%}
+      --------------------------------------------------------------------------------------------------------------------
+      PRODUCT TABS
+      --------------------------------------------------------------------------------------------------------------------
+      {%- endcomment -%}
+  {% if section.settings.hide_tabs %}
+            {% assign Tabs = false %}
+             {% for variant in product.variants %}
+              {% if variant.sku contains 'TN' %}
+              
+                        {% assign Tabs = true %}
+                {% else %}
+                
+                {% endif %}
+               {% endfor %}
+       {% endif %}
+        {% if Tabs == true %} 
+                
+                {% else %}
+      {%- render 'product-tabs' -%}
+      {% endif %}
+      {%- comment -%}
+      --------------------------------------------------------------------------------------------------------------------
+      PRODUCT WEAR IT WITH
+      --------------------------------------------------------------------------------------------------------------------
+      {%- endcomment -%}
+    {%- endcapture -%}
+  
+    <div class="Product__InfoWrapper{% if product.selected_or_first_available_variant.sku contains 'VM' %} vimla_product{% endif %}">
+      <div class="Product__Info {% if media_count == 0 %}Product__Info--noGallery{% endif %} custom_product">
+        <div class="Container">
+          {%- assign has_ouputted_variant_selector = false -%}
+
+          {%- form 'product', product, class: 'ProductForm' -%}
+            {%- render 'product-data', product: product -%}
+           
+            {%- for block in section.blocks -%}
+              {%- case block.type -%}
+                {%- when '@app' -%}
+                  {%- render block -%}
+                      
+                {%- when 'product_meta' -%}
+                  {%- render 'product-meta', form: form, block: block, product: product -%}
+
+                {%- when 'description' -%}
+                  {%- if product.description != blank -%}
+                    <div class="ProductMeta__Description Container {% if product.metafields.custom.frequently_bought.type %}extra_margin{% endif %}" {{ block.shopify_attributes }}>
+                      <div class="Rte">
+                        {{- product.description | replace: 'data-section-type', 'data-section-type-placeholder' -}}
+                      </div>
+                    </div>
+                  {%- endif -%}
+              {% if section.settings.hide_tabs %}
+                      {% assign Tabs = false %}
+                       {% for variant in product.variants %}
+                        {% if variant.sku contains 'TN' %}
+                      
+                                  {% assign Tabs = true %}
+                          {% else %}
+                          
+                          {% endif %}
+                         {% endfor %}
+                 {% endif %}
+                  {% if Tabs == true %} 
+                
+                {% else %}
+	            {%- render 'product-tabs' -%}
+          		 	{% endif %}
+                {%- when 'share_buttons' -%}
+                  <div class="ProductMeta__ShareButtons hidden-pocket" {{ block.shopify_attributes }}>
+                    <span class="ProductMeta__ShareTitle Heading Text--subdued u-h7">{{ 'product.form.share' | t }}</span>
+
+                    {%- assign share_url = shop.url | append: product.url -%}
+                    {%- assign twitter_text = product.title -%}
+                    {%- assign pinterest_description = product.description | strip_html | truncatewords: 15 | url_param_escape -%}
+                    {%- assign pinterest_image = product.featured_image | img_url: 'large' | prepend: 'https:' -%}
+
+                    <div class="ProductMeta__ShareList Text--subdued">
+                      <a class="ProductMeta__ShareItem" href="https://www.facebook.com/sharer.php?u={{ share_url }}" target="_blank" rel="noopener" aria-label="Facebook">{%- render 'icon' with 'facebook' -%}</a>
+                      <a class="ProductMeta__ShareItem" href="https://twitter.com/share?{% if twitter_text != blank %}text={{twitter_text}}&{% endif %}url={{ share_url }}" target="_blank" rel="noopener" aria-label="Twitter">{%- render 'icon' with 'twitter' -%}</a>
+                      <a class="ProductMeta__ShareItem" href="https://pinterest.com/pin/create/button/?url={{ share_url }}{% if pinterest_image != blank %}&media={{ pinterest_image }}{% endif %}&description={{ pinterest_description }}" target="_blank" rel="noopener" aria-label="Pinterest">{%- render 'icon' with 'pinterest' -%}</a>
+                    </div>
+                  </div>
+
+                {%- when 'variant_selector' -%}
+                  {%- assign has_ouputted_variant_selector = true -%}
+                  {%- render 'product-form', block: block, product: product -%}
+             
+                 
+                {%- when 'quantity_selector' -%}
+                  <div class="ProductForm__QuantitySelector" {{ block.shopify_attributes }}>
+                    {%- if block.settings.show_label -%}
+                      <span class="ProductForm__Label">{{ 'product.form.quantity' | t }}:</span>
+                    {%- endif -%}
+
+                    <div class="QuantitySelector QuantitySelector--large">
+                      {%- assign quantity_minus_one = line_item.quantity | minus: 1 -%}
+
+                      <button type="button" class="QuantitySelector__Button Link Link--secondary" data-action="decrease-quantity">{% render 'icon' with 'minus' %}</button>
+                      <input type="text" class="QuantitySelector__CurrentQuantity" pattern="[0-9]*" name="quantity" value="1" aria-label="{{ 'product.form.quantity' | t }}">
+                      <button type="button" class="QuantitySelector__Button Link Link--secondary" data-action="increase-quantity">{% render 'icon' with 'plus' %}</button>
+                    </div>
+                  </div>
+
+                {%- when 'inventory' -%}
+                  {%- assign hide_inventory_quantity_by_default = false -%}
+
+                  {%- if product.selected_or_first_available_variant.inventory_management == blank or product.selected_or_first_available_variant.inventory_quantity <= 0 -%}
+                    {%- assign hide_inventory_quantity_by_default = true -%}
+                  {%- endif -%}
+
+                  {%- if block.settings.inventory_quantity_threshold != 0 and product.selected_or_first_available_variant.inventory_quantity > block.settings.inventory_quantity_threshold -%}
+                    {%- assign hide_inventory_quantity_by_default = true -%}
+                  {%- endif -%}
+
+                  <p class="ProductForm__Inventory Text--subdued" {% if hide_inventory_quantity_by_default %}style="display: none"{% endif %} {{ block.shopify_attributes }}>
+                    {%- if block.settings.inventory_quantity_threshold == 0 -%}
+                      {{- 'product.form.inventory_quantity_count' | t: count: product.selected_or_first_available_variant.inventory_quantity -}}
+                    {%- else -%}
+                      {{- 'product.form.low_inventory_quantity_count' | t: count: product.selected_or_first_available_variant.inventory_quantity -}}
+                    {%- endif -%}
+                  </p>
+                
+                
+                {%- when 'buy_buttons' -%}
+                  <style>
+                      .Vimla-chech_with_evoli input[type=checkbox]:checked~label:before,
+                input#vimla_subscription:checked + label:before, 
+                input#unsubscrib_checkbox:checked + label:before{
+                          background: {{ block.settings.check_color }};
+                          border-color: {{ block.settings.check_color }};  
+                      }
+                
+                      .Vimla-chech_with_evoli input[type=checkbox]:checked~label:after,
+                input#vimla_subscription:checked + label:after
+                input#unsubscrib_checkbox:checked + label:after{
+                        border-color: {{ block.settings.check_color_icon }}
+                      }
+                     
+                      .Vimla-chech_with_evoli label:before {
+                      border-color: {{ block.settings.color }}
+                      }
+                      </style>
+                  {% assign evoli_insurance_tag =  section.settings.evoli_tag  %}
+                  {% assign flag = false %}
+                 
+                {% for variant in product.variants %}
+                  {% if variant.sku contains 'VM' %}
+                            {% assign flag = true %}
+                         
+                     {% endif %}
+                  {% endfor %}
+                   <div class="Vimla-chech_with_evoli">
+               {% comment %}this code for vimla subscription{% endcomment %}
+                  {% capture vimla_sub %}
+                {% if flag == true %} 
+                   <h3 class="h3">Vad stämmer in bäst på dig?</h3>
+                    
+                   <div class="vimla_sub">    
+                        <!-- 	<input type="checkbox" name="vimla_checkbox" id="vimla_checkbox">
+                      	<label for="vimla_checkbox">{{ block.settings.vimla_checkbox }}</label> -->
+                          <input type="radio" id="vimla_subscription" name="vimla_checkbox" value="vimla_subscription" required>
+                          <label for="vimla_subscription">{{ 'product.vimla_products.vimla_subscription_checkbox' | t }}</label><br>
+                          <input type="radio" id="unsubscrib_checkbox" name="vimla_checkbox" value="vimla_subscription">
+                          <label for="unsubscrib_checkbox">{{ 'product.vimla_products.vimla_unsubscribed_checkbox' | t }}</label><br>
+                   </div>
+                  {% else %}
+                   {% assign replaced_subtag  = settings.producttag_discountcode %}
+                  {% assign subtag = replaced_subtag | replace: replaced_subtag, "subscribed" %}
+                   {% if product.tags contains subtag %}
+<!--                      {{ subtag }} subtag -->
+<!--                      <h3 class="h3">Vad stämmer in bäst på dig?</h3> -->
+                        <div class="vimla_sub" style="border-bottom: 1px solid gainsboro;">
+                           <input type="checkbox" id="vimla_subscription" name="evoli_checkbox" {% if product.tags contains subtag %}data-id="all_renewed_product"{% endif %} value="vimla_subscription" required>
+                            {% capture vimla-free %}
+                               <img class="vimla-image-logo vimla-image-size" src="{{ section.settings. vima-free-image| img_url }}">
+                             {% endcapture %}
+                        
+                           {% capture about_me1 %}
+                            <label for="vimla_subscription">
+                              {{- 'product.vimla_products.vimla_subscription_checkbox_all_products' | t -}} <a href="#" class=" vimla-popup"> {{ section.settings.evoli_popup_button }} </a>{{ vimla-free }}
+                           </label><br>
+                          {% endcapture %}
+
+                          {% assign vimla-image = section.settings['vima-image'] %}
+                          {% capture about_me %}
+                               <img class="vimla-image-logo" src="{{ vimla-image | img_url }}">
+                           {% endcapture %}
+                          {% if about_me1 contains 'Vimla' %}
+                              {{ about_me1 | replace: 'Vimla', about_me }}
+                          {% endif %}
+                      </div>
+                     {% endif %}
+                   {% endif %}
+                  {% endcapture %}
+                  {%- if localization.country == 'Danmark' and settings.Denmark == false -%}
+                          {{ vimla_sub }}
+                        {% elsif localization.country == 'Sverige' and settings.Sverige == false %}
+                          {{ vimla_sub }}
+                        {% elsif localization.country == 'Italia' and settings.Italy == false %}
+                          {{ vimla_sub }}
+                        {% elsif localization.country == 'Deutschland' and settings.Germay == false %}
+                          {{ vimla_sub }}
+                        {% elsif localization.country == 'France' and settings.France == false %}
+                          {{ vimla_sub }}
+                        {% elsif localization.country == 'España' and settings.spain == false %}
+                          {{ vimla_sub }}
+                   {% endif %}
+                  {% comment %}this code for vimla subscription{% endcomment %}
+                
+                  {% if product.tags contains evoli_insurance_tag %}
+                      
+                        {% else %}
+                          {% capture evoli_sub %}
+                          <div class="evoli_sub">     
+                          	<input type="checkbox" name="evoli_checkbox" id="evoli_checkbox" >
+                          	<label class="evolidis"for="evoli_checkbox">{{ block.settings.evoli_checkbox }}</label>
+                            <span style="display:none;" class="insurance_message">{{ block.settings.insurance_message }}</span>
+                        
+                            <div class="evoli-button-main"><a href="#" class="evoli-readmore">{{ section.settings.evoli_popup_button }}</a></div>
+                            <div class="evoli_checkbox_prefilled_main">
+                              <div class="evoli_checkbox_prefilled_content-1">
+                                      <input type="radio" name="evoli_radio" id="evoli_prefilled_yes" class="evoli_check" value="yes" >
+                                      <label for="evoli_prefilled_yes">{{ block.settings.evoli_prefilled_yes }}</label>
+                              </div>
+                              <div class="evoli_checkbox_prefilled_content-2">
+                                      <input type="radio" name="evoli_radio" id="evoli_prefilled_no" class="evoli_check" value="no" >
+                                      <label for="evoli_prefilled_no">{{ block.settings.evoli_prefilled_no }}</label>
+                              </div>
+                            </div>
+                          </div> 
+                     {% endcapture %}
+                        {%- if localization.country == 'Danmark' and section.settings.Denmark -%}
+                          {{ evoli_sub }}
+                        {% elsif localization.country == 'Sverige' and section.settings.Sverige %}
+                          {{ evoli_sub }}
+                        {% elsif localization.country == 'Italia' and section.settings.Italy %}
+                          {{ evoli_sub }}
+                        {% elsif localization.country == 'Deutschland' and section.settings.Germay %}
+                          {{ evoli_sub }}
+                        {% elsif localization.country == 'France' and section.settings.France %}
+                          {{ evoli_sub }}
+                        {% elsif localization.country == 'España' and section.settings.spain %}
+                          {{ evoli_sub }}
+                        {% endif %}
+                      {% endif %}
+                  {% for variant in product.variants %}
+                    {% assign get_Qty = product.selected_or_first_available_variant.inventory_quantity  %}
+                    {% endfor %}
+                    {% style %}
+                      .Telenor_soldout a {
+                        color : {{ section.settings.link-color }};
+                      }
+                    {% endstyle %}
+                   {% if Tabs == true %} {% if get_Qty == 0 %} <div class="Telenor_soldout"><span>{{ section.settings.telenor_soldout }}</span><a href="{{ section.settings.telenor_soldout_url }}">{{ section.settings.telenor_soldout_url_text }}</a></div> {% else %} {% endif %} {% else %} {% endif %}
+                  
+                   </div>
+
+                {% assign btn = false %}
+                {% if settings.enable_unsubscribe == true and settings.enable_subscribe == true %}
+           
+                  {%- for item in cart.items -%}
+                    {% assign getItem = item.properties %}
+                      
+                     {% for items in getItem %}
+                      {% if items contains "_vimla" %}
+                        {% capture my_var_btn %}
+                      {% assign btn = true %}
+                          {% endcapture %}
+                 
+                      {% endif %}
+                     {% endfor %}
+                  {% endfor %}
+                  {% endif %}
+
+                {%- for discount_application in product.discount_application -%}
+{{ discount_application.title }} {{ discount_application.total_allocated_amount | money }}
+{%- endfor -%}
+                
+                {% if flag == true  or product.tags contains subtag %} 
+                  {%- if block.settings.show_payment_button == false or product.selling_plan_groups.size > 0 -%}
+                    {%- assign use_primary_button = true -%}
+                  {%- else -%}
+                    {%- assign use_primary_button = false -%}
+                  {%- endif -%}
+  {% comment %}add to cart buttons-------------------------------------------------------------{% endcomment %}
+             <div class="followMeBar  fixedbuybutton ">
+                  <button type="submit" style="padding:14px 28px !important; line-height: initial;" data-use-primary-button="{% if use_primary_button == true %}true{% else %}false{% endif %}"
+                  class="Vimla_button vimla_btn vimla_pointer_evnts  Button Button--full 
+                  {% if product.selected_or_first_available_variant.available and use_primary_button %}Button--primary{% else %}Button--secondary{% endif %}{% if product.tags contains subtag %} Button--hide{% endif %}"
+                  {% if product.selected_or_first_available_variant.available %}{% else %}disabled="disabled"{% endif %}>
+                           {%- if product.selected_or_first_available_variant.available -%}
+                              <span class="addtocart_txt Button--hide">{% if product.template_suffix == 'pre-order' %}{{ 'product.form.pre_order' | t }}{% else %}{{ 'product.form.add_to_cart' | t }}{% endif %}</span>
+   
+                              {%- if block.settings.show_price_in_button -%}
+                                <span class="Button__SeparatorDot"></span>
+                                <span>{{ product.selected_or_first_available_variant.price | money }}</span>
+                              {%- endif -%}
+                            {%- else -%}
+                              {{- 'product.form.sold_out' | t -}}
+                            {%- endif -%}
+                            <span class="loader Button--show">{% include 'loader' %}</span>
+                    </button>
+                    <button type="submit" style="padding:14px 28px !important; line-height: initial;" data-use-primary-button="{% if use_primary_button == true %}true{% else %}false{% endif %}"
+                    class="Vimla_second vimla_btn vimla_pointer_evnts  Button Button--full  
+                      {% if product.selected_or_first_available_variant.available and use_primary_button %}Button--primary{% else %}Button--secondary{% endif %}{% if product.tags contains subtag %} Button--hide{% endif %}" 
+                      {% if product.selected_or_first_available_variant.available %}{% else %}disabled="disabled"{% endif %}>
+                            {%- if product.selected_or_first_available_variant.available -%}
+                              <span class="addtocart_txt Button--hide">{% if product.template_suffix == 'pre-order' %}{{ 'product.form.pre_order' | t }}{% else %}{{ 'product.form.add_to_cart' | t }}{% endif %}</span>
+      
+                              {%- if block.settings.show_price_in_button -%}
+                                <span class="Button__SeparatorDot"></span>
+                                <span>{{ product.selected_or_first_available_variant.price | money }}</span>
+                              {%- endif -%}
+                            {%- else -%}
+                              {{- 'product.form.sold_out' | t -}} 
+                            {%- endif -%}
+                            <span class="loader Button--show">{% include 'loader' %}</span>
+                    </button>
+                  
+                {% endif %}
+                 {%- if block.settings.show_payment_button == false or product.selling_plan_groups.size > 0 -%}
+                    {%- assign use_primary_button = true -%}
+                  {%- else -%}
+                    {%- assign use_primary_button = false -%}
+                  {%- endif -%}
+                   <div class="followMeBar fixedbuybutton">   
+                  <div class="ProductForm__BuyButtons" {{ block.shopify_attributes }}>
+                    {%- if block.settings.show_payment_button and product.selected_or_first_available_variant.available == false -%}
+                      <style>
+                        #shopify-section-{{ section.id }} .shopify-payment-button {
+                          display: none;
+                        }
+                      </style>
+                    {%- endif -%}
+                    <div {% if section.settings.accessories_page %} id="location"  {% if product.metafields.related-products != blank %} data-target="{{shop.url}}/pages/relevent-accessories?product={{product.handle}}"  {%endif%} {%endif%}>
+                          <button type="submit" data-use-primary-button="{% if use_primary_button %}true{% else %}false{% endif %}" class="ProductForm__AddToCart Button {% if flag == true %} Button--hide page_vimla_cart {% endif %} 
+                {% if product.selected_or_first_available_variant.available and use_primary_button %}Button--primary{% else %}Button--secondary{% endif %} Button--full" {% if product.selected_or_first_available_variant.available %}data-action="add-to-cart"{% else %}disabled="disabled"{% endif %}>
+                            {%- if product.selected_or_first_available_variant.available -%}
+                              <span>{% if product.template_suffix == 'pre-order' %}{{ 'product.form.pre_order' | t }}{% else %}{{ 'product.form.add_to_cart' | t }}{% endif %}</span>
+      
+                              {%- if block.settings.show_price_in_button -%}
+                                <span class="Button__SeparatorDot"></span>
+                                <span>{{ product.selected_or_first_available_variant.price | money }}</span>
+                              {%- endif -%}
+                            {%- else -%}
+                              {{- 'product.form.sold_out' | t -}}
+                            {%- endif -%}
+                          </button>
+                       </div>
+                  </div>
+                    </div>
+{% comment %}-----------------------------------------end add to cart buttons{% endcomment %}
+                    {%- if block.settings.show_payment_button and product.template_suffix != 'pre-order' -%}
+                      {{ form | payment_button }}
+                    {%- endif -%}
+                    <div class="vimla_error">{% render 'icon' with 'checkmark' %}{{ 'product.vimla_products.vimla_cart_error' | t }}</div>
+                 <div class="vimla_selection_error">{{ 'product.vimla_products.Vimla_checkbox_error_text' | t }}</div>
+                  </div>
+
+                {%- when 'store_pickup' -%}
+                  {%- comment -%}The availability container will be added automatically if there is store pickup available{%- endcomment -%}
+                  <div class="ProductMeta__StoreAvailabilityContainer" {{ block.shopify_attributes }}></div>
+
+                {%- when 'text' -%}
+                  {%- if block.settings.text != blank -%}
+                    <div class="ProductMeta__Text" {{ block.shopify_attributes }}>
+                      {{- block.settings.text -}}
+                    </div>
+                  {%- endif -%}
+
+                {%- when 'liquid' -%}
+                  {%- if block.settings.liquid != blank -%}
+                    <div class="ProductMeta__Text" {{ block.shopify_attributes }}>
+                      {{ block.settings.liquid }}
+                    </div>
+                  {%- endif -%}
+
+              {%- endcase -%}
+            {%- endfor -%}
+
+            {%- unless has_ouputted_variant_selector -%}
+              {%- comment -%}If for any reason the merchant has removed the variant selector block, we still output the ID here{%- endcomment -%}
+              <input type="hidden" name="id" value="{{ product.selected_or_first_available_variant.id }}">
+            {%- endunless -%}
+            
+          {% if flag == true or product.tags contains subtag %} 
+            {%- render 'vimla-offers-plan' -%}
+            <input id="offer-code" type="hidden" name="properties[_erbjudande_plan]">
+            {%- render 'vimla-offer-second' -%}
+  
+                <div class="category" style="display:none;"> {{ product.type }} </div>
+                <div class="brand" style="display:none;"> {{  product.vendor }} </div> 
+           {% endif %}
+            
+                <p class="line-item-property__field" style="display:none;">
+                  <input id="evoli-code" type="text" name="properties[Evoli försäkring]">  
+                  <input id="evoli-category" type="text" name="properties[_kategori]" >
+                  <input id="evoli-brand" type="text"  name="properties[_varumärke]" >
+                </p>
+          {%- endform -%}
+          
+          {%- if section.settings.stack_images and product_aside != blank and media_count > 0 -%}
+            <div class="Product__QuickNav hidden-pocket">
+              <div class="Product__QuickNavWrapper">
+                <a href="#ProductAside" class="Heading Link Link--secondary u-h7">{{ 'product.form.view_info' | t }} {% render 'icon' with 'select-arrow-right' %}</a>
+                <a href="#ProductGallery" class="Heading Link Link--secondary u-h7">{{ 'product.form.view_images' | t }} {% render 'icon' with 'select-arrow-right' %}</a>
+              </div>
+            </div>
+          {%- endif -%}
+        </div>
+      </div>
+    </div>
+
+     <div class="Product__InfoWrapper-text{% if product.selected_or_first_available_variant.sku contains 'VM' %} vimla_product{% endif %}">
+
+ <div class="Product__Info {% if media_count == 0 %}Product__Info--noGallery{% endif %} custom_product">
+
+ <div class="Container">
+
+        {%- if product.description != blank -%}
+                    <div class="ProductMeta__Description  {% if product.metafields.custom.frequently_bought.type %}extra_margin{% endif %}" {{ block.shopify_attributes }}>
+                      <div class="Rte">
+                        {{- product.description | replace: 'data-section-type', 'data-section-type-placeholder' -}}
+                      </div>
+                    </div>
+                  {%- endif -%}
+        
+          {% if section.settings.hide_tabs %}
+                      {% assign Tabs = false %}
+                       {% for variant in product.variants %}
+                        {% if variant.sku contains 'TN' %}
+                      
+                                  {% assign Tabs = true %}
+                          {% else %}
+                          
+                          {% endif %}
+                         {% endfor %}
+                 {% endif %}
+                  {% if Tabs == true %} 
+                
+                {% else %}
+	            {%- render 'product-tabs' -%}
+          		 	{% endif %}
+  
+</div>
+   
+ </div>
+   
+ </div>
+       
+
+    {% comment %}
+    <div id="splide_product" class="left_product_section slideshow-container splide product_section_mobile">
+      {% assign bundle_products =  product.metafields.meta.test_pro.value %}
+      {%- if bundle_products != blank -%}
+      <header class="SectionHeader SectionHeader--center">
+        <h3 class="SectionHeader__Heading Heading u-h4">{{ section.settings.accessories_title | escape }}</h3>
+      </header>
+        {% endif %} 
+      <div class="splide__track">
+        <div class="splide__list">
+        
+        {% for bundle_product in bundle_products %}
+          {%- if bundle_product != blank -%}
+             <div class="splide__slide Section Section--spacingNormal sx for-this-spacing">
+              {% render 'product-items-custom', product: bundle_product, use_horizontal: true, show_labels: false, show_product_info: true, show_vendor: false, show_price_on_hover: false %}
+            </div>
+          {% endif %} 
+         {%- endfor -%}
+        </div>
+      </div>
+    </div>
+    {% endcomment %}
+  
+{% comment %} 
+<!-- this tab is move in to below product description  --> 
+    {%- if product_aside != blank -%}
+      <div class="Product__Aside">
+        <span id="ProductAside" class="Anchor"></span>
+        {{- product_aside -}}
+      </div>
+    {%- endif -%}
+
+{% endcomment %}
+  </div>
+</section>
+
+{%- comment -%}
+--------------------------------------------------------------------------------------------------------------------
+PHOTO SWIPE
+
+This is the root container for the zoom functionality. Must not be removed, as order element is important.
+--------------------------------------------------------------------------------------------------------------------
+{%- endcomment -%}
+
+{%- if section.settings.enable_image_zoom -%}
+  <div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+    <!-- Background of PhotoSwipe -->
+    <div class="pswp__bg"></div>
+
+    <!-- Slides wrapper with overflow:hidden. -->
+    <div class="pswp__scroll-wrap">
+
+      <!-- Container that holds slides. Do not remove as content is dynamically added -->
+      <div class="pswp__container">
+        <div class="pswp__item"></div>
+        <div class="pswp__item"></div>
+        <div class="pswp__item"></div>
+      </div>
+
+      <!-- Main UI bar -->
+      <div class="pswp__ui pswp__ui--hidden">
+        <button class="pswp__button pswp__button--prev RoundButton" data-animate-left title="{{ 'product.slideshow.previous' | t }}">{% render 'icon' with 'arrow-left' %}</button>
+        <button class="pswp__button pswp__button--close RoundButton RoundButton--large" data-animate-bottom title="{{ 'product.slideshow.close' | t }}">{% render 'icon' with 'close' %}</button>
+        <button class="pswp__button pswp__button--next RoundButton" data-animate-right title="{{ 'product.slideshow.next' | t }}">{% render 'icon' with 'arrow-right' %}</button>
+      </div>
+    </div>
+  </div>
+{%- endif -%}
+
+<script>
+  window.ShopifyXR=window.ShopifyXR||function(){(ShopifyXR.q=ShopifyXR.q||[]).push(arguments)};
+  ShopifyXR('addModels', {{ product.media | where: 'media_type', 'model' | json }});
+</script>
+
+
+
+{% schema %}
+{
+  "name": "Product page",
+  "class": "shopify-section--bordered",
+  "blocks": [
+    {
+      "type": "product_meta",
+      "name": "Product meta",
+      "limit": 1,
+      "settings": [
+        {
+          "type": "checkbox",
+          "id": "show_vendor",
+          "label": "Show vendor",
+          "default": true
+        },
+        {
+          "type": "checkbox",
+          "id": "show_sku",
+          "label": "Show SKU",
+          "default": false
+        },
+        {
+          "type": "checkbox",
+          "id": "show_product_rating",
+          "label": "Show product rating",
+          "info": "To display a rating, add a product rating app. [Learn more](https://help.shopify.com/en/manual/products/product-reviews/installation)",
+          "default": false
+        },
+        {
+          "type": "checkbox",
+          "id": "show_taxes_included",
+          "label": "Show price taxes notice",
+          "default": false
+        }
+      ]
+    },
+    {
+      "type": "variant_selector",
+      "name": "Variant selector",
+      "limit": 1,
+      "settings": [
+        {
+          "type": "select",
+          "id": "selector_mode",
+          "label": "Selector type",
+          "options": [
+            {
+              "value": "block",
+              "label": "Block"
+            },
+            {
+              "value": "dropdown",
+              "label": "Dropdown"
+            }
+          ],
+          "default": "dropdown"
+        },
+        {
+          "type": "checkbox",
+          "id": "show_color_swatch",
+          "label": "Show color swatch",
+          "default": false,
+          "info": "Some colors appear white? [Learn more](http://support.maestrooo.com/article/80-product-uploading-custom-color-for-color-swatch)."
+        },
+        {
+          "type": "checkbox",
+          "id": "show_color_carousel",
+          "label": "Show color carousel",
+          "info": "A pop-up selector with variant images for choosing colors. Only enables when color swatch is disabled.",
+          "default": false
+        },
+        {
+          "type": "page",
+          "id": "size_chart",
+          "label": "Size chart",
+          "info": "Show along option named Size."
+        }
+      ]
+    },
+    {
+      "type": "share_buttons",
+      "name": "Share buttons",
+      "limit": 1
+    },
+    {
+      "type": "inventory",
+      "name": "Inventory",
+      "limit": 1,
+      "settings": [
+        {
+          "type": "range",
+          "id": "inventory_quantity_threshold",
+          "label": "Inventory quantity threshold",
+          "info": "Only show inventory quantity if below threshold. Choose 0 to always show.",
+          "min": 0,
+          "max": 50,
+          "step": 1,
+          "default": 0
+        }
+      ]
+    },
+    {
+      "type": "buy_buttons",
+      "name": "Buy buttons",
+      "limit": 1,
+      "settings": [
+        {
+          "type": "checkbox",
+          "id": "show_price_in_button",
+          "label": "Show price in add to cart button",
+          "default": false
+        },
+        {
+          "type": "checkbox",
+          "id": "show_payment_button",
+          "label": "Show dynamic checkout button",
+          "info": "Each customer will see their preferred payment method from those available on your store, such as PayPal or Apple Pay. [Learn more](https://help.shopify.com/manual/using-themes/change-the-layout/dynamic-checkout)",
+          "default": true
+        },
+        {
+          "type": "text",
+          "id": "vimla_checkbox",
+          "label": "vimla subscription title",
+          "default": "Vimla abonnemang"
+        },
+        {
+          "type": "text",
+          "id": "evoli_checkbox",
+          "label": "Evoli insurance title",
+          "default": "Evoli försäkring"
+        },
+        {
+          "type": "text",
+          "id": "insurance_message",
+          "label": "Evoli insurance message",
+          "default": "Evoli försäkring Tillagd"
+        },
+        {
+          "type": "text",
+          "id": "evoli_prefilled_yes",
+          "label": "Evoli prefilled message-1",
+          "default": "Prefilled Yes"
+        },
+        {
+          "type": "text",
+          "id": "evoli_prefilled_no",
+          "label": "Evoli prefilled message-2",
+          "default": "Prefilled No"
+        },
+        {
+          "type": "header",
+          "content": "Evoli Checkbox color"
+        },
+        {
+          "type": "color",
+          "id": "check_color",
+          "label": "Checkbox fill color",
+          "default": "#2028cd"
+        },
+        {
+          "type": "color",
+          "id": "check_color_icon",
+          "label": "Checkbox fill Icon color",
+          "default": "#FFF"
+        },
+        {
+          "type": "color",
+          "id": "color",
+          "label": "Checkbox color",
+          "default": "#0079bf"
+        }
+      ]
+    },
+    {
+      "type": "description",
+      "name": "Description",
+      "limit": 1
+    },
+    {
+      "type": "liquid",
+      "name": "Liquid",
+      "settings": [
+        {
+          "type": "paragraph",
+          "content": "This Liquid code will show on the right part of the product page."
+        },
+        {
+          "type": "liquid",
+          "id": "liquid",
+          "label": "Liquid"
+        }
+      ]
+    },
+    {
+      "type": "quantity_selector",
+      "name": "Quantity selector",
+      "limit": 1,
+      "settings": [
+        {
+          "type": "checkbox",
+          "id": "show_label",
+          "label": "Show label",
+          "default": false
+        }
+      ]
+    },
+    {
+      "type": "text",
+      "name": "Text",
+      "settings": [
+        {
+          "type": "paragraph",
+          "content": "This text will show on the right part of the product page."
+        },
+        {
+          "type": "text",
+          "id": "text",
+          "label": "Text"
+        }
+      ]
+    },
+    {
+      "type": "store_pickup",
+      "name": "Local pickup availability",
+      "limit": 1,
+      "settings": [
+        {
+          "type": "paragraph",
+          "content": "Show customers where they can pick up the product. [Learn more](https://help.shopify.com/en/manual/shipping/setting-up-and-managing-your-shipping/local-methods/local-pickup#show-pickup-availability-to-your-customers)"
+        }
+      ]
+    },
+    {
+      "type": "@app"
+    },
+    {
+      "name": "Content",
+      "type": "content",
+      "settings": [
+        {
+          "type": "paragraph",
+          "content": "This content will show on the bottom part, below the product description."
+        },
+        {
+          "type": "text",
+          "id": "title",
+          "label": "Title"
+        },
+        {
+          "type": "richtext",
+          "id": "content",
+          "label": "Content"
+        },
+        {
+          "type": "page",
+          "id": "page",
+          "label": "Content from page",
+          "info": "If specified, takes precedence over inline content."
+        }
+      ]
+    },
+  {
+      "name": "Specs",
+      "type": "Specs",
+      "limit": 1,
+      "settings": [
+        {
+          "type": "paragraph",
+          "content": "Custom Product info"
+        }
+      ]
+    },
+  {
+      "name": "Info",
+      "type": "Info",
+      "limit": 1,
+      "settings": [
+        {
+          "type": "paragraph",
+          "content": "Custom Product info"
+        }
+      ]
+    },
+    {
+      "name": "Reviews",
+      "type": "reviews",
+      "limit": 1,
+      "settings": [
+        {
+          "type": "paragraph",
+          "content": "To show reviews, install [Shopify Product Reviews](https://apps.shopify.com/product-reviews). This content will show on the left part, below the product images. "
+        }
+      ]
+    }
+  ],
+  "settings": [
+    {
+      "type": "header",
+      "content": "Media"
+    },
+    {
+      "type": "paragraph",
+      "content": "Learn more about [media types](https://help.shopify.com/en/manual/products/product-media)"
+    },
+    {
+      "type": "select",
+      "id": "image_size",
+      "label": "Size",
+      "options": [
+        {
+          "value": "small",
+          "label": "Small"
+        },
+        {
+          "value": "medium",
+          "label": "Medium"
+        },
+        {
+          "value": "large",
+          "label": "Large"
+        },
+        {
+          "value": "fill",
+          "label": "Fill screen"
+        }
+      ],
+      "default": "large"
+    },
+    {
+      "type": "checkbox",
+      "id": "stack_images",
+      "label": "Stack images on desktop",
+      "default": true
+    },
+    {
+      "type": "checkbox",
+      "id": "show_thumbnails",
+      "label": "Show thumbnails on desktop",
+      "default": true
+    },
+    {
+      "type": "checkbox",
+      "id": "accessories_page",
+      "label": "enable redirect on accessories page",
+      "default": true
+    },
+    {
+      "type": "checkbox",
+      "id": "enable_image_zoom",
+      "label": "Enable zoom",
+      "default": true
+    },
+    {
+      "type": "checkbox",
+      "id": "enable_video_looping",
+      "label": "Enable video looping",
+      "default": false
+    },
+    {
+      "type": "checkbox",
+      "id": "hide_tabs",
+      "label": "Hide tab Telenor products",
+      "default": false
+    },
+    {
+      "type": "text",
+      "id": "evoli_tag",
+      "label": "Non evoli product tag",
+      "default": "non evoli product"
+    },
+    {
+      "type": "text",
+      "id": "telenor_soldout",
+      "label": "Telenor accessories product soldout text",
+      "default": "Produkten är slutsåld."
+    },
+    {
+      "type": "text",
+      "id": "telenor_soldout_url_text",
+      "label": "Telenor accessories product soldout Link text"
+    },
+    {
+      "type": "url",
+      "id": "telenor_soldout_url",
+      "label": "Telenor accessories product soldout Link"
+    },
+    {
+      "type": "color",
+      "id": "link-color",
+      "label": "Telenor accessories product soldout Link text olors",
+      "default": "#19aaf8"
+    },
+    {
+      "type": "header",
+      "content": "Premium Product Color Settings"
+     },
+     {
+        "type": "color",
+        "id": "bg_color",
+        "default": "#4d6e89",
+        "label": "Premium Products Background Color"
+    },
+    {
+        "type": "color",
+        "id": "text_color",
+        "default": "#fff",
+        "label": "Premium Products Text Color"
+    },
+     {
+        "type": "color",
+        "id": "price_text_color",
+        "default": "#f94c43",
+        "label": "Premium Products Price Text Color"
+    },
+    {
+        "type": "color",
+        "id": "button_background_color",
+        "default": "#2028cd",
+        "label": "Button Background Color"
+    },
+     {
+        "type": "color",
+        "id": "button_background_color_on_hover",
+        "default": "#2621ab",
+        "label": "background Color On Hover"
+    },
+    {
+        "type": "color",
+        "id": "button_text_color",
+        "default": "#ffffff",
+        "label": "Button Text Color"
+    },
+    {
+        "type": "color",
+        "id": "button_text_color_on_hover",
+        "default": "#ffffff",
+        "label": "Button Text Color On Hover"
+    },
+     {
+        "type": "color",
+        "id": "border_color",
+        "default": "#dcdcdc",
+        "label": "Border Color"
+    },
+     {
+        "type": "color",
+        "id": "checkbox_color",
+        "default": "#0079bf",
+        "label": "Vimla Checkbox Color"
+    },
+    {
+        "type": "color",
+        "id": "checkbox_background_color",
+        "default": "#2028cd",
+        "label": "Vimla Checkbox Background Color"
+    },
+    {
+        "type": "header",
+        "content": "Check country in which you want show evoli"
+      },
+    {
+      "type": "checkbox",
+      "id": "Sverige",
+      "label": "Sverige",
+      "default": false
+    },
+     {
+      "type": "checkbox",
+      "id": "Denmark",
+      "label": "Denmark",
+      "default": false
+    },
+     {
+      "type": "checkbox",
+      "id": "Italy",
+      "label": "Italy",
+      "default": false
+    },
+     {
+      "type": "checkbox",
+      "id": "Germay",
+      "label": "Germay",
+      "default": false
+    },
+     {
+      "type": "checkbox",
+      "id": "France",
+      "label": "France",
+      "default": false
+    },
+     {
+      "type": "checkbox",
+      "id": "spain",
+      "label": "spain",
+      "default": false
+    },
+    {
+      "type": "header",
+      "content": "Evoli Popup Content"
+    },
+      {
+      "type": "color",
+      "id": "evoli-popup-heading-bg",
+      "label": "Heading color",
+      "default": "#FFFFFF"
+     },  
+    {
+      "type": "text",
+      "id": "evoli_popup_button",
+      "label": "Button Text",
+      "default": "Read more"
+    },
+    {
+      "type": "text",
+      "id": "evoli_popup_heading",
+      "label": "Heading",
+      "default": "Heading"
+    },
+    {
+      "type": "richtext",
+      "id": "evoli_popup_content",
+      "label": "Content",
+      "default": "<p>Content</p>"
+    },
+    {
+      "type": "richtext",
+      "id": "evoli_popup_footer_content",
+      "label": "Footer Content",
+      "default": "<p>Footer Content</p>"
+    },
+     {
+      "type": "header",
+      "content": "vimla Popup Content"
+    },
+    {
+      "type": "color",
+      "id": "vimla-popup-heading-bg",
+      "label": "Heading color",
+      "default": "#FFFFFF"
+     },   
+    {
+        "id": "vima-image",
+        "type": "image_picker",
+        "label": "Vimla Image"
+    },
+      {
+        "id": "vima-free-image",
+        "type": "image_picker",
+        "label": "Free Accessories Image "
+    },
+    {
+      "type": "text",
+      "id": "vimla_popup_button",
+      "label": "Button Text",
+      "default": "Read more"
+    },
+    {
+      "type": "text",
+      "id": "vimla_popup_heading",
+      "label": "Heading",
+      "default": "Heading"
+    },
+    {
+      "type": "richtext",
+      "id": "vimla_popup_content",
+      "label": "Content",
+      "default": "<p>Content</p>"
+    },
+    {
+      "type": "richtext",
+      "id": "vimla_popup_footer_content",
+      "label": "Footer Content",
+      "default": "<p>Footer Content</p>"
+    }
+  ]
+}
+{% endschema %}

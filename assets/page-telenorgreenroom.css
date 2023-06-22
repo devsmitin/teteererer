@@ -1,0 +1,308 @@
+.TelenorEvolution-Bold {
+  font-family: "TelenorEvolution-Bold" !important; 
+}
+.TelenorEvolution-Medium {
+  font-family: "TelenorEvolution-Medium" !important;
+}
+.TelenorEvolutionUI-Medium {
+  font-family: "TelenorEvolutionUI-Medium" !important;
+}
+.TelenorEvolutionUI-Light {
+   font-family: "TelenorEvolutionUI-Light" !important;
+}
+.Text-flex .Text-flex-inner .ArticleItem__Content p {
+font-family: "TelenorEvolutionUI-Light" !important; 
+} 
+.icon--flex-left span svg {
+  fill: #2028CD;
+}
+.Slideshow--fullscreen h2 {
+  text-transform : inherit !important; 
+}
+.js .telenorgreenroom.Carousel--fadeIn .Carousel__Cell.is-selected {
+  opacity: 0;
+  visibility: visible;
+  transition-delay: 0s;
+}
+/*Header section css*/
+.telenorgreenroom #CartCount {
+    margin-right: 0;
+}
+
+.Page__Header__CartDot {
+  box-shadow: 0 0 0 2px var(--header-heading-color);
+    }
+
+.Page__Header__CartDot .Header__CartCount {
+  color: #000;
+}
+.Richtext-img {
+  max-width: 125px;
+  margin: 0 auto;
+}
+/*Button with text section*/
+.Section-flex {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  width: auto;
+  margin: 0 -10px;
+}
+
+.Section-flex .Flex-items {
+  width: 25%;
+  padding: 10px;
+}
+
+.Section-flex .Button--flex {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  width: 100%;
+  padding: 10px;
+  border-bottom: 1px solid #000;
+}
+
+.Section-flex .Button--flex .button--icon {
+  padding-right: 10px;
+}
+.Icon--mobile {
+  width: 24px;
+  height: 32px;
+  overflow: visible!important;
+}
+
+/*Image with text section*/
+.Text-flex .ArticleItem-main {
+  visibility: visible !important;
+}
+.Section--heading {
+  margin-bottom: 60px;
+}
+
+.Text-flex {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  width: auto;
+  margin: 0 -10px;
+}
+
+.Text-flex .Text-flex-inner {
+  padding: 10px;
+  width: 33.33%;
+}
+
+.Text-flex .Text-flex-inner .ArticleItem__ImageWrapper {
+  margin-bottom: 0;
+}
+
+.Text-flex .Text-flex-inner .ArticleItem__Content {
+  padding: 20px 20px 25px;
+  margin : 0;
+}
+.Text-flex .Text-flex-inner .Text-link {color: #19aaf8;}
+
+/*Rich text section css*/
+.Richtext-bg {
+  padding: 20px;
+}
+
+.Richtext-bg .Richtext-heading {
+  padding: 20px 0px;
+}
+
+.Richtext-bg .Richtext-content {
+  text-align: center;
+  width: 100%;
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 10px 0px 20px;
+}
+/*Icon with text section*/
+.Icon-flex {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  justify-content: space-between;
+  width: auto;
+  margin: 0px -10px;
+}
+
+.Icon-flex .icon-Flex-items {
+  width: 25%;
+  padding: 10px;
+}
+
+.Icon-flex .icon--flex {
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+  width: 100%;
+}
+.Icon-flex .icon--flex .icon--flex-left {
+  padding-right: 15px;
+}
+.Icon-flex .icon--flex  .icon--flex-right p {
+  margin-bottom: 0;
+  font-size: 14px;
+}
+
+.Richtext-bg .Richtext-content a {
+  color: #19aaf8;
+}
+
+/*richtext with logo section*/
+.richtext-logo .logo--flex {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  width: auto;
+  margin: 0 -10px;
+}
+.richtext-logo .Richtext-heading {
+  padding: 0px !important;
+}
+.richtext-logo .Richtext-content {
+  padding-bottom: 0 !important;
+}
+
+.PageOverlay.hide-no-js{
+  display:none !important;
+}
+
+.Icon-section .Section--spacingNormal{
+  padding:20px 0 !important;
+}
+.Icon-section,.richtext-logo,.richtext--section{
+  border:none !important;
+}
+
+/*===================================================================================================================*/
+/*===============================================Respomsive media query==============================================*/
+/*===================================================================================================================*/
+@media (min-width: 769px) {
+  .hide-icon {
+    display: none;
+  }
+}
+@media (max-width: 1599px) {
+.Header__FlexItem {
+  margin-bottom: 0;
+} 
+}
+@media (min-width: 1366px) and (max-width: 1439px) {
+  nav.Header__MainNav.center-nav ul {display: none;}
+  .Header__FlexItem {
+    margin-bottom: 0px;
+  }
+}
+@media (min-width: 1280px) and (max-width: 1365px) {
+  nav.Header__MainNav.center-nav ul {display: none;} 
+  .Header__FlexItem {
+    margin-bottom: 0px;
+  }
+}
+@media (max-width: 1279.99px) {
+  nav.Header__MainNav.center-nav ul {display: none;} 
+  .Header__FlexItem {
+    margin-bottom: 0px;
+  }
+  .Section-flex .Button--flex .button-text {
+    font-size: 17px;
+  }
+  .Icon-flex .icon--flex .button-text {
+    font-size: 17px;
+  }
+
+  .Icon-flex .icon--flex .icon--flex-right p {
+    font-size: 13px;
+  }
+}
+
+@media (max-width: 991.99px) {
+  .Section-flex .Flex-items {
+    width: 50%;
+  }
+
+  .Icon-flex .icon-Flex-items {
+    width: 50%;
+  }
+  .Text-flex .Text-flex-inner {
+    width: 50%;
+}
+.telenorgreenroom .Header__Logo {
+    margin-right: 0;
+}
+}
+
+@media (max-width: 766.99px) {
+  .Section-flex .Button--flex .button-text {
+    font-size: 14px;
+  }
+  .Icon-flex .icon-Flex-items {
+    width: 100%;
+  }
+  .Text-flex .Text-flex-inner {
+    width: 100%;
+  }
+
+  .Section--heading {
+    margin-bottom: 20px;
+  }
+
+  .richtext-logo .logo--flex {
+    flex-wrap: inherit;
+  }
+  .page-footer .Footer__PaymentList {
+    margin-top: 35px;
+  }
+  .richtext-logo .SectionHeader__Heading.Heading.u-h1{
+  	font-size:16px !important;
+  }
+  #CartCount{
+  	margin-right:31px;
+  }
+  .mobile_drawer{
+  	margin-left:25px;
+  }
+  .hidden-tablet-and-up .Icon{
+  	width:17px;
+    height:20px;
+  }
+  .mobile_drawer .hidden-tablet-and-up .Icon{
+  	width:20px;
+    height:14px;
+  }
+  .Header__Logo{
+  	margin-right:29px;
+  }
+}
+
+@media (max-width: 424.99px) { 
+  .Section-flex .Flex-items {
+    width: 100%;
+  }
+  .Richtext-bg .Richtext-content {
+    font-size: 12px;
+  }
+  .ProductList--carousel .Carousel__Cell:first-child {
+    margin-left: 6%;
+  }
+  .ProductList--carousel .Carousel__Cell {
+    width: 46%;
+  }
+}
+
+@media (max-width: 374.99px) {}
+
+.PageOverlay.is-visible.page-is-visible {
+  visibility: hidden;
+}
+.Icon-with-text .Section.Section--spacingNormal {
+  padding-bottom: 20px;
+  padding-top: 20PX;
+}

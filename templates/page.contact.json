@@ -1,0 +1,25 @@
+{
+  "sections": {
+    "main": {
+      "type": "main-contact",
+      "blocks": {
+        "f8a6646e-fc9f-4d0f-b0e1-a087afa61370": {
+          "type": "text",
+          "settings": {
+            "title": "Mobil (valfritt)",
+            "use_long_text": false,
+            "is_required": false
+          }
+        }
+      },
+      "block_order": [
+        "f8a6646e-fc9f-4d0f-b0e1-a087afa61370"
+      ],
+      "settings": {
+      }
+    }
+  },
+  "order": [
+    "main"
+  ]
+}

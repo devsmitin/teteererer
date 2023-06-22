@@ -1,0 +1,50 @@
+{
+  "sections": {
+    "main": {
+      "type": "main-collection",
+      "settings": {
+        "show_collection_info": true,
+        "show_collection_image": false,
+        "apply_overlay": false,
+        "show_color_swatch": true,
+        "show_vendor": false,
+        "collection_image_size": "normal",
+        "show_sort_by": true,
+        "show_layout_switch": false,
+        "toolbar_position": "top",
+        "show_filters": true,
+        "show_filter_color_swatch": true,
+        "expand_filters": true,
+        "filter_position": "sidebar",
+        "filter_menu": "",
+        "grid_items_per_page": 48,
+        "grid_mobile_items_per_row": "2",
+        "grid_desktop_items_per_row": 4
+      }
+    },
+    "recently-viewed-products": {
+      "type": "recently-viewed-products",
+      "disabled": true,
+      "settings": {
+        "title": "Recently viewed",
+        "show_product_info": true,
+        "show_vendor": false,
+        "show_color_swatch": false
+      }
+    },
+    "adbd4f78-57f8-4d18-b5c9-b4bf604a2348": {
+      "type": "richtext",
+      "settings": {
+        "color_bg": "#efefef",
+        "title": "Begagnade mobiltelefoner",
+        "content": "<p>Letar du efter en billig begagnad Samsung mobiltelefon? Då har du hittat rätt!<br\/>Hos renewed kan du göra något bra för miljön samtidigt som du sparar pengar.<\/p><p>Begagnad, renoverad, återvunnen, refurbad, ja det finns många namn som används på second hand marknaden.<\/p><p>Hos oss på renewed, så jobbar vi hårt för att våra förnyade telefoner ska hålla den högsta kvalitén och vi känner oss<br\/>trygga med att våra begagnade mobiltelefoner håller marknadens bästa standard.<\/p><p>Därför erbjuder vi 12 månaders garanti på alla våra mobiler och 14 dagars ångerrätt. Vi samarbetar endast med seriösa auktoriserade partners för att säkerställa att alla delar i våra mobiltelefoner är original.<\/p><p>Renewed är ett svenskt företag som säljer svensksålda mobiler till marknadens bästa priser i motsvarande kvalité.<\/p><p>Några modeller från Samsung som vi på renewed erbjuder är: Samsung Galaxy S21, S21 Plus, S21 Ultra, S21 FE. Samsung Galaxy S20, S20 Ultra, S20 FE, S20 Plus. Samsung Galaxy A42, A52. Samsung Galaxy S22 & S22 Ultra.  Samsung Galaxy Z Flip och Samsung Galaxy Z Fold.<br\/>Vi säljer även Samsung Galaxy S10 som är den perfekta första mobiltelefonen till barnen.<\/p><p>Vi säljer våra begagnade Samsung telefoner i olika skick. Med skick så menar vi endast telefonens kosmetiska utseende och inte funktion. Oavsett vilket skick ni väljer så fungerar telefonen som ny där alla våra telefoner är noga kontrollerade av professionella tekniker, testade och fungerar lika bra som nya telefoner. Därför känner vi oss väldigt trygga med att kunna erbjuda våra kunder 12 månaders garanti och 14 dagars ångerrätt på alla våra Samsung mobiler.<\/p><p><strong>Nedan är de skick vi erbjuder våra kunder:<\/strong><\/p><p><strong>Premium <\/strong>=<strong>  <\/strong>En produkt som har fått ett originalbatteri med 100 procent batterihälsa och har blivit renoverad genom att alla yttre delar har blivit utbytta av auktoriserade tekniker. För detta använder vi endast originaldelar. I och med detta så finns det inga tecken på att mobilen någonsin har blivit använd.<\/p><p><strong>Nyskick<\/strong> = En produkt som nästan inte har några tecken på användning. Har en batterikapacitet på 90-100 procent och samma funktionalitet som om du köper en fabriksny produkt.  <\/p><p><strong>Utmärkt skick<\/strong> = En produkt i mycket bra skick och hög standard. Skärmen och ramen kan ha enstaka mindre repor men inga tydliga märken. Skärmen och ramen är dock fria från sprickor och har en batterikapacitet på 80-100 procent. Samma funktionalitet som om du köper en fabriksny produkt.  <\/p><p><strong>Bra skick<\/strong> = En fin produkt med några tecken av användning. Skärmen och ramen kan ha mindre repor och märken. Är dock fri från sprickor och har en batterikapacitet på 80-100 procent. Samma funktionalitet som om du köper en fabriksny produkt.  <\/p><p><strong>Okej skick:<\/strong> En produkt med tydliga tecken av användning. Skärmen och ramen har synbara repor och märken. Skärmen är dock fri från sprickor och har en batterikapacitet på 80-100 procent. Samma funktionalitet som om du köper en fabriksny produkt.<\/p><p><strong>Köpa nytt eller begagnat?<\/strong><\/p><p>Senaste åren har populariteten för andrahandsmarknaden av mobiltelefoner vuxit väldigt mycket i Sverige.<\/p><p>Anledningarna till detta är många. Kvalitén på de nya telefonerna som släpps håller en väldigt hög standard och har en livslängd på 5-7 år. Ändå släpper tillverkarna nya modeller varje år vilket hos många skapar ett måste ha begär där de vill ha det senaste på marknaden.<\/p><p>När vissa väljer att byta telefon varje år känner andra att de behöver en ny mobiltelefon men inte måste ha det absolut senaste. Detta har skapat en marknad för folk som vill ha en nästan ny mobil fast inte känner att de vill spendera tusentals kronor varje år på att få en uppgraderad kamera och några andra få funktioner.<\/p><p>Om du känner att du vill lägga dina pengar på annat kul men ändå vill ha en telefon med den senaste teknologin. Passa då på att titta igenom vårt sortiment av begagnade mobiltelefoner som är kontrollerade av professionella tekniker och håller en hög standard.<\/p><p>Köp smart, köp renewed!<\/p>",
+        "image": "shopify:\/\/shop_images\/Begagnade_mobiltelefoner_1000x_27909914-a4ec-4900-835f-dcef4a990650.webp"
+      }
+    }
+  },
+  "order": [
+    "main",
+    "recently-viewed-products",
+    "adbd4f78-57f8-4d18-b5c9-b4bf604a2348"
+  ]
+}

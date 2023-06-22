@@ -1,0 +1,158 @@
+{
+  "sections": {
+    "main": {
+      "type": "main-product",
+      "blocks": {
+        "product_meta": {
+          "type": "product_meta",
+          "settings": {
+            "show_vendor": true,
+            "show_sku": false,
+            "show_product_rating": false,
+            "show_taxes_included": false
+          }
+        },
+        "variant_selector": {
+          "type": "variant_selector",
+          "settings": {
+            "selector_mode": "block",
+            "show_color_swatch": true,
+            "show_color_carousel": false,
+            "size_chart": ""
+          }
+        },
+        "905ff429-13f0-40f5-b711-1e696b363e16": {
+          "type": "quantity_selector",
+          "disabled": true,
+          "settings": {
+            "show_label": false
+          }
+        },
+        "buy_buttons": {
+          "type": "buy_buttons",
+          "settings": {
+            "show_price_in_button": false,
+            "show_payment_button": false,
+            "vimla_checkbox": "Vimla abonnemang",
+            "evoli_checkbox": "Produktförsäkring - 30 dagars kostnadsfritt skydd ingår (aktiveringslänk via sms efter köp - avsluta när du vill)",
+            "insurance_message": "Evoli försäkring Tillagd",
+            "evoli_prefilled_yes": "Ja, lägg till!",
+            "evoli_prefilled_no": "Nej, inget skydd",
+            "check_color": "#2028cd",
+            "check_color_icon": "#ffffff",
+            "color": "#0079bf"
+          }
+        },
+        "a8bc32e7-1350-4430-95a9-c612d11ee7bc": {
+          "type": "shopify:\/\/apps\/klarna-on-site-messaging\/blocks\/app-block\/b95936a9-74b6-4a95-8103-6a1b6459c25e",
+          "settings": {
+            "data_key": "credit-promotion-badge",
+            "locale_option": "geolocation",
+            "locale_fallback": "",
+            "theme": "light",
+            "topPadding": "10",
+            "bottomPadding": "0"
+          }
+        },
+        "description": {
+          "type": "description",
+          "settings": {
+          }
+        },
+        "29e71e2c-4886-4ed8-89de-447ab93007c8": {
+          "type": "content",
+          "settings": {
+            "title": "",
+            "content": "",
+            "page": "{{ product.metafields.my_fields.info.value }}"
+          }
+        },
+        "354270ca-e35b-40fd-a2c5-6128ea14a7d3": {
+          "type": "content",
+          "settings": {
+            "title": "",
+            "content": "",
+            "page": "produkternas-skick"
+          }
+        }
+      },
+      "block_order": [
+        "product_meta",
+        "variant_selector",
+        "905ff429-13f0-40f5-b711-1e696b363e16",
+        "buy_buttons",
+        "a8bc32e7-1350-4430-95a9-c612d11ee7bc",
+        "description",
+        "29e71e2c-4886-4ed8-89de-447ab93007c8",
+        "354270ca-e35b-40fd-a2c5-6128ea14a7d3"
+      ],
+      "settings": {
+        "image_size": "small",
+        "stack_images": false,
+        "show_thumbnails": false,
+        "accessories_page": false,
+        "enable_image_zoom": true,
+        "enable_video_looping": false,
+        "hide_tabs": true,
+        "evoli_tag": "non evoli product",
+        "telenor_soldout": "Snart i lager. Hitta din närmaste butik",
+        "telenor_soldout_url_text": "här.",
+        "telenor_soldout_url": "https:\/\/www.telenor.se\/hitta-butik\/",
+        "link-color": "#2028cd",
+        "bg_color": "#4d6e89",
+        "text_color": "#ffffff",
+        "price_text_color": "#f94c43",
+        "button_background_color": "#2028cd",
+        "button_background_color_on_hover": "#2621ab",
+        "button_text_color": "#ffffff",
+        "button_text_color_on_hover": "#ffffff",
+        "border_color": "#dcdcdc",
+        "checkbox_color": "#2028cd",
+        "checkbox_background_color": "#2028cd",
+        "Sverige": true,
+        "Denmark": true,
+        "Italy": false,
+        "Germay": false,
+        "France": false,
+        "spain": false,
+        "evoli-popup-heading-bg": "#2028cd",
+        "evoli_popup_button": "Läs mer",
+        "evoli_popup_heading": "evoli försäkring",
+        "evoli_popup_content": "<p>evoli ersätter dig fulla värdet när oturen är framme. Ingen värdeminskning till skillnad från traditionell hemförsäkring, som kan värdera din produkt till 0 kr beroende på hur länge du haft den. Du har ingen bindningstid och kan säga upp försäkringen när det passar dig. <\/p>",
+        "evoli_popup_footer_content": "<p>Observera att försäkringen måste aktiveras  i samband med ditt köp för att försäkringen ska gälla. Aktiveringslänk skickas via sms efter köp. <\/p>",
+        "vimla-popup-heading-bg": "#50dc82",
+        "vima-image": "shopify:\/\/shop_images\/vimla_logo_rgb_495px_98047072-b597-4bb6-bf5a-882cf7117c42.png",
+        "vima-free-image": "shopify:\/\/shop_images\/Urban_ears_boo_tip_raw-edited.png",
+        "vimla_popup_button": "Läs mer",
+        "vimla_popup_heading": "Vimla abonnemang",
+        "vimla_popup_content": "<p>Vimla har vunnit årets operatör 5 år i rad och har nu även vunnit SKI:s Sveriges nöjdaste mobilkunder. Det är busenkelt att ta med ditt nummer till Vimla! Du skriver bara in ditt nummer i beställningen så följer numret med dig in till Vimla. <\/p>",
+        "vimla_popup_footer_content": "<ul><li>Fria samtal och mess<\/li><li>Ingen bindningstid<\/li><li>Spara surf forever<\/li><li>Telenors nät<\/li><li>Enkel nummerflytt   <\/li><\/ul>"
+      }
+    },
+    "product-recommendations": {
+      "type": "product-recommendations",
+      "disabled": true,
+      "settings": {
+        "heading": "Du kanske också gillar",
+        "show_product_info": true,
+        "show_vendor": false,
+        "show_color_swatch": true
+      }
+    },
+    "recently-viewed-products": {
+      "type": "recently-viewed-products",
+      "disabled": true,
+      "settings": {
+        "title": "Recently viewed",
+        "show_product_info": true,
+        "show_vendor": false,
+        "show_color_swatch": false
+      }
+    }
+  },
+  "order": [
+    "main",
+    "product-recommendations",
+    "recently-viewed-products"
+  ]
+}

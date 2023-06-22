@@ -1,0 +1,100 @@
+<section class="Section  {% unless section.settings.image %}Section--spacingNormal{% endunless %}">
+  <div class="Container">
+    <div class="Icon-flex">
+    	{% for block in section.blocks %}
+      	   <div class="icon-Flex-items">
+             <div class="icon--flex">
+               <div class="icon--flex-left">
+                 
+               {%- if section.blocks.size > 0 -%}
+                       
+                          {%- if block.settings.icon-link != blank -%}
+                          <img src="block.settings.icon-link">
+                          {%- endif -%}
+
+
+                           {%- if block.settings.icon-link == blank -%}
+                                {%- if block.settings.icon-image != blank -%}
+                                  {{ block.settings.icon-image | img_url: '30x30', scale: 2 | img_tag: block.settings.icon-image }}
+                                {%- else -%}
+                                  
+                                {%- endif -%}
+                            {%- endif -%}
+                                  
+                  {%- endif -%}   
+                 
+               </div>
+               <div class="icon--flex-right">
+                 <span class="button-text Heading u-h4">{%- if block.settings.link != blank -%}<a href="{{ block.settings.link }}">{%- endif -%}{{ block.settings.button_text | escape }}{%- if block.settings.link != blank -%}</a>{%- endif -%}</span>
+                 <span>{{ block.settings.content }}</span>
+               </div>
+            </div>
+      	   </div>
+      	{% endfor %}
+    </div>
+  </div>
+</section>
+
+{% schema %}
+  {
+    "name": "Icon with text",
+	"class" : "shopify-section--bordered Icon-section",
+    "settings": [],
+    "blocks": [
+      {
+        "type": "Text-section",
+        "name": "Text Section",
+        "settings": [
+			{
+              "type": "text",
+              "id": "button_text",
+              "label": "Enter text",
+              "default": "Apple iPhone"
+            },
+			{
+              "type": "url",
+              "id": "link",
+              "label": "Link"
+            },
+          {
+              "type": "image_picker",
+              "id": "icon-image",
+              "label": "Image"
+            },
+			{
+              "type": "url",
+              "id": "icon-link",
+              "label": "Image URL"
+            },
+			{
+              "type": "richtext",
+              "id": "content",
+              "label": "Text",
+              "default": "<p>Add your own custom content to give more information about your store, availability details...</p>"
+            }
+		]
+      }
+  	],
+	"presets": [
+      {
+		"category": "Icon with text",
+        "name": "Icon with text",
+        "settings": {},
+		 "blocks": [
+          {
+            "type": "Text-section",
+            "settings": {
+              
+            }
+          }
+        ]
+      }
+    ]
+  }
+{% endschema %}
+
+{% stylesheet %}
+{% endstylesheet %}
+
+{% javascript %}
+{% endjavascript %}

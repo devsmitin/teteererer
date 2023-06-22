@@ -1,0 +1,170 @@
+<style>
+  // **************************************************** Related products styles start here **************************************************** //
+
+  .btn-wrap {
+    text-align: center; }
+  
+  .btn-wrap button {
+  	margin: 3% auto; }
+  
+  .related_product_wrap .ProductItem a.Button {
+    display: none; }
+  
+  .btn_add {
+    text-align: center;
+    margin-top: 5%; }
+
+
+// **************************************************** Related products styles end here **************************************************** //
+</style>
+
+
+  {%- assign desktop_items_per_row = cart.attributes.collection_desktop_items_per_row | default: section.settings.grid_desktop_items_per_row | times: 1 -%}
+  {%- assign mobile_items_per_row  = cart.attributes.collection_mobile_items_per_row | default: section.settings.grid_mobile_items_per_row | times: 1 -%}
+
+  {%- if desktop_items_per_row >= 3 and desktop_items_per_row != section.settings.grid_desktop_items_per_row -%}
+    {%- assign desktop_items_per_row = section.settings.grid_desktop_items_per_row -%}
+  {%- endif -%}
+
+  {%- assign desktop_items_per_row = section.settings.grid_desktop_items_per_row | times: 1 -%}
+  {%- assign mobile_items_per_row  = section.settings.grid_mobile_items_per_row | times: 1 -%}
+
+{%- if desktop_items_per_row == 4 -%}
+  {%- assign tablet_items_per_row = 3 -%}
+{%- else -%}
+  {%- assign tablet_items_per_row = 2 -%}
+{%- endif -%}
+
+{%- capture contentForQuerystring -%}{{ content_for_header }}{%- endcapture -%}
+
+{% comment %} Use string splitting to pull the value from content_for_header and apply some string clean up {% endcomment %}
+{%- assign product_handle = contentForQuerystring | split:'"pageurl":"' | last | split:'"' | first | split:'.myshopify.com' | last |
+   replace:'\/','/' | 
+   replace:'%20',' ' | 
+   replace:'\u0026','&' | split:'?' | last | split:'=' | last 
+-%}
+
+
+{% assign product_object = all_products[product_handle] %}
+
+  {% assign related_products = product_object.metafields.related-products | split: "," %}
+
+  {% assign related_products = product_object.metafields.related-products %}
+  
+  {% if related_products.size > 0 %}
+	<div class="related_product_wrap Container">
+        <div class="Grid" data-mobile-count="{{ mobile_items_per_row }}" data-desktop-count="{{ desktop_items_per_row }}">
+    {% for field in related_products %}
+    
+      {% assign site_url = shop.url | append: "/products/" %}
+      {% assign relate_product_handle = field | last | handleize %}
+      {% assign related_product = all_products[relate_product_handle]%}
+      {% assign relate_product_handle_object = all_products[relate_product_handle]%}
+      {% assign full_url = site_url | append: relate_product_handle %}
+	{% if relate_product_handle_object.handle != empty %}
+          <div class="Grid_cell Grid__Cell 1/{{ mobile_items_per_row }}--phone 1/{{ tablet_items_per_row }}--tablet-and-up 1/{{ desktop_items_per_row }}--{% if section.settings.filter_position == 'drawer' %}lap-and-up{% else %}desk{% endif %}">
+            {%- render 'product-item', product: all_products[relate_product_handle], show_product_info: true, show_vendor: false, show_color_swatch: section.settings.show_color_swatch, show_labels: true -%}
+         	 {%- form 'product', all_products[relate_product_handle], class: 'ProductForm' -%}
+			{% if relate_product_handle_object.variants.size == 1 %}
+				<input type="hidden" name="id" class="input_id" value="{{ relate_product_handle_object.variants.first.id }}" />
+			{% else %}
+				<select name="id" id="variant_option" >
+                   
+                  {% for variant in relate_product_handle_object.variants %}
+                  <option class="variant_id" value="{{ variant.id }}" data-variant-id="variant_{{variant.id}}" data-variant-price="{{variant.price| money_without_trailing_zeros}}" data-variant-compare-price="{{ variant.compare_at_price | money_without_trailing_zeros}}"  > {{ variant.title }}</option>
+                  {% endfor %}
+          		</select>
+			{% endif %}
+          
+			<div class="btn_add">
+          
+                  {% for variant in relate_product_handle_object.variants %}
+        				<button type="submit"  data-var_id="{{ variant.id }}" name="add" class="Button accessories_btn {% if relate_product_handle_object.available  %}Button--primary{% else %}Button--secondary{% endif %} Button--small" {% if relate_product_handle_object.available %}data-action="add-to-cart"{% else %}disabled="disabled"{% endif %} >
+                        {%- if relate_product_handle_object.available -%}
+                        <span class="add_to_cart_text">{{- 'product.accessories.add_cart' | t -}}</span>
+                        {%- else -%}
+                        {{- 'product.form.sold_out' | t -}}
+                        {%- endif -%}
+        				</button>
+                    {% endfor %}
+  			</div>
+           		{% endform %}
+      
+		  </div>
+          
+    {% endif %}
+    {% endfor %}
+  </div>
+</div>
+	{% else %}
+<h2 style="text-align:center;">Sorry! No Relavent accessories available</h2>
+  {%endif%}
+	
+<div class="btn-wrap Cart__btn Container">
+	<span class="btn_inner">
+      <a class="Cart__Checkout Button Button--primary Button--small" href="/cart"> <span>{{- 'product.accessories.cart' | t -}}</span></a>
+  </span>
+</div>
+
+
+
+{% schema %}
+  {
+    "name": "Related prpduct section",
+    "class": "shopify-section--bordered",
+  "settings": [
+    
+    {
+      "type": "header",
+      "content": "Grid"
+    },
+    {
+      "type": "range",
+      "id": "grid_items_per_page",
+      "label": "Products per page",
+      "min": 4,
+      "max": 48,
+      "step": 4,
+      "default": 16
+    },
+    {
+      "type": "select",
+      "id": "grid_mobile_items_per_row",
+      "label": "Products per row (mobile)",
+      "options": [
+        {
+          "value": "1",
+          "label": "1"
+        },
+        {
+          "value": "2",
+          "label": "2"
+        }
+      ],
+      "default": "2"
+    },
+    {
+      "type": "range",
+      "min": 2,
+      "max": 4,
+      "id": "grid_desktop_items_per_row",
+      "label": "Products per row (desktop)",
+      "default": 4
+    }
+  ],
+    "presets": [
+    {
+      "name": "Related product",
+      "settings": {
+      
+      }
+    }
+  ]
+}
+{% endschema %}
+
+{% stylesheet %}
+{% endstylesheet %}
+
+{% javascript %}
+{% endjavascript %}

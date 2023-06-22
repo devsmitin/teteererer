@@ -1,0 +1,444 @@
+{
+  "sections": {
+    "main": {
+      "type": "main-page",
+      "disabled": true,
+      "settings": {
+        "show_large": false
+      }
+    },
+    "16532916926c62d9ea": {
+      "type": "slideshow",
+      "blocks": {
+        "1653291692ac0ee759-1": {
+          "type": "image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Banner_vimla_renewed.png",
+            "mobile_image": "shopify:\/\/shop_images\/renewed_mobil_banner_1.png",
+            "apply_overlay": false,
+            "content_position": "bottomLeft",
+            "content_position_mobile": "bottom",
+            "mobiletextbg": "",
+            "show_mobile": false,
+            "topheading": "",
+            "top_heading_font": "helvetica_n4",
+            "topheadfsize": 16,
+            "topheadcolor": "",
+            "topsubheadingmobile": "",
+            "topsubheading": "",
+            "top_subheading_font": "helvetica_n4",
+            "topsubheadfsize": 16,
+            "topsubheadcolor": "",
+            "listedpointsmobile": "",
+            "listedpoints": "",
+            "listedpointscolor": "",
+            "subheading": "",
+            "title": "Förnyade mobiler  till superpris",
+            "bottomheadfsize": 16,
+            "bottomhead_color": "#ffffff",
+            "subtext": "✅ 12 månaders garanti <br>✅ Alltid fria returer <br> ✅ Spara upp till 50%",
+            "bottomsubheadfsize": 16,
+            "bottomsubhead_color": "#ffffff",
+            "button_1_text": "Se alla telefoner",
+            "button_1_link": "shopify:\/\/collections\/vimlas-hallbara-erbjudanden",
+            "button_2_text": "",
+            "button_2_link": ""
+          }
+        },
+        "e0a530bd-7b5d-4995-bcd9-d90d6c2cc018": {
+          "type": "image",
+          "disabled": true,
+          "settings": {
+            "image": "shopify:\/\/shop_images\/renewed_banner_desktop_1.jpg",
+            "mobile_image": "shopify:\/\/shop_images\/renewed_mobil_banner_3.jpg",
+            "apply_overlay": false,
+            "content_position": "bottomLeft",
+            "content_position_mobile": "bottom",
+            "mobiletextbg": "",
+            "show_mobile": false,
+            "topheading": "",
+            "top_heading_font": "helvetica_n4",
+            "topheadfsize": 16,
+            "topheadcolor": "",
+            "topsubheadingmobile": "",
+            "topsubheading": "",
+            "top_subheading_font": "helvetica_n4",
+            "topsubheadfsize": 16,
+            "topsubheadcolor": "",
+            "listedpointsmobile": "",
+            "listedpoints": "",
+            "listedpointscolor": "",
+            "subheading": "",
+            "title": "",
+            "bottomheadfsize": 16,
+            "bottomhead_color": "",
+            "subtext": "",
+            "bottomsubheadfsize": 16,
+            "bottomsubhead_color": "",
+            "button_1_text": "",
+            "button_1_link": "",
+            "button_2_text": "",
+            "button_2_link": ""
+          }
+        }
+      },
+      "block_order": [
+        "1653291692ac0ee759-1",
+        "e0a530bd-7b5d-4995-bcd9-d90d6c2cc018"
+      ],
+      "settings": {
+        "bg": "#f5f5f5",
+        "show_fullscreen": false,
+        "show_arrow": false,
+        "autoplay": false,
+        "cycle_speed": 5,
+        "text_color": "#ffffff",
+        "button_color": "#ffffff",
+        "button_background": "#50dc82"
+      }
+    },
+    "38ddac80-5e34-44f0-81ec-b9fac46e5b84": {
+      "type": "featured-collections",
+      "blocks": {
+        "template--18905513886029__38ddac80-5e34-44f0-81ec-b9fac46e5b84-1684349051cbb01e81-0": {
+          "type": "collection",
+          "settings": {
+            "collection": "vimlas-hallbara-erbjudanden",
+            "title": "",
+            "grid_items_count": 37,
+            "button_text": "Se alla produkter"
+          }
+        }
+      },
+      "block_order": [
+        "template--18905513886029__38ddac80-5e34-44f0-81ec-b9fac46e5b84-1684349051cbb01e81-0"
+      ],
+      "settings": {
+        "bg": "#f5f5f5",
+        "title": "",
+        "layout_mode": "carousel",
+        "show_product_info": true,
+        "show_vendor": false,
+        "show_color_swatch": false,
+        "show_popup": false,
+        "show_button": false,
+        "popup_text": "<p>Beskrivning \/ Specifikation <strong>+<\/strong><\/p>",
+        "grid_mobile_items_per_row": "2",
+        "grid_desktop_items_per_row": 4
+      }
+    },
+    "16532919517943b0e4": {
+      "type": "foretag-image-with-text",
+      "settings": {
+        "show_border": true,
+        "subheading": "",
+        "title": "Skaffa Vimla med din nya mobiltelefon",
+        "image": "shopify:\/\/shop_images\/Vimla_nojd_1.png",
+        "image_position": "right",
+        "container": "with",
+        "text-content": true,
+        "content": "<p>Vi på renewed är väldigt stolta över vårt samarbete med Vimla.<\/p><p>Vimla är mobiloperatören som föddes online och som inte tycker att vi ska behöva dra fåniga gränser för vad som ska få kallas verklighet eller på riktigt.<\/p><p>Med Vimla får du fri tillgång till nätets alla underliga underverk, och kan bada i fria mess och samtal. Dessutom skänker dem en del av vinsten till välgörenhet. Vimla fick även den fantastiska utmärkelsen från Svenskt Kvalitetsindex (SKI) att de har Sveriges Nöjdaste Mobilkunder 2022. Vimla är en del av Telenor Sverige AB och använder därför Telenors otroliga mobilnät.<\/p><p>Med ett abonnemang hos Vimla så kan du välja den surfmängd som bäst passar just dina behov. 3 GB eller 100 GB, eller kanske någonting mittemellan? Oavsett mängd på mobilsurf så har du som kund alltid fria samtal och sms. Skulle dina behov förändras under tiden så kan du närsomhelst ändra din abonnemangsnivå. <\/p>",
+        "link_text": "",
+        "link_url": ""
+      }
+    },
+    "78020925-5b36-4939-afbd-bef5fbc08ba7": {
+      "type": "image-with-text-overlay",
+      "settings": {
+        "section_size": "large",
+        "image": "shopify:\/\/shop_images\/Namnlos_design_13.png",
+        "text_color": "#1c1b1b",
+        "overlay_color": "#000000",
+        "overlay_opacity": 0,
+        "subheading": "",
+        "title": "Mobilabonnemang ska vara smidigt och schysst",
+        "content": "<h3><strong>Bindningstid? Usch<\/strong><\/h3><p>Hos Vimla är du fri att lämna när du vill.<\/p><h3><strong>Osurfad surf sparas<\/strong><\/h3><p>Du får spara hur mycket surf du vill, hur länge du vill!<\/p><h3><strong>Riktigt bra täckning!<\/strong><\/h3><p>4g-, 3g-och 2g i full fräs-hastighet med Telenors nät.<\/p><h3><strong>Rabatt när du tipsar!<\/strong><\/h3><p>Varje tipsning ger 10 kr\/månad i rabatt, så länge du och den du tipsar är aktiva hos Vimla.<\/p><p><\/p>"
+      }
+    },
+    "3b3a292f-ec5a-4e9f-860b-602150e299f8": {
+      "type": "foretag-image-with-text",
+      "settings": {
+        "show_border": false,
+        "subheading": "",
+        "title": "Köp lur, få lurar!",
+        "image": "shopify:\/\/shop_images\/Vimla_partner_renewed.png",
+        "image_position": "right",
+        "container": "with",
+        "text-content": true,
+        "content": "<p><strong>Köp telefon med Vimlas mobilabonnemang och få hörlurar på köpet!<\/strong><\/p><p><\/p><p><strong>Som grädden på moset så får du 75% rabatt på ditt mobilabonnemang i tre månader + 30 GB extra surf. <\/strong><\/p><p><strong>Rabatten gäller alla mobilabonnemang.<\/strong><\/p>",
+        "link_text": "Köp här",
+        "link_url": "https:\/\/renewed.se\/pages\/vimla"
+      }
+    },
+    "c96f1f06-2f78-4dbb-839b-29d113438357": {
+      "type": "slideshow",
+      "disabled": true,
+      "blocks": {
+        "template--18345483370829__c96f1f06-2f78-4dbb-839b-29d113438357-16793931675acb17c0-0": {
+          "type": "image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/VARDE_795KR.png",
+            "apply_overlay": false,
+            "content_position": "middleCenter",
+            "content_position_mobile": "top",
+            "mobiletextbg": "",
+            "show_mobile": false,
+            "topheading": "",
+            "top_heading_font": "helvetica_n4",
+            "topheadfsize": 16,
+            "topheadcolor": "",
+            "topsubheadingmobile": "",
+            "topsubheading": "",
+            "top_subheading_font": "helvetica_n4",
+            "topsubheadfsize": 16,
+            "topsubheadcolor": "",
+            "listedpointsmobile": "",
+            "listedpoints": "",
+            "listedpointscolor": "",
+            "subheading": "",
+            "title": "",
+            "bottomheadfsize": 16,
+            "bottomhead_color": "",
+            "subtext": "",
+            "bottomsubheadfsize": 16,
+            "bottomsubhead_color": "",
+            "button_1_text": "",
+            "button_1_link": "",
+            "button_2_text": "",
+            "button_2_link": ""
+          }
+        },
+        "template--18345483370829__c96f1f06-2f78-4dbb-839b-29d113438357-16793931675acb17c0-1": {
+          "type": "image",
+          "disabled": true,
+          "settings": {
+            "apply_overlay": true,
+            "content_position": "bottomLeft",
+            "content_position_mobile": "bottom",
+            "mobiletextbg": "",
+            "show_mobile": false,
+            "topheading": "",
+            "top_heading_font": "helvetica_n4",
+            "topheadfsize": 16,
+            "topheadcolor": "",
+            "topsubheadingmobile": "",
+            "topsubheading": "",
+            "top_subheading_font": "helvetica_n4",
+            "topsubheadfsize": 16,
+            "topsubheadcolor": "",
+            "listedpointsmobile": "",
+            "listedpoints": "",
+            "listedpointscolor": "",
+            "subheading": "Slide title",
+            "title": "Tell your story",
+            "bottomheadfsize": 16,
+            "bottomhead_color": "",
+            "subtext": "Slide text",
+            "bottomsubheadfsize": 16,
+            "bottomsubhead_color": "",
+            "button_1_text": "",
+            "button_1_link": "",
+            "button_2_text": "",
+            "button_2_link": ""
+          }
+        }
+      },
+      "block_order": [
+        "template--18345483370829__c96f1f06-2f78-4dbb-839b-29d113438357-16793931675acb17c0-0",
+        "template--18345483370829__c96f1f06-2f78-4dbb-839b-29d113438357-16793931675acb17c0-1"
+      ],
+      "settings": {
+        "bg": "#f5f5f5",
+        "show_fullscreen": false,
+        "show_arrow": false,
+        "autoplay": true,
+        "cycle_speed": 5,
+        "text_color": "#ffffff",
+        "button_color": "#363636",
+        "button_background": "#ffffff"
+      }
+    },
+    "54899ceb-e1cf-4ab2-ba9c-2512de1761bb": {
+      "type": "foretag-image-with-text",
+      "settings": {
+        "show_border": true,
+        "subheading": "",
+        "title": "Pris och surfnivå",
+        "image": "shopify:\/\/shop_images\/vimla_bild_1.jpg",
+        "image_position": "left",
+        "container": "with",
+        "text-content": true,
+        "content": "<p>Är du ute efter ett riktigt billigt abonnemang, ett abonnemang med mycket surf eller vad som helst med en riktigt bra kampanj? Eller kanske en blandning av alla tre? Det tycker i alla fall vi är det bästa!<\/p><p>Vimla erbjuder sex surfnivåer på sina ordinarie abonnemang och barn-abonnemang, plus fem surfnivåer på abonnemang för studenter och seniorer över 55 år. Självklart till ett schysst pris, och alltid med ett grymt välkomsterbjudande!<\/p>",
+        "link_text": "Se Vimlas priser",
+        "link_url": "https:\/\/vimla.se\/priser\/"
+      }
+    },
+    "1653296448b0f278f0": {
+      "type": "foretag-image-with-text",
+      "disabled": true,
+      "blocks": {
+        "b441c883-ca50-4e51-9e8a-0511489d3697": {
+          "type": "text",
+          "settings": {
+            "title-1": "Ny mobil",
+            "sub-content-1": "<p>86,5 kg <\/p><p>CO2e<\/p>",
+            "title-2": "Mobil Renewed",
+            "sub-content-2": "<p>6,82 kg <\/p><p>   CO2e<br\/><\/p>",
+            "title-3": "Skillnad",
+            "sub-content-3": "<p>-92%<\/p>"
+          }
+        },
+        "336d0a24-0eff-4bc8-918b-57e043027994": {
+          "type": "text",
+          "settings": {
+            "title-1": "",
+            "sub-content-1": "<p>281 kg<\/p><p>Råmaterial <\/p>",
+            "title-2": "",
+            "sub-content-2": "<p>23 kg<\/p><p>Råmaterial <\/p>",
+            "title-3": "",
+            "sub-content-3": "<p>-92%<\/p>"
+          }
+        },
+        "917ae1e5-46fb-4483-bd01-f589fe009475": {
+          "type": "text",
+          "settings": {
+            "title-1": "",
+            "sub-content-1": "<p>82,300 L<\/p><p>Vatten <\/p>",
+            "title-2": "",
+            "sub-content-2": "<p>13,900 L<\/p><p>Vatten<\/p>",
+            "title-3": "",
+            "sub-content-3": "<p>-83%<\/p>"
+          }
+        },
+        "f0badfc7-a2e8-4ce5-aaea-5062785225eb": {
+          "type": "text",
+          "settings": {
+            "title-1": "",
+            "sub-content-1": "<p>199 g<\/p><p>E-avfall <\/p>",
+            "title-2": "",
+            "sub-content-2": "<p>24 g<\/p><p>E-avfall <\/p>",
+            "title-3": "",
+            "sub-content-3": "<p>-88%<\/p>"
+          }
+        }
+      },
+      "block_order": [
+        "b441c883-ca50-4e51-9e8a-0511489d3697",
+        "336d0a24-0eff-4bc8-918b-57e043027994",
+        "917ae1e5-46fb-4483-bd01-f589fe009475",
+        "f0badfc7-a2e8-4ce5-aaea-5062785225eb"
+      ],
+      "settings": {
+        "show_border": true,
+        "subheading": "",
+        "title": "Ansvarsfullt företagande för miljön!",
+        "image": "shopify:\/\/shop_images\/Foretag_1000_x_500_2.jpg",
+        "image_position": "left",
+        "container": "without",
+        "text-content": false,
+        "content": "",
+        "link_text": "",
+        "link_url": ""
+      }
+    },
+    "ee67dead-53dc-43c2-bb91-b5c16291fab6": {
+      "type": "custom-faq",
+      "blocks": {
+        "template--18345483370829__ee67dead-53dc-43c2-bb91-b5c16291fab6-16793887296c0ee337-0": {
+          "type": "separator",
+          "settings": {
+            "title": "Vanliga frågor"
+          }
+        },
+        "template--18345483370829__ee67dead-53dc-43c2-bb91-b5c16291fab6-16793887296c0ee337-1": {
+          "type": "question",
+          "settings": {
+            "title": "Vilket nät använder Vimla?",
+            "answer": "<p><strong>Vimla använder samma nät som Telenor, och täcker därmed 99,9% av Sveriges befolkning! Kolla in din täckning på <\/strong><a href=\"https:\/\/vimla.se\/tackningskartan\/\" target=\"_blank\" title=\"https:\/\/vimla.se\/tackningskartan\/\">vimla.se\/tackningskartan.<\/a><\/p>"
+          }
+        },
+        "1531e14d-af7a-44f3-b006-fda657f2c62e": {
+          "type": "question",
+          "settings": {
+            "title": "Hur mycket surf behöver jag?",
+            "answer": "<p>Det beror på hur mycket du vill surfa, men här är några tumregler:<\/p><ul><li><strong>3 GB<\/strong>– Perfekt till dig som mest kollar mail eller streamar Spotify. Räcker till mer än 30 minuters lyssnande på Spotify per dag. <\/li><li><strong>6 GB<\/strong>–  Passar dig som mest scrollar Facebook eller Instagram men inte ser så mycket på video. <\/li><li><strong>10 GB<\/strong> – Är perfekt för dig som lyssnar mycket på Spotify, och kanske vill kika lite Youtube på bussen in till stan.<\/li><li><strong>20 GB<\/strong>– Perfekt för vardagssurfaren, på väg in till jobbet eller skolan.<\/li><li><strong>50 GB<\/strong>– Passar dig som vill göra allt med mobilen. Surfa, streama, lyssna på Spotify. Gärna allt samtidigt.<\/li><li><strong>100 GB<\/strong> – Är för dig som aldrig vill behöva bry dig om att få slut på surf. Du kanske t.o.m använder mobilen som hotspot (internetdelning) ibland.<\/li><\/ul>"
+          }
+        },
+        "e22409ec-56ec-4bb1-8939-53d47f08fc59": {
+          "type": "question",
+          "settings": {
+            "title": "Kan jag byta abonnemangsnivå om jag ändrar mig?",
+            "answer": "<p>Självklart! Du kan ändra ditt abonnemang när du vill direkt på Mitt Vimla eller i Vimlas App.<\/p>"
+          }
+        },
+        "2fec2f4d-3bc6-487a-89ae-77f12261d0e5": {
+          "type": "question",
+          "settings": {
+            "title": "Vilka regler finns för att spara surf?",
+            "answer": "<p>Du får:<br\/>– Spara surf på <strong>alla Vimlas abonnemang<\/strong>.<br\/>– Spara <strong>hur mycket surf du vill.<\/strong><br\/>– Spara <strong>surfen hur länge du vill.<\/strong><\/p><p>Du kan läsa mer om sparad surf <a href=\"https:\/\/faq.vimla.se\/hc\/sv\/articles\/360019829558-S%C3%A5-h%C3%A4r-fungerar-sparad-data\" target=\"_blank\" title=\"https:\/\/faq.vimla.se\/hc\/sv\/articles\/360019829558-S%C3%A5-h%C3%A4r-fungerar-sparad-data\">här<\/a><\/p>"
+          }
+        },
+        "a312e4ad-06f2-4ba3-abf6-7493db308fdb": {
+          "type": "question",
+          "settings": {
+            "title": "Kan jag flytta med mitt nummer?",
+            "answer": "<p>Självklart kan du välja att flytta med ditt nuvarande nummer till Vimla! För att din nummerflytt ska kunna godkännas så finns det några saker du behöver kontrollera innan du gör din beställning hos Vimla.<\/p><p>Läs allt om hur du går tillväga både innan, under och efter beställningen för att få till en lyckad nummerflytt, i Vimlas <a href=\"https:\/\/vimla.se\/nummerflytt-guide\/\" target=\"_blank\" title=\"https:\/\/vimla.se\/nummerflytt-guide\/\">nummerflyttsguide<\/a>.<\/p>"
+          }
+        },
+        "fb912ea9-98ab-4370-9e13-28eb9ac92da4": {
+          "type": "question",
+          "settings": {
+            "title": "Behöver jag säga upp mitt gamla abonnemang?",
+            "answer": "<p>Ditt gamla abonnemang kommer automatiskt att sägas upp den dagen som ditt nummer flyttas över till Vimla.<\/p><p>Ifall du har uppsägningstid på abonnemanget så startar den på flyttdagen och abonnemanget avslutas först när uppsägningstiden är slut, vilket innebär att du kan få betala för två abonnemang samtidigt. Därför rekommenderar vi alltid innan en nummerflytt att ta kontakt med nuvarande operatör och kontrollera allt tillsammans med dem.<\/p>"
+          }
+        },
+        "a7a26462-3062-4d36-ac60-de43261721b1": {
+          "type": "question",
+          "settings": {
+            "title": "Funkar Vimla med alla telefoner?",
+            "answer": "<p>Vissa <strong>2G-telefoner som är tillverkade före 2013<\/strong> har inte stöd för nya operatörer, och funkar därför inte med Vimla. Det beror på att Vimla startades <strong>efter att tillverkaren slutat uppdatera telefonens mjukvara<\/strong>. Detta är inget unikt för Vimla, utan telefonerna känner inte igen några nystartade operatörer.<\/p>"
+          }
+        }
+      },
+      "block_order": [
+        "template--18345483370829__ee67dead-53dc-43c2-bb91-b5c16291fab6-16793887296c0ee337-0",
+        "template--18345483370829__ee67dead-53dc-43c2-bb91-b5c16291fab6-16793887296c0ee337-1",
+        "1531e14d-af7a-44f3-b006-fda657f2c62e",
+        "e22409ec-56ec-4bb1-8939-53d47f08fc59",
+        "2fec2f4d-3bc6-487a-89ae-77f12261d0e5",
+        "a312e4ad-06f2-4ba3-abf6-7493db308fdb",
+        "fb912ea9-98ab-4370-9e13-28eb9ac92da4",
+        "a7a26462-3062-4d36-ac60-de43261721b1"
+      ],
+      "settings": {
+      }
+    },
+    "a3b34d3e-cd0b-4dad-8255-12f411da5c41": {
+      "type": "image-with-text-overlay",
+      "disabled": true,
+      "settings": {
+        "section_size": "large",
+        "image": "shopify:\/\/shop_images\/VARDE_795KR.jpg",
+        "text_color": "#ffffff",
+        "overlay_color": "#000000",
+        "overlay_opacity": 0,
+        "subheading": "",
+        "title": "",
+        "content": ""
+      }
+    }
+  },
+  "order": [
+    "main",
+    "16532916926c62d9ea",
+    "38ddac80-5e34-44f0-81ec-b9fac46e5b84",
+    "16532919517943b0e4",
+    "78020925-5b36-4939-afbd-bef5fbc08ba7",
+    "3b3a292f-ec5a-4e9f-860b-602150e299f8",
+    "c96f1f06-2f78-4dbb-839b-29d113438357",
+    "54899ceb-e1cf-4ab2-ba9c-2512de1761bb",
+    "1653296448b0f278f0",
+    "ee67dead-53dc-43c2-bb91-b5c16291fab6",
+    "a3b34d3e-cd0b-4dad-8255-12f411da5c41"
+  ]
+}
