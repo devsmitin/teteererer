@@ -463,32 +463,30 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 
     </main>
 
-          {% if settings.enable_all_renewed %}
-                  {% assign free_all_pro = settings.free_all_product_subscribe %}
-                  {% for variant in free_all_pro.variants %}
-                   <p id="free_allproduct" style="display:none;" value="{{ variant.id }}"></p> 
-                    {% endfor %}
-                {% endif %}
-                
-                {% if settings.enable_unsubscribe %}
-                  {% assign free_vim_pro = settings.free_vimla-product %}
-                  {% assign vim_pro_id = free_vim_pro.id %}
-                  {% for variant in free_vim_pro.variants %}
-                   <p id="free_vimlaproduct" style="display:none;" value="{{ variant.id }}"></p> 
-                    {% endfor %}
-                {% endif %}
-                
-                {% if settings.enable_subscribe %}
-                   {% assign free_sub_pro = settings.free_vimla_product_subscribe %}
-                  {% assign vim_sub_id = free_sub_pro.id %}
-                  {% for variant in free_sub_pro.variants %}
-                   <p id="free_sub_product" style="display:none;" value="{{ variant.id }}"></p> 
-                    {% endfor %}
-                  {% endif %}
-                {% if settings.enable_discountcode %}
-                <p id="auto_discount-code" style="display:none;"></p>
-                {% endif %}
-                
+    {% if settings.enable_all_renewed %}
+      {% assign free_all_pro = settings.free_all_product_subscribe %}
+      {% assign free_all_pro_variant = free_all_pro.selected_or_first_available_variant %}
+      <p id="free_allproduct" style="display:none;" value="{{ free_all_pro.id }}"></p> 
+    {% endif %}
+    
+    {% if settings.enable_unsubscribe %}
+      {% assign free_vim_pro = settings.free_vimla-product %}
+      {% assign vim_pro_id = free_vim_pro.id %}
+      {% assign free_vim_pro_variant = free_vim_pro.selected_or_first_available_variant %}
+      <p id="free_vimlaproduct" style="display:none;" value="{{ free_vim_pro_variant.id }}"></p> 
+    {% endif %}
+    
+    {% if settings.enable_subscribe %}
+      {% assign free_sub_pro = settings.free_vimla_product_subscribe %}
+      {% assign vim_sub_id = free_sub_pro.id %}
+      {% assign free_sub_pro_variant = free_sub_pro.selected_or_first_available_variant %}
+      <p id="free_sub_product" style="display:none;" value="{{ free_sub_pro_variant.id }}"></p> 
+    {% endif %}
+
+    {% if settings.enable_discountcode %}
+    <p id="auto_discount-code" style="display:none;"></p>
+    {% endif %}
+    
 
     {% section 'footer' %}
   </div>
