@@ -926,23 +926,13 @@
     },
     "filters": {
       "availability": {
-        "label": "Tilgængelighed",
         "value": {
           "in_stock": "På lager",
           "out_of_stock": "Udsolgt"
         }
       },
-      "vendor": {
-        "label": "Varemærke"
-      },
-      "product_type": {
-        "label": "Udvalg"
-      },
       "boolean": {
         "false_label": "Ingen"
-      },
-      "tags": {
-        "label": "Flere filtre"
       }
     },
     "search": {

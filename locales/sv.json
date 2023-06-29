@@ -492,11 +492,6 @@
     "month_day_year_time": ""
   },
   "shopify": {
-    "filters": {
-      "product_type": {
-        "label": "Sortiment"
-      }
-    },
     "checkout": {
       "general": {
         "complete_purchase_button_label": "Slutför köp"

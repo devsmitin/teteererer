@@ -197,27 +197,27 @@
         "html": "<iframe src=\"https:\/\/widget.reco.se\/v2\/widget\/4031121?mode=HORIZONTAL_QUOTE\" scrolling=\"no\" style=\"border:0;display:block\" data-reactroot=\"\" width=\"100%\" height=\"225\"><\/iframe>"
       }
     },
-    "4e477fd5-c0b6-41f9-bb0f-29bc3964f326": {
+    "1647595625c9939ad9": {
       "type": "text-with-image",
       "settings": {
         "Sverige": true,
-        "Denmark": false,
-        "Italy": false,
-        "Germay": false,
-        "France": false,
-        "spain": false,
+        "Denmark": true,
+        "Italy": true,
+        "Germay": true,
+        "France": true,
+        "spain": true,
         "bg": "#f5f5f5",
         "subheading": "",
-        "title": "Skaffa Vimla med din telefon!",
-        "image": "shopify:\/\/shop_images\/Vimla_Renewed.png",
-        "image_position": "left",
+        "title": "Begagnade & renoverade mobiler",
+        "image": "shopify:\/\/shop_images\/startsida_reco.png",
+        "image_position": "right",
         "text_alignment": "left",
         "text_mobile_alignment": "left",
         "container": "with",
         "text-content": true,
-        "content": "<p>Välj den surfnivå som passar just dig! Alla abonnemang från 3 GB till 100 GB med 75% rabatt i tre månader + 30 GB bara med Renewed. Med Vimlas abonnemang har du alltid, 24\/7, året om:  <\/p><ul><li>Fria samtal och mess<\/li><li>Ingen bindningstid<\/li><li>Spara forever ´n ever!<\/li><li>Sveriges nöjdaste mobilkunder<\/li><\/ul><p>Passa på att bli en del av den fantastiska Vimla familjen!<\/p>",
-        "link_text": "Läs mer om Vimla",
-        "link_url": "shopify:\/\/pages\/partner-vimla"
+        "content": "<p>re!Newed är ett svenskt företag som specialiserar sig på att tillhandahålla återvunna IT- och elektronikprodukter. Genom att erbjuda produkter av hög standard med likvärdig funktionalitet som fabriksnya produkter vill vi ge våra kunder ett kostnadseffektivt och miljövänligt alternativ.<\/p><p>För att säkerställa hög kvalitet genomgår alla våra produkter noggranna funktionskontroller av professionella tekniker. Vi är stolta över att kunna erbjuda 12 månaders garanti på alla våra produkter.<\/p><p>Genom att handla från oss kan du spara upp till 50% jämfört med att köpa en fabriksny produkt, samtidigt som du bidrar till att skapa en mer hållbar framtid. <\/p><p>Vi tror att vårt arbete kan hjälpa till att minska den negativa miljöpåverkan som elektronikavfall kan orsaka och vi är övertygade om att små förändringar kan göra stor skillnad.<\/p>",
+        "link_text": "Köp nu",
+        "link_url": "shopify:\/\/collections\/alla-produkter"
       }
     },
     "fcb517a2-e9e1-4dfb-89da-0d519dbb12a2": {
@@ -233,7 +233,7 @@
         "subheading": "",
         "title": "re!Newed Premium",
         "image": "shopify:\/\/shop_images\/premium_bild_startsida.png",
-        "image_position": "right",
+        "image_position": "left",
         "text_alignment": "left",
         "text_mobile_alignment": "left",
         "container": "with",
@@ -243,27 +243,27 @@
         "link_url": "shopify:\/\/pages\/premium"
       }
     },
-    "1647595625c9939ad9": {
+    "4e477fd5-c0b6-41f9-bb0f-29bc3964f326": {
       "type": "text-with-image",
       "settings": {
         "Sverige": true,
-        "Denmark": true,
-        "Italy": true,
-        "Germay": true,
-        "France": true,
-        "spain": true,
+        "Denmark": false,
+        "Italy": false,
+        "Germay": false,
+        "France": false,
+        "spain": false,
         "bg": "#f5f5f5",
         "subheading": "",
-        "title": "Begagnade & renoverade mobiler",
-        "image": "shopify:\/\/shop_images\/startsida_reco.png",
-        "image_position": "left",
+        "title": "Skaffa Vimla med din telefon!",
+        "image": "shopify:\/\/shop_images\/Vimla_Renewed.png",
+        "image_position": "right",
         "text_alignment": "left",
         "text_mobile_alignment": "left",
         "container": "with",
         "text-content": true,
-        "content": "<p>re!Newed är ett svenskt företag som specialiserar sig på att tillhandahålla återvunna IT- och elektronikprodukter. Genom att erbjuda produkter av hög standard med likvärdig funktionalitet som fabriksnya produkter vill vi ge våra kunder ett kostnadseffektivt och miljövänligt alternativ.<\/p><p>För att säkerställa hög kvalitet genomgår alla våra produkter noggranna funktionskontroller av professionella tekniker. Vi är stolta över att kunna erbjuda 12 månaders garanti på alla våra produkter.<\/p><p>Genom att handla från oss kan du spara upp till 50% jämfört med att köpa en fabriksny produkt, samtidigt som du bidrar till att skapa en mer hållbar framtid. <\/p><p>Vi tror att vårt arbete kan hjälpa till att minska den negativa miljöpåverkan som elektronikavfall kan orsaka och vi är övertygade om att små förändringar kan göra stor skillnad.<\/p>",
-        "link_text": "Köp nu",
-        "link_url": "shopify:\/\/collections\/alla-produkter"
+        "content": "<p>Välj den surfnivå som passar just dig! Alla abonnemang från 3 GB till 100 GB med 75% rabatt i tre månader + 30 GB bara med Renewed. Med Vimlas abonnemang har du alltid, 24\/7, året om:  <\/p><ul><li>Fria samtal och mess<\/li><li>Ingen bindningstid<\/li><li>Spara forever ´n ever!<\/li><li>Sveriges nöjdaste mobilkunder<\/li><\/ul><p>Passa på att bli en del av den fantastiska Vimla familjen!<\/p>",
+        "link_text": "Läs mer om Vimla",
+        "link_url": "shopify:\/\/pages\/partner-vimla"
       }
     },
     "f658bc52-1f82-4554-ae73-95099cff7bdc": {
@@ -279,7 +279,7 @@
         "subheading": "",
         "title": "Telenor väljer re!Newed som långsiktig samarbetspartner",
         "image": "shopify:\/\/shop_images\/telenor_renewed_facetime-girl_1115x560_002_f0295e18-a866-47b8-ae4a-d708ef30b900.jpg",
-        "image_position": "right",
+        "image_position": "left",
         "text_alignment": "left",
         "text_mobile_alignment": "left",
         "container": "with",
@@ -406,9 +406,9 @@
     "c90893ac-103e-464a-94cb-ae03f7615777",
     "featured-collections",
     "1647594488d673cf0e",
-    "4e477fd5-c0b6-41f9-bb0f-29bc3964f326",
-    "fcb517a2-e9e1-4dfb-89da-0d519dbb12a2",
     "1647595625c9939ad9",
+    "fcb517a2-e9e1-4dfb-89da-0d519dbb12a2",
+    "4e477fd5-c0b6-41f9-bb0f-29bc3964f326",
     "f658bc52-1f82-4554-ae73-95099cff7bdc",
     "1129a888-8ff7-498a-ac26-78891edb3ff7",
     "16475959609bfec0ca"
